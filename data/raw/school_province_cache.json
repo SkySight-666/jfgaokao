@@ -1,0 +1,4834 @@
+{
+  "201": {
+    "belong": "公安部",
+    "province_id": "21"
+  },
+  "730": {
+    "belong": "河北省",
+    "province_id": "13"
+  },
+  "57": {
+    "belong": "教育部",
+    "province_id": "61"
+  },
+  "1021": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "1472": {
+    "belong": "重庆市教委",
+    "province_id": "50"
+  },
+  "1124": {
+    "belong": "湖北省教育厅",
+    "province_id": "42"
+  },
+  "1009": {
+    "belong": "重庆市",
+    "province_id": "50"
+  },
+  "1585": {
+    "belong": "河北省教育厅",
+    "province_id": "13"
+  },
+  "997": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "1077": {
+    "belong": "湖北省教育厅",
+    "province_id": "42"
+  },
+  "73": {
+    "belong": "教育部",
+    "province_id": "31"
+  },
+  "684": {
+    "belong": "上海市教委",
+    "province_id": "31"
+  },
+  "346": {
+    "belong": "云南省",
+    "province_id": "53"
+  },
+  "846": {
+    "belong": "天津市",
+    "province_id": "12"
+  },
+  "1918": {
+    "belong": "西藏自治区",
+    "province_id": "54"
+  },
+  "847": {
+    "belong": "天津市",
+    "province_id": "12"
+  },
+  "569": {
+    "belong": "教育部",
+    "province_id": "11"
+  },
+  "132": {
+    "belong": "教育部",
+    "province_id": "31"
+  },
+  "567": {
+    "belong": "北京市",
+    "province_id": "11"
+  },
+  "896": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "1982": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "1618": {
+    "belong": "吉林省",
+    "province_id": "22"
+  },
+  "198": {
+    "belong": "重庆市",
+    "province_id": "50"
+  },
+  "606": {
+    "belong": "河北省",
+    "province_id": "13"
+  },
+  "362": {
+    "belong": "云南省",
+    "province_id": "53"
+  },
+  "33": {
+    "belong": "交通运输部",
+    "province_id": "21"
+  },
+  "589": {
+    "belong": "北京市",
+    "province_id": "11"
+  },
+  "1324": {
+    "belong": "河南省教育厅",
+    "province_id": "41"
+  },
+  "177": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "1157": {
+    "belong": "湖北省教育厅",
+    "province_id": "42"
+  },
+  "1546": {
+    "belong": "吉林省",
+    "province_id": "22"
+  },
+  "1489": {
+    "belong": "重庆市",
+    "province_id": "50"
+  },
+  "119": {
+    "belong": "教育部",
+    "province_id": "50"
+  },
+  "599": {
+    "belong": "河北省",
+    "province_id": "13"
+  },
+  "243": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "1328": {
+    "belong": "黑龙江省教育厅",
+    "province_id": "23"
+  },
+  "113": {
+    "belong": "教育部",
+    "province_id": "32"
+  },
+  "140": {
+    "belong": "教育部",
+    "province_id": "11"
+  },
+  "485": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "1006": {
+    "belong": "教育部",
+    "province_id": "11"
+  },
+  "1520": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "836": {
+    "belong": "天津市",
+    "province_id": "12"
+  },
+  "1067": {
+    "belong": "辽宁省",
+    "province_id": "21"
+  },
+  "82": {
+    "belong": "天津市",
+    "province_id": "12"
+  },
+  "366": {
+    "belong": "陕西省",
+    "province_id": "61"
+  },
+  "460": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "963": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "627": {
+    "belong": "河北省",
+    "province_id": "13"
+  },
+  "1253": {
+    "belong": "解放军总后勤部",
+    "province_id": "12"
+  },
+  "311": {
+    "belong": "上海市",
+    "province_id": "31"
+  },
+  "1227": {
+    "belong": "解放军总后勤部",
+    "province_id": "50"
+  },
+  "468": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "330": {
+    "belong": "教育部",
+    "province_id": "61"
+  },
+  "368": {
+    "belong": "陕西省",
+    "province_id": "61"
+  },
+  "1959": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "650": {
+    "belong": "河北省",
+    "province_id": "13"
+  },
+  "595": {
+    "belong": "河北省",
+    "province_id": "13"
+  },
+  "487": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "146": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "1231": {
+    "belong": "解放军火箭军",
+    "province_id": "61"
+  },
+  "332": {
+    "belong": "教育部",
+    "province_id": "61"
+  },
+  "853": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "180": {
+    "belong": "重庆市",
+    "province_id": "50"
+  },
+  "1125": {
+    "belong": "河南省教育厅",
+    "province_id": "41"
+  },
+  "67": {
+    "belong": "安徽省",
+    "province_id": "34"
+  },
+  "549": {
+    "belong": "山东省",
+    "province_id": "37"
+  },
+  "160": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "149": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "890": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "770": {
+    "belong": "四川省教育厅",
+    "province_id": "51"
+  },
+  "34": {
+    "belong": "工业和信息化部",
+    "province_id": "23"
+  },
+  "526": {
+    "belong": "山东省",
+    "province_id": "37"
+  },
+  "981": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "1199": {
+    "belong": "江苏省教育厅",
+    "province_id": "32"
+  },
+  "1026": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "106": {
+    "belong": "中央统战部",
+    "province_id": "44"
+  },
+  "851": {
+    "belong": "天津市",
+    "province_id": "12"
+  },
+  "574": {
+    "belong": "北京市",
+    "province_id": "11"
+  },
+  "1544": {
+    "belong": "江苏省教育厅",
+    "province_id": "32"
+  },
+  "2027": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "961": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "977": {
+    "belong": "广东省教育厅",
+    "province_id": "44"
+  },
+  "224": {
+    "belong": "辽宁省",
+    "province_id": "21"
+  },
+  "1971": {
+    "belong": "湖北省教育厅",
+    "province_id": "42"
+  },
+  "1651": {
+    "belong": "山西省",
+    "province_id": "14"
+  },
+  "1082": {
+    "belong": "四川省",
+    "province_id": "51"
+  },
+  "163": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "1105": {
+    "belong": "湖北省教育厅",
+    "province_id": "42"
+  },
+  "1892": {
+    "belong": "福建省教育厅",
+    "province_id": "35"
+  },
+  "404": {
+    "belong": "吉林省",
+    "province_id": "22"
+  },
+  "37": {
+    "belong": "陕西省",
+    "province_id": "61"
+  },
+  "309": {
+    "belong": "上海市",
+    "province_id": "31"
+  },
+  "1071": {
+    "belong": "贵州省",
+    "province_id": "52"
+  },
+  "1181": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "1947": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "159": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "429": {
+    "belong": "黑龙江省",
+    "province_id": "23"
+  },
+  "1162": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "1769": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "1990": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "685": {
+    "belong": "上海市教委",
+    "province_id": "31"
+  },
+  "1359": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "477": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "840": {
+    "belong": "天津市",
+    "province_id": "12"
+  },
+  "148": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "1952": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "121": {
+    "belong": "教育部",
+    "province_id": "42"
+  },
+  "53": {
+    "belong": "教育部",
+    "province_id": "11"
+  },
+  "973": {
+    "belong": "广东省教育厅",
+    "province_id": "44"
+  },
+  "488": {
+    "belong": "甘肃省",
+    "province_id": "62"
+  },
+  "516": {
+    "belong": "贵州省",
+    "province_id": "52"
+  },
+  "1970": {
+    "belong": "湖北省教育厅",
+    "province_id": "42"
+  },
+  "2021": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "689": {
+    "belong": "河北省",
+    "province_id": "13"
+  },
+  "84": {
+    "belong": "天津市",
+    "province_id": "12"
+  },
+  "210": {
+    "belong": "辽宁省",
+    "province_id": "21"
+  },
+  "573": {
+    "belong": "国家卫生健康委员会",
+    "province_id": "11"
+  },
+  "1297": {
+    "belong": "广东省教育厅",
+    "province_id": "44"
+  },
+  "1014": {
+    "belong": "吉林省",
+    "province_id": "22"
+  },
+  "1861": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "880": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "1399": {
+    "belong": "云南省",
+    "province_id": "53"
+  },
+  "150": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "1587": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "603": {
+    "belong": "河北省",
+    "province_id": "13"
+  },
+  "1762": {
+    "belong": "广西壮族自治区教育厅",
+    "province_id": "45"
+  },
+  "1455": {
+    "belong": "广东省教育厅",
+    "province_id": "44"
+  },
+  "668": {
+    "belong": "上海市教委",
+    "province_id": "31"
+  },
+  "1608": {
+    "belong": "吉林省",
+    "province_id": "22"
+  },
+  "86": {
+    "belong": "教育部",
+    "province_id": "32"
+  },
+  "2002": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "1650": {
+    "belong": "山西省",
+    "province_id": "14"
+  },
+  "1133": {
+    "belong": "湖南省教育厅",
+    "province_id": "43"
+  },
+  "1469": {
+    "belong": "上海市教委",
+    "province_id": "31"
+  },
+  "1997": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "450": {
+    "belong": "黑龙江省",
+    "province_id": "23"
+  },
+  "410": {
+    "belong": "吉林省",
+    "province_id": "22"
+  },
+  "252": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "649": {
+    "belong": "广东省教育厅",
+    "province_id": "44"
+  },
+  "422": {
+    "belong": "黑龙江省",
+    "province_id": "23"
+  },
+  "401": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "854": {
+    "belong": "天津市",
+    "province_id": "12"
+  },
+  "1784": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "371": {
+    "belong": "陕西省",
+    "province_id": "61"
+  },
+  "74": {
+    "belong": "新疆维吾尔自治区",
+    "province_id": "65"
+  },
+  "922": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "234": {
+    "belong": "新疆维吾尔自治区",
+    "province_id": "65"
+  },
+  "1161": {
+    "belong": "河南省教育厅",
+    "province_id": "41"
+  },
+  "202": {
+    "belong": "辽宁省",
+    "province_id": "21"
+  },
+  "178": {
+    "belong": "重庆市",
+    "province_id": "50"
+  },
+  "483": {
+    "belong": "甘肃省",
+    "province_id": "62"
+  },
+  "396": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "129": {
+    "belong": "吉林省",
+    "province_id": "22"
+  },
+  "1051": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "1743": {
+    "belong": "广西壮族自治区",
+    "province_id": "45"
+  },
+  "338": {
+    "belong": "安徽省",
+    "province_id": "34"
+  },
+  "1512": {
+    "belong": "河南省教育厅",
+    "province_id": "41"
+  },
+  "280": {
+    "belong": "山西省",
+    "province_id": "14"
+  },
+  "559": {
+    "belong": "北京市教委",
+    "province_id": "11"
+  },
+  "112": {
+    "belong": "工业和信息化部",
+    "province_id": "32"
+  },
+  "237": {
+    "belong": "新疆维吾尔自治区",
+    "province_id": "65"
+  },
+  "769": {
+    "belong": "四川省",
+    "province_id": "51"
+  },
+  "137": {
+    "belong": "黑龙江省",
+    "province_id": "23"
+  },
+  "1913": {
+    "belong": "福建省教育厅",
+    "province_id": "35"
+  },
+  "941": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "1826": {
+    "belong": "安徽省",
+    "province_id": "34"
+  },
+  "361": {
+    "belong": "陕西省",
+    "province_id": "61"
+  },
+  "70": {
+    "belong": "安徽省",
+    "province_id": "34"
+  },
+  "1542": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "100": {
+    "belong": "四川省",
+    "province_id": "51"
+  },
+  "947": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "395": {
+    "belong": "吉林省",
+    "province_id": "22"
+  },
+  "523": {
+    "belong": "贵州省",
+    "province_id": "52"
+  },
+  "1804": {
+    "belong": "安徽省",
+    "province_id": "34"
+  },
+  "1974": {
+    "belong": "湖北省教育厅",
+    "province_id": "42"
+  },
+  "919": {
+    "belong": "山西省",
+    "province_id": "14"
+  },
+  "434": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "444": {
+    "belong": "黑龙江省",
+    "province_id": "23"
+  },
+  "1998": {
+    "belong": "湖南省教育厅",
+    "province_id": "43"
+  },
+  "686": {
+    "belong": "上海市",
+    "province_id": "31"
+  },
+  "2008": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "594": {
+    "belong": "教育部",
+    "province_id": "11"
+  },
+  "505": {
+    "belong": "内蒙古自治区",
+    "province_id": "15"
+  },
+  "631": {
+    "belong": "广东省教育厅",
+    "province_id": "44"
+  },
+  "570": {
+    "belong": "北京市",
+    "province_id": "11"
+  },
+  "1766": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "259": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "1305": {
+    "belong": "辽宁省教育厅",
+    "province_id": "21"
+  },
+  "1186": {
+    "belong": "福建省教育厅",
+    "province_id": "35"
+  },
+  "88": {
+    "belong": "交通运输部（中国民用航空局）",
+    "province_id": "12"
+  },
+  "580": {
+    "belong": "北京市",
+    "province_id": "11"
+  },
+  "437": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "541": {
+    "belong": "广西壮族自治区",
+    "province_id": "45"
+  },
+  "1786": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "431": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "463": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "416": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "508": {
+    "belong": "内蒙古自治区",
+    "province_id": "15"
+  },
+  "651": {
+    "belong": "河北省",
+    "province_id": "13"
+  },
+  "1263": {
+    "belong": "陕西省",
+    "province_id": "61"
+  },
+  "383": {
+    "belong": "陕西省教育厅",
+    "province_id": "61"
+  },
+  "1383": {
+    "belong": "陕西省",
+    "province_id": "61"
+  },
+  "976": {
+    "belong": "广东省教育厅",
+    "province_id": "44"
+  },
+  "68": {
+    "belong": "安徽省",
+    "province_id": "34"
+  },
+  "967": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "894": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "1713": {
+    "belong": "甘肃省",
+    "province_id": "62"
+  },
+  "135": {
+    "belong": "教育部",
+    "province_id": "31"
+  },
+  "173": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "786": {
+    "belong": "辽宁省",
+    "province_id": "21"
+  },
+  "1036": {
+    "belong": "新疆维吾尔自治区",
+    "province_id": "65"
+  },
+  "1730": {
+    "belong": "广西壮族自治区",
+    "province_id": "45"
+  },
+  "492": {
+    "belong": "甘肃省",
+    "province_id": "62"
+  },
+  "1951": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "350": {
+    "belong": "云南省",
+    "province_id": "53"
+  },
+  "1188": {
+    "belong": "湖南省教育厅",
+    "province_id": "43"
+  },
+  "230": {
+    "belong": "辽宁省",
+    "province_id": "21"
+  },
+  "1720": {
+    "belong": "甘肃省",
+    "province_id": "62"
+  },
+  "1114": {
+    "belong": "河南省教育厅",
+    "province_id": "41"
+  },
+  "1890": {
+    "belong": "福建省教育厅",
+    "province_id": "35"
+  },
+  "142": {
+    "belong": "教育部",
+    "province_id": "22"
+  },
+  "222": {
+    "belong": "辽宁省",
+    "province_id": "21"
+  },
+  "2019": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "1160": {
+    "belong": "解放军空军",
+    "province_id": "42"
+  },
+  "1878": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "1451": {
+    "belong": "贵州省",
+    "province_id": "52"
+  },
+  "1110": {
+    "belong": "北京市教委",
+    "province_id": "11"
+  },
+  "815": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "208": {
+    "belong": "国家民委",
+    "province_id": "21"
+  },
+  "913": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "674": {
+    "belong": "上海市教委",
+    "province_id": "31"
+  },
+  "1872": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "75": {
+    "belong": "教育部",
+    "province_id": "31"
+  },
+  "458": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "1375": {
+    "belong": "四川省",
+    "province_id": "51"
+  },
+  "52": {
+    "belong": "教育部",
+    "province_id": "11"
+  },
+  "714": {
+    "belong": "黑龙江省",
+    "province_id": "23"
+  },
+  "872": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "1249": {
+    "belong": "海南省",
+    "province_id": "46"
+  },
+  "506": {
+    "belong": "内蒙古自治区",
+    "province_id": "15"
+  },
+  "1065": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "1782": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "478": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "878": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "1141": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "108": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "597": {
+    "belong": "河北省",
+    "province_id": "13"
+  },
+  "1484": {
+    "belong": "重庆市",
+    "province_id": "50"
+  },
+  "185": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "1888": {
+    "belong": "福建省教育厅",
+    "province_id": "35"
+  },
+  "263": {
+    "belong": "四川省",
+    "province_id": "51"
+  },
+  "1010": {
+    "belong": "上海市",
+    "province_id": "31"
+  },
+  "166": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "102": {
+    "belong": "教育部",
+    "province_id": "35"
+  },
+  "1576": {
+    "belong": "河北省教育厅",
+    "province_id": "13"
+  },
+  "1676": {
+    "belong": "辽宁省",
+    "province_id": "21"
+  },
+  "1876": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "1304": {
+    "belong": "上海市教委",
+    "province_id": "31"
+  },
+  "35": {
+    "belong": "云南省",
+    "province_id": "53"
+  },
+  "737": {
+    "belong": "黑龙江省",
+    "province_id": "23"
+  },
+  "830": {
+    "belong": "教育部",
+    "province_id": "11"
+  },
+  "258": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "801": {
+    "belong": "四川省教育厅",
+    "province_id": "51"
+  },
+  "1140": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "512": {
+    "belong": "海南省",
+    "province_id": "46"
+  },
+  "1262": {
+    "belong": "陕西省",
+    "province_id": "61"
+  },
+  "1195": {
+    "belong": "天津市",
+    "province_id": "12"
+  },
+  "323": {
+    "belong": "上海市",
+    "province_id": "31"
+  },
+  "1151": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "1256": {
+    "belong": "广西壮族自治区",
+    "province_id": "45"
+  },
+  "115": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "471": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "1046": {
+    "belong": "广西壮族自治区",
+    "province_id": "45"
+  },
+  "1352": {
+    "belong": "四川省",
+    "province_id": "51"
+  },
+  "1693": {
+    "belong": "辽宁省",
+    "province_id": "21"
+  },
+  "428": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "109": {
+    "belong": "教育部",
+    "province_id": "32"
+  },
+  "294": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "204": {
+    "belong": "辽宁省",
+    "province_id": "21"
+  },
+  "782": {
+    "belong": "四川省",
+    "province_id": "51"
+  },
+  "375": {
+    "belong": "陕西省",
+    "province_id": "61"
+  },
+  "1134": {
+    "belong": "山西省",
+    "province_id": "14"
+  },
+  "1889": {
+    "belong": "福建省教育厅",
+    "province_id": "35"
+  },
+  "1403": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "1880": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "1799": {
+    "belong": "安徽省",
+    "province_id": "34"
+  },
+  "551": {
+    "belong": "山东省",
+    "province_id": "37"
+  },
+  "120": {
+    "belong": "教育部",
+    "province_id": "37"
+  },
+  "940": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "795": {
+    "belong": "四川省",
+    "province_id": "51"
+  },
+  "475": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "1100": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "377": {
+    "belong": "吉林省",
+    "province_id": "22"
+  },
+  "1045": {
+    "belong": "黑龙江省",
+    "province_id": "23"
+  },
+  "241": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "32": {
+    "belong": "内蒙古自治区",
+    "province_id": "15"
+  },
+  "988": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "838": {
+    "belong": "天津市",
+    "province_id": "12"
+  },
+  "282": {
+    "belong": "山西省",
+    "province_id": "14"
+  },
+  "1257": {
+    "belong": "山西省",
+    "province_id": "14"
+  },
+  "1967": {
+    "belong": "湖北省教育厅",
+    "province_id": "42"
+  },
+  "507": {
+    "belong": "山东省",
+    "province_id": "37"
+  },
+  "1437": {
+    "belong": "江苏省教育厅",
+    "province_id": "32"
+  },
+  "2009": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "240": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "638": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "968": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "1476": {
+    "belong": "重庆市教委",
+    "province_id": "50"
+  },
+  "1215": {
+    "belong": "上海市教委",
+    "province_id": "31"
+  },
+  "1311": {
+    "belong": "解放军总装备部",
+    "province_id": "11"
+  },
+  "1216": {
+    "belong": "浙江省教育厅",
+    "province_id": "33"
+  },
+  "157": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "89": {
+    "belong": "天津市",
+    "province_id": "12"
+  },
+  "353": {
+    "belong": "云南省",
+    "province_id": "53"
+  },
+  "2010": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "374": {
+    "belong": "吉林省",
+    "province_id": "22"
+  },
+  "265": {
+    "belong": "四川省",
+    "province_id": "51"
+  },
+  "111": {
+    "belong": "教育部",
+    "province_id": "32"
+  },
+  "1551": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "134": {
+    "belong": "教育部",
+    "province_id": "21"
+  },
+  "1513": {
+    "belong": "山东省",
+    "province_id": "37"
+  },
+  "187": {
+    "belong": "重庆市",
+    "province_id": "50"
+  },
+  "296": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "1391": {
+    "belong": "海南省教育厅",
+    "province_id": "46"
+  },
+  "1398": {
+    "belong": "河北省教育厅",
+    "province_id": "13"
+  },
+  "1499": {
+    "belong": "重庆市教委",
+    "province_id": "50"
+  },
+  "38": {
+    "belong": "教育部",
+    "province_id": "11"
+  },
+  "281": {
+    "belong": "山西省",
+    "province_id": "14"
+  },
+  "584": {
+    "belong": "北京市",
+    "province_id": "11"
+  },
+  "251": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "1214": {
+    "belong": "福建省教育厅",
+    "province_id": "35"
+  },
+  "248": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "442": {
+    "belong": "黑龙江省",
+    "province_id": "23"
+  },
+  "305": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "1800": {
+    "belong": "安徽省",
+    "province_id": "34"
+  },
+  "51": {
+    "belong": "教育部",
+    "province_id": "51"
+  },
+  "1221": {
+    "belong": "香港特别行政区",
+    "province_id": "81"
+  },
+  "275": {
+    "belong": "山西省",
+    "province_id": "14"
+  },
+  "91": {
+    "belong": "天津市",
+    "province_id": "12"
+  },
+  "858": {
+    "belong": "天津市",
+    "province_id": "12"
+  },
+  "2014": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "1823": {
+    "belong": "安徽省",
+    "province_id": "34"
+  },
+  "1351": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "918": {
+    "belong": "北京市",
+    "province_id": "11"
+  },
+  "501": {
+    "belong": "甘肃省",
+    "province_id": "62"
+  },
+  "392": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "964": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "1532": {
+    "belong": "河南省教育厅",
+    "province_id": "41"
+  },
+  "793": {
+    "belong": "四川省",
+    "province_id": "51"
+  },
+  "1330": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "1156": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "1027": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "381": {
+    "belong": "吉林省",
+    "province_id": "22"
+  },
+  "978": {
+    "belong": "广东省教育厅",
+    "province_id": "44"
+  },
+  "445": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "118": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "424": {
+    "belong": "黑龙江省",
+    "province_id": "23"
+  },
+  "1327": {
+    "belong": "天津市",
+    "province_id": "12"
+  },
+  "575": {
+    "belong": "北京市",
+    "province_id": "11"
+  },
+  "783": {
+    "belong": "四川省教育厅",
+    "province_id": "51"
+  },
+  "196": {
+    "belong": "重庆市",
+    "province_id": "50"
+  },
+  "364": {
+    "belong": "西藏自治区",
+    "province_id": "54"
+  },
+  "1481": {
+    "belong": "重庆市",
+    "province_id": "50"
+  },
+  "1491": {
+    "belong": "重庆市",
+    "province_id": "50"
+  },
+  "1549": {
+    "belong": "辽宁省教育厅",
+    "province_id": "21"
+  },
+  "1258": {
+    "belong": "河北省",
+    "province_id": "13"
+  },
+  "128": {
+    "belong": "教育部",
+    "province_id": "42"
+  },
+  "677": {
+    "belong": "上海市",
+    "province_id": "31"
+  },
+  "2001": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "1848": {
+    "belong": "安徽省教育厅",
+    "province_id": "34"
+  },
+  "144": {
+    "belong": "教育部",
+    "province_id": "11"
+  },
+  "1169": {
+    "belong": "湖北省教育厅",
+    "province_id": "42"
+  },
+  "494": {
+    "belong": "山东省",
+    "province_id": "37"
+  },
+  "1596": {
+    "belong": "贵州省",
+    "province_id": "52"
+  },
+  "457": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "934": {
+    "belong": "教育部",
+    "province_id": "50"
+  },
+  "875": {
+    "belong": "北京市",
+    "province_id": "11"
+  },
+  "635": {
+    "belong": "交通运输部（中国民用航空局）",
+    "province_id": "44"
+  },
+  "1089": {
+    "belong": "云南省",
+    "province_id": "53"
+  },
+  "1923": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "283": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "289": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "943": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "952": {
+    "belong": "江西省政府",
+    "province_id": "36"
+  },
+  "39": {
+    "belong": "教育部",
+    "province_id": "11"
+  },
+  "1985": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "1496": {
+    "belong": "重庆市",
+    "province_id": "50"
+  },
+  "376": {
+    "belong": "陕西省",
+    "province_id": "61"
+  },
+  "1746": {
+    "belong": "广西壮族自治区",
+    "province_id": "45"
+  },
+  "269": {
+    "belong": "山西省",
+    "province_id": "14"
+  },
+  "114": {
+    "belong": "教育部",
+    "province_id": "33"
+  },
+  "306": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "1902": {
+    "belong": "福建省教育厅",
+    "province_id": "35"
+  },
+  "1245": {
+    "belong": "山东省教育厅",
+    "province_id": "37"
+  },
+  "591": {
+    "belong": "教育部",
+    "province_id": "13"
+  },
+  "1404": {
+    "belong": "海南省",
+    "province_id": "46"
+  },
+  "822": {
+    "belong": "四川省教育厅",
+    "province_id": "51"
+  },
+  "1238": {
+    "belong": "山东省",
+    "province_id": "37"
+  },
+  "995": {
+    "belong": "广东省教育厅",
+    "province_id": "44"
+  },
+  "72": {
+    "belong": "安徽省",
+    "province_id": "34"
+  },
+  "138": {
+    "belong": "教育部",
+    "province_id": "21"
+  },
+  "179": {
+    "belong": "重庆市",
+    "province_id": "50"
+  },
+  "369": {
+    "belong": "陕西省",
+    "province_id": "61"
+  },
+  "1600": {
+    "belong": "天津市",
+    "province_id": "12"
+  },
+  "105": {
+    "belong": "教育部",
+    "province_id": "44"
+  },
+  "40": {
+    "belong": "教育部",
+    "province_id": "11"
+  },
+  "1298": {
+    "belong": "广东省教育厅",
+    "province_id": "44"
+  },
+  "1858": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "402": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "728": {
+    "belong": "河北省教育厅",
+    "province_id": "13"
+  },
+  "212": {
+    "belong": "辽宁省",
+    "province_id": "21"
+  },
+  "1792": {
+    "belong": "浙江省教育厅",
+    "province_id": "33"
+  },
+  "130": {
+    "belong": "教育部",
+    "province_id": "31"
+  },
+  "1099": {
+    "belong": "湖北省教育厅",
+    "province_id": "42"
+  },
+  "1506": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "1865": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "1678": {
+    "belong": "辽宁省",
+    "province_id": "21"
+  },
+  "1900": {
+    "belong": "福建省教育厅",
+    "province_id": "35"
+  },
+  "1277": {
+    "belong": "云南省教育厅",
+    "province_id": "53"
+  },
+  "1485": {
+    "belong": "重庆市教委",
+    "province_id": "50"
+  },
+  "1964": {
+    "belong": "湖北省教育厅",
+    "province_id": "42"
+  },
+  "1716": {
+    "belong": "甘肃省",
+    "province_id": "62"
+  },
+  "418": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "233": {
+    "belong": "新疆维吾尔自治区",
+    "province_id": "65"
+  },
+  "250": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "866": {
+    "belong": "国家体育总局",
+    "province_id": "11"
+  },
+  "125": {
+    "belong": "教育部",
+    "province_id": "31"
+  },
+  "707": {
+    "belong": "黑龙江省",
+    "province_id": "23"
+  },
+  "131": {
+    "belong": "教育部",
+    "province_id": "31"
+  },
+  "1965": {
+    "belong": "湖北省教育厅",
+    "province_id": "42"
+  },
+  "101": {
+    "belong": "教育部",
+    "province_id": "51"
+  },
+  "1966": {
+    "belong": "湖北省教育厅",
+    "province_id": "42"
+  },
+  "511": {
+    "belong": "海南省",
+    "province_id": "46"
+  },
+  "124": {
+    "belong": "工业和信息化部",
+    "province_id": "23"
+  },
+  "974": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "629": {
+    "belong": "河北省",
+    "province_id": "13"
+  },
+  "542": {
+    "belong": "山东省",
+    "province_id": "37"
+  },
+  "536": {
+    "belong": "广西壮族自治区",
+    "province_id": "45"
+  },
+  "1572": {
+    "belong": "贵州省",
+    "province_id": "52"
+  },
+  "92": {
+    "belong": "天津市",
+    "province_id": "12"
+  },
+  "820": {
+    "belong": "北京市教委",
+    "province_id": "11"
+  },
+  "1198": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "1035": {
+    "belong": "广西壮族自治区",
+    "province_id": "45"
+  },
+  "1991": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "1094": {
+    "belong": "甘肃省",
+    "province_id": "62"
+  },
+  "1480": {
+    "belong": "重庆市",
+    "province_id": "50"
+  },
+  "693": {
+    "belong": "河北省",
+    "province_id": "13"
+  },
+  "1179": {
+    "belong": "江苏省教育厅",
+    "province_id": "32"
+  },
+  "1908": {
+    "belong": "福建省教育厅",
+    "province_id": "35"
+  },
+  "1862": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "373": {
+    "belong": "陕西省",
+    "province_id": "61"
+  },
+  "1763": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "1158": {
+    "belong": "湖北省教育厅",
+    "province_id": "42"
+  },
+  "286": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "209": {
+    "belong": "辽宁省",
+    "province_id": "21"
+  },
+  "291": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "215": {
+    "belong": "辽宁省",
+    "province_id": "21"
+  },
+  "1390": {
+    "belong": "海南省",
+    "province_id": "46"
+  },
+  "661": {
+    "belong": "教育部",
+    "province_id": "51"
+  },
+  "873": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "811": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "408": {
+    "belong": "吉林省",
+    "province_id": "22"
+  },
+  "183": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "312": {
+    "belong": "上海市",
+    "province_id": "31"
+  },
+  "928": {
+    "belong": "江西省教育厅",
+    "province_id": "36"
+  },
+  "1963": {
+    "belong": "湖北省教育厅",
+    "province_id": "42"
+  },
+  "566": {
+    "belong": "教育部",
+    "province_id": "11"
+  },
+  "219": {
+    "belong": "辽宁省",
+    "province_id": "21"
+  },
+  "271": {
+    "belong": "山西省",
+    "province_id": "14"
+  },
+  "136": {
+    "belong": "教育部",
+    "province_id": "31"
+  },
+  "1118": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "1638": {
+    "belong": "山西省",
+    "province_id": "14"
+  },
+  "2022": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "1591": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "162": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "420": {
+    "belong": "教育部",
+    "province_id": "42"
+  },
+  "58": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "1434": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "379": {
+    "belong": "吉林省",
+    "province_id": "22"
+  },
+  "561": {
+    "belong": "北京市",
+    "province_id": "11"
+  },
+  "519": {
+    "belong": "内蒙古自治区",
+    "province_id": "15"
+  },
+  "1265": {
+    "belong": "陕西省",
+    "province_id": "61"
+  },
+  "1020": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "538": {
+    "belong": "广西壮族自治区",
+    "province_id": "45"
+  },
+  "798": {
+    "belong": "四川省",
+    "province_id": "51"
+  },
+  "44": {
+    "belong": "教育部",
+    "province_id": "43"
+  },
+  "1220": {
+    "belong": "香港特别行政区",
+    "province_id": "81"
+  },
+  "54": {
+    "belong": "河北省",
+    "province_id": "13"
+  },
+  "695": {
+    "belong": "河北省",
+    "province_id": "13"
+  },
+  "1937": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "1726": {
+    "belong": "上海市教委",
+    "province_id": "31"
+  },
+  "223": {
+    "belong": "辽宁省",
+    "province_id": "21"
+  },
+  "65": {
+    "belong": "山东省",
+    "province_id": "37"
+  },
+  "1280": {
+    "belong": "云南省教育厅",
+    "province_id": "53"
+  },
+  "771": {
+    "belong": "四川省",
+    "province_id": "51"
+  },
+  "680": {
+    "belong": "上海市教委",
+    "province_id": "31"
+  },
+  "308": {
+    "belong": "上海市",
+    "province_id": "31"
+  },
+  "796": {
+    "belong": "四川省",
+    "province_id": "51"
+  },
+  "225": {
+    "belong": "辽宁省",
+    "province_id": "21"
+  },
+  "169": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "1145": {
+    "belong": "江苏省教育厅",
+    "province_id": "32"
+  },
+  "1616": {
+    "belong": "吉林省",
+    "province_id": "22"
+  },
+  "1950": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "220": {
+    "belong": "辽宁省",
+    "province_id": "21"
+  },
+  "1945": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "833": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "1927": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "1993": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "1896": {
+    "belong": "福建省教育厅",
+    "province_id": "35"
+  },
+  "923": {
+    "belong": "江西省教育厅",
+    "province_id": "36"
+  },
+  "1898": {
+    "belong": "福建省教育厅",
+    "province_id": "35"
+  },
+  "552": {
+    "belong": "山东省",
+    "province_id": "37"
+  },
+  "50": {
+    "belong": "辽宁省",
+    "province_id": "21"
+  },
+  "1312": {
+    "belong": "解放军总参谋部",
+    "province_id": "32"
+  },
+  "480": {
+    "belong": "国家民委",
+    "province_id": "62"
+  },
+  "1041": {
+    "belong": "辽宁省",
+    "province_id": "21"
+  },
+  "891": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "1710": {
+    "belong": "甘肃省",
+    "province_id": "62"
+  },
+  "946": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "290": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "683": {
+    "belong": "上海市教委",
+    "province_id": "31"
+  },
+  "555": {
+    "belong": "山东省",
+    "province_id": "37"
+  },
+  "1413": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "1474": {
+    "belong": "重庆市教委",
+    "province_id": "50"
+  },
+  "302": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "49": {
+    "belong": "教育部",
+    "province_id": "11"
+  },
+  "87": {
+    "belong": "天津市",
+    "province_id": "12"
+  },
+  "1007": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "920": {
+    "belong": "山西省",
+    "province_id": "14"
+  },
+  "45": {
+    "belong": "国家民委",
+    "province_id": "11"
+  },
+  "93": {
+    "belong": "天津市",
+    "province_id": "12"
+  },
+  "46": {
+    "belong": "教育部",
+    "province_id": "11"
+  },
+  "1783": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "411": {
+    "belong": "吉林省教育厅",
+    "province_id": "22"
+  },
+  "1002": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "2020": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "152": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "277": {
+    "belong": "山西省",
+    "province_id": "14"
+  },
+  "888": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "1556": {
+    "belong": "福建省教育厅",
+    "province_id": "35"
+  },
+  "706": {
+    "belong": "上海市教委",
+    "province_id": "31"
+  },
+  "301": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "139": {
+    "belong": "山西省",
+    "province_id": "14"
+  },
+  "462": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "883": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "876": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "164": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "151": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "1860": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "1864": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "438": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "1752": {
+    "belong": "广西壮族自治区",
+    "province_id": "45"
+  },
+  "690": {
+    "belong": "河北省",
+    "province_id": "13"
+  },
+  "855": {
+    "belong": "天津市",
+    "province_id": "12"
+  },
+  "453": {
+    "belong": "黑龙江省",
+    "province_id": "23"
+  },
+  "517": {
+    "belong": "内蒙古自治区",
+    "province_id": "15"
+  },
+  "1727": {
+    "belong": "上海市教委",
+    "province_id": "31"
+  },
+  "787": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "1569": {
+    "belong": "青海省",
+    "province_id": "63"
+  },
+  "1400": {
+    "belong": "山东省教育厅",
+    "province_id": "37"
+  },
+  "884": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "347": {
+    "belong": "云南省",
+    "province_id": "53"
+  },
+  "313": {
+    "belong": "上海市",
+    "province_id": "31"
+  },
+  "1879": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "1553": {
+    "belong": "江苏省教育厅",
+    "province_id": "32"
+  },
+  "335": {
+    "belong": "安徽省",
+    "province_id": "34"
+  },
+  "320": {
+    "belong": "上海市",
+    "province_id": "31"
+  },
+  "520": {
+    "belong": "贵州省",
+    "province_id": "52"
+  },
+  "1886": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "1251": {
+    "belong": "广西壮族自治区",
+    "province_id": "45"
+  },
+  "1986": {
+    "belong": "湖南省教育厅",
+    "province_id": "43"
+  },
+  "499": {
+    "belong": "山东省",
+    "province_id": "37"
+  },
+  "669": {
+    "belong": "上海市教委",
+    "province_id": "31"
+  },
+  "316": {
+    "belong": "安徽省",
+    "province_id": "34"
+  },
+  "228": {
+    "belong": "辽宁省",
+    "province_id": "21"
+  },
+  "227": {
+    "belong": "辽宁省",
+    "province_id": "21"
+  },
+  "697": {
+    "belong": "河北省",
+    "province_id": "13"
+  },
+  "1935": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "592": {
+    "belong": "教育部",
+    "province_id": "11"
+  },
+  "153": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "388": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "343": {
+    "belong": "云南省",
+    "province_id": "53"
+  },
+  "357": {
+    "belong": "陕西省",
+    "province_id": "61"
+  },
+  "1267": {
+    "belong": "贵州省",
+    "province_id": "52"
+  },
+  "2016": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "1479": {
+    "belong": "重庆市",
+    "province_id": "50"
+  },
+  "448": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "489": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "266": {
+    "belong": "四川省",
+    "province_id": "51"
+  },
+  "172": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "1559": {
+    "belong": "甘肃省教育厅",
+    "province_id": "62"
+  },
+  "99": {
+    "belong": "教育部",
+    "province_id": "51"
+  },
+  "1131": {
+    "belong": "四川省教育厅",
+    "province_id": "51"
+  },
+  "1813": {
+    "belong": "安徽省",
+    "province_id": "34"
+  },
+  "1911": {
+    "belong": "福建省教育厅",
+    "province_id": "35"
+  },
+  "565": {
+    "belong": "中央办公厅",
+    "province_id": "11"
+  },
+  "544": {
+    "belong": "宁夏回族自治区",
+    "province_id": "64"
+  },
+  "334": {
+    "belong": "教育部",
+    "province_id": "61"
+  },
+  "1500": {
+    "belong": "重庆市教委",
+    "province_id": "50"
+  },
+  "546": {
+    "belong": "宁夏回族自治区",
+    "province_id": "64"
+  },
+  "1605": {
+    "belong": "吉林省",
+    "province_id": "22"
+  },
+  "1642": {
+    "belong": "山西省",
+    "province_id": "14"
+  },
+  "31": {
+    "belong": "教育部",
+    "province_id": "11"
+  },
+  "406": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "1168": {
+    "belong": "山东省",
+    "province_id": "37"
+  },
+  "1920": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "1176": {
+    "belong": "湖北省教育厅",
+    "province_id": "42"
+  },
+  "607": {
+    "belong": "河北省",
+    "province_id": "13"
+  },
+  "1074": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "355": {
+    "belong": "云南省",
+    "province_id": "53"
+  },
+  "604": {
+    "belong": "应急管理部",
+    "province_id": "13"
+  },
+  "432": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "775": {
+    "belong": "四川省",
+    "province_id": "51"
+  },
+  "345": {
+    "belong": "云南省",
+    "province_id": "53"
+  },
+  "452": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "55": {
+    "belong": "河北省",
+    "province_id": "13"
+  },
+  "1821": {
+    "belong": "安徽省",
+    "province_id": "34"
+  },
+  "358": {
+    "belong": "陕西省",
+    "province_id": "61"
+  },
+  "253": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "879": {
+    "belong": "北京市",
+    "province_id": "11"
+  },
+  "454": {
+    "belong": "黑龙江省",
+    "province_id": "23"
+  },
+  "948": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "451": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "576": {
+    "belong": "公安部",
+    "province_id": "11"
+  },
+  "666": {
+    "belong": "上海市",
+    "province_id": "31"
+  },
+  "1905": {
+    "belong": "福建省教育厅",
+    "province_id": "35"
+  },
+  "1882": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "1192": {
+    "belong": "江苏省教育厅",
+    "province_id": "32"
+  },
+  "498": {
+    "belong": "甘肃省",
+    "province_id": "62"
+  },
+  "1521": {
+    "belong": "海南省",
+    "province_id": "46"
+  },
+  "79": {
+    "belong": "天津市",
+    "province_id": "12"
+  },
+  "1171": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "1897": {
+    "belong": "福建省教育厅",
+    "province_id": "35"
+  },
+  "1096": {
+    "belong": "广东省教育厅",
+    "province_id": "44"
+  },
+  "679": {
+    "belong": "上海市",
+    "province_id": "31"
+  },
+  "1401": {
+    "belong": "河北省教育厅",
+    "province_id": "13"
+  },
+  "1873": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "461": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "41": {
+    "belong": "河北省",
+    "province_id": "12"
+  },
+  "1349": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "1904": {
+    "belong": "福建省教育厅",
+    "province_id": "35"
+  },
+  "602": {
+    "belong": "河北省",
+    "province_id": "13"
+  },
+  "1264": {
+    "belong": "山东省",
+    "province_id": "37"
+  },
+  "1266": {
+    "belong": "贵州省",
+    "province_id": "52"
+  },
+  "1062": {
+    "belong": "黑龙江省",
+    "province_id": "23"
+  },
+  "869": {
+    "belong": "江西省教育厅",
+    "province_id": "36"
+  },
+  "1049": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "441": {
+    "belong": "黑龙江省",
+    "province_id": "23"
+  },
+  "387": {
+    "belong": "吉林省",
+    "province_id": "22"
+  },
+  "1246": {
+    "belong": "山东省",
+    "province_id": "37"
+  },
+  "307": {
+    "belong": "上海市",
+    "province_id": "31"
+  },
+  "1278": {
+    "belong": "四川省",
+    "province_id": "51"
+  },
+  "171": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "1570": {
+    "belong": "贵州省",
+    "province_id": "52"
+  },
+  "76": {
+    "belong": "上海市",
+    "province_id": "31"
+  },
+  "491": {
+    "belong": "山东省",
+    "province_id": "37"
+  },
+  "270": {
+    "belong": "四川省",
+    "province_id": "51"
+  },
+  "90": {
+    "belong": "天津市",
+    "province_id": "12"
+  },
+  "1070": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "110": {
+    "belong": "教育部",
+    "province_id": "32"
+  },
+  "390": {
+    "belong": "吉林省",
+    "province_id": "22"
+  },
+  "273": {
+    "belong": "四川省",
+    "province_id": "51"
+  },
+  "1182": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "871": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "386": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "1388": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "81": {
+    "belong": "天津市",
+    "province_id": "12"
+  },
+  "936": {
+    "belong": "解放军总后勤部",
+    "province_id": "31"
+  },
+  "97": {
+    "belong": "教育部",
+    "province_id": "62"
+  },
+  "1794": {
+    "belong": "浙江省教育厅",
+    "province_id": "33"
+  },
+  "1979": {
+    "belong": "湖北省教育厅",
+    "province_id": "42"
+  },
+  "1066": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "1791": {
+    "belong": "浙江省教育厅",
+    "province_id": "33"
+  },
+  "264": {
+    "belong": "四川省",
+    "province_id": "51"
+  },
+  "543": {
+    "belong": "广西壮族自治区",
+    "province_id": "45"
+  },
+  "62": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "1056": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "133": {
+    "belong": "教育部",
+    "province_id": "31"
+  },
+  "314": {
+    "belong": "安徽省",
+    "province_id": "34"
+  },
+  "176": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "909": {
+    "belong": "江西省教育厅",
+    "province_id": "36"
+  },
+  "1839": {
+    "belong": "安徽省",
+    "province_id": "34"
+  },
+  "1226": {
+    "belong": "解放军总后勤部",
+    "province_id": "50"
+  },
+  "1255": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "194": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "260": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "1069": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "48": {
+    "belong": "教育部",
+    "province_id": "11"
+  },
+  "1956": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "1461": {
+    "belong": "河北省教育厅",
+    "province_id": "13"
+  },
+  "1745": {
+    "belong": "广西壮族自治区",
+    "province_id": "45"
+  },
+  "2000": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "789": {
+    "belong": "四川省",
+    "province_id": "51"
+  },
+  "1983": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "156": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "1884": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "61": {
+    "belong": "教育部",
+    "province_id": "37"
+  },
+  "117": {
+    "belong": "教育部",
+    "province_id": "32"
+  },
+  "1276": {
+    "belong": "吉林省教育厅",
+    "province_id": "22"
+  },
+  "1457": {
+    "belong": "工业和信息化部",
+    "province_id": "37"
+  },
+  "1091": {
+    "belong": "新疆生产建设兵团",
+    "province_id": "65"
+  },
+  "1891": {
+    "belong": "福建省教育厅",
+    "province_id": "35"
+  },
+  "344": {
+    "belong": "云南省",
+    "province_id": "53"
+  },
+  "1906": {
+    "belong": "福建省教育厅",
+    "province_id": "35"
+  },
+  "1586": {
+    "belong": "河北省教育厅",
+    "province_id": "13"
+  },
+  "287": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "1968": {
+    "belong": "湖北省教育厅",
+    "province_id": "42"
+  },
+  "620": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "676": {
+    "belong": "上海市教委",
+    "province_id": "31"
+  },
+  "351": {
+    "belong": "陕西省",
+    "province_id": "61"
+  },
+  "1405": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "165": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "272": {
+    "belong": "山西省",
+    "province_id": "14"
+  },
+  "370": {
+    "belong": "青海省",
+    "province_id": "63"
+  },
+  "1801": {
+    "belong": "安徽省",
+    "province_id": "34"
+  },
+  "617": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "382": {
+    "belong": "陕西省",
+    "province_id": "61"
+  },
+  "435": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "1505": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "267": {
+    "belong": "交通运输部（中国民用航空局）",
+    "province_id": "51"
+  },
+  "1495": {
+    "belong": "重庆市",
+    "province_id": "50"
+  },
+  "1429": {
+    "belong": "安徽省",
+    "province_id": "34"
+  },
+  "1996": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "315": {
+    "belong": "上海市",
+    "province_id": "31"
+  },
+  "232": {
+    "belong": "四川省",
+    "province_id": "51"
+  },
+  "1922": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "297": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "242": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "1387": {
+    "belong": "河北省教育厅",
+    "province_id": "13"
+  },
+  "484": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "182": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "1564": {
+    "belong": "贵州省",
+    "province_id": "52"
+  },
+  "1241": {
+    "belong": "宁夏回族自治区",
+    "province_id": "64"
+  },
+  "556": {
+    "belong": "教育部",
+    "province_id": "11"
+  },
+  "958": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "1005": {
+    "belong": "广东省教育厅",
+    "province_id": "44"
+  },
+  "474": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "788": {
+    "belong": "四川省教育厅",
+    "province_id": "51"
+  },
+  "545": {
+    "belong": "国家民委",
+    "province_id": "64"
+  },
+  "1601": {
+    "belong": "天津市教委",
+    "province_id": "12"
+  },
+  "596": {
+    "belong": "河北省",
+    "province_id": "13"
+  },
+  "682": {
+    "belong": "上海市",
+    "province_id": "31"
+  },
+  "1779": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "399": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "331": {
+    "belong": "安徽省",
+    "province_id": "34"
+  },
+  "953": {
+    "belong": "江西省教育厅",
+    "province_id": "36"
+  },
+  "1912": {
+    "belong": "福建省教育厅",
+    "province_id": "35"
+  },
+  "870": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "459": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "1712": {
+    "belong": "甘肃省",
+    "province_id": "62"
+  },
+  "235": {
+    "belong": "新疆维吾尔自治区",
+    "province_id": "65"
+  },
+  "56": {
+    "belong": "河北省",
+    "province_id": "13"
+  },
+  "521": {
+    "belong": "贵州省",
+    "province_id": "52"
+  },
+  "274": {
+    "belong": "四川省",
+    "province_id": "51"
+  },
+  "433": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "175": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "464": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "886": {
+    "belong": "公安部",
+    "province_id": "41"
+  },
+  "1419": {
+    "belong": "吉林省教育厅",
+    "province_id": "22"
+  },
+  "1604": {
+    "belong": "吉林省",
+    "province_id": "22"
+  },
+  "189": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "1907": {
+    "belong": "福建省教育厅",
+    "province_id": "35"
+  },
+  "742": {
+    "belong": "黑龙江省",
+    "province_id": "23"
+  },
+  "1554": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "960": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "447": {
+    "belong": "黑龙江省",
+    "province_id": "23"
+  },
+  "1218": {
+    "belong": "教育部",
+    "province_id": "13"
+  },
+  "957": {
+    "belong": "江西省教育厅",
+    "province_id": "36"
+  },
+  "246": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "874": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "1776": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "615": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "1261": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "239": {
+    "belong": "新疆维吾尔自治区",
+    "province_id": "65"
+  },
+  "415": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "1949": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "329": {
+    "belong": "上海市教委",
+    "province_id": "31"
+  },
+  "835": {
+    "belong": "天津市",
+    "province_id": "12"
+  },
+  "1112": {
+    "belong": "北京市教委",
+    "province_id": "11"
+  },
+  "1259": {
+    "belong": "广西壮族自治区",
+    "province_id": "45"
+  },
+  "993": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "1232": {
+    "belong": "重庆市教委",
+    "province_id": "50"
+  },
+  "98": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "1969": {
+    "belong": "湖北省教育厅",
+    "province_id": "42"
+  },
+  "1159": {
+    "belong": "湖北省教育厅",
+    "province_id": "42"
+  },
+  "1355": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "1356": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "527": {
+    "belong": "山东省",
+    "province_id": "37"
+  },
+  "1064": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "391": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "1243": {
+    "belong": "湖南省教育厅",
+    "province_id": "43"
+  },
+  "303": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "1343": {
+    "belong": "江苏省教育厅",
+    "province_id": "32"
+  },
+  "449": {
+    "belong": "黑龙江省",
+    "province_id": "23"
+  },
+  "78": {
+    "belong": "天津市",
+    "province_id": "12"
+  },
+  "1364": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "1034": {
+    "belong": "广西壮族自治区",
+    "province_id": "45"
+  },
+  "1236": {
+    "belong": "贵州省",
+    "province_id": "52"
+  },
+  "496": {
+    "belong": "山东省",
+    "province_id": "37"
+  },
+  "817": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "1250": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "278": {
+    "belong": "山西省",
+    "province_id": "14"
+  },
+  "1881": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "389": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "1883": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "1374": {
+    "belong": "广西壮族自治区",
+    "province_id": "45"
+  },
+  "1731": {
+    "belong": "广西壮族自治区",
+    "province_id": "45"
+  },
+  "1612": {
+    "belong": "吉林省",
+    "province_id": "22"
+  },
+  "1914": {
+    "belong": "福建省教育厅",
+    "province_id": "35"
+  },
+  "1975": {
+    "belong": "湖北省教育厅",
+    "province_id": "42"
+  },
+  "1557": {
+    "belong": "湖北省教育厅",
+    "province_id": "42"
+  },
+  "965": {
+    "belong": "广东省教育厅",
+    "province_id": "44"
+  },
+  "1561": {
+    "belong": "贵州省",
+    "province_id": "52"
+  },
+  "372": {
+    "belong": "青海省",
+    "province_id": "63"
+  },
+  "207": {
+    "belong": "辽宁省",
+    "province_id": "21"
+  },
+  "143": {
+    "belong": "工业和信息化部",
+    "province_id": "11"
+  },
+  "868": {
+    "belong": "江西省教育厅",
+    "province_id": "36"
+  },
+  "310": {
+    "belong": "上海市",
+    "province_id": "31"
+  },
+  "625": {
+    "belong": "河北省",
+    "province_id": "13"
+  },
+  "671": {
+    "belong": "上海市",
+    "province_id": "31"
+  },
+  "1781": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "926": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "465": {
+    "belong": "中央统战部",
+    "province_id": "35"
+  },
+  "167": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "1341": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "1275": {
+    "belong": "广东省教育厅",
+    "province_id": "44"
+  },
+  "43": {
+    "belong": "教育部",
+    "province_id": "11"
+  },
+  "500": {
+    "belong": "甘肃省",
+    "province_id": "62"
+  },
+  "553": {
+    "belong": "山东省",
+    "province_id": "37"
+  },
+  "226": {
+    "belong": "辽宁省",
+    "province_id": "21"
+  },
+  "839": {
+    "belong": "天津市",
+    "province_id": "12"
+  },
+  "244": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "195": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "1075": {
+    "belong": "四川省",
+    "province_id": "51"
+  },
+  "1019": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "1409": {
+    "belong": "吉林省教育厅",
+    "province_id": "22"
+  },
+  "518": {
+    "belong": "贵州省",
+    "province_id": "52"
+  },
+  "419": {
+    "belong": "教育部",
+    "province_id": "23"
+  },
+  "300": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "193": {
+    "belong": "重庆市",
+    "province_id": "50"
+  },
+  "1607": {
+    "belong": "吉林省",
+    "province_id": "22"
+  },
+  "1863": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "107": {
+    "belong": "工业和信息化部",
+    "province_id": "61"
+  },
+  "123": {
+    "belong": "教育部",
+    "province_id": "43"
+  },
+  "579": {
+    "belong": "中华全国总工会",
+    "province_id": "11"
+  },
+  "1832": {
+    "belong": "安徽省",
+    "province_id": "34"
+  },
+  "1269": {
+    "belong": "甘肃省",
+    "province_id": "62"
+  },
+  "1357": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "1915": {
+    "belong": "福建省教育厅",
+    "province_id": "35"
+  },
+  "1562": {
+    "belong": "贵州省",
+    "province_id": "52"
+  },
+  "800": {
+    "belong": "四川省",
+    "province_id": "51"
+  },
+  "712": {
+    "belong": "黑龙江省",
+    "province_id": "23"
+  },
+  "384": {
+    "belong": "吉林省",
+    "province_id": "22"
+  },
+  "36": {
+    "belong": "教育部",
+    "province_id": "61"
+  },
+  "127": {
+    "belong": "教育部",
+    "province_id": "42"
+  },
+  "662": {
+    "belong": "上海市教委",
+    "province_id": "31"
+  },
+  "1418": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "1144": {
+    "belong": "湖北省教育厅",
+    "province_id": "42"
+  },
+  "1919": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "642": {
+    "belong": "广东省教育厅",
+    "province_id": "44"
+  },
+  "1682": {
+    "belong": "辽宁省",
+    "province_id": "21"
+  },
+  "1308": {
+    "belong": "广东省教育厅",
+    "province_id": "44"
+  },
+  "816": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "664": {
+    "belong": "上海市",
+    "province_id": "31"
+  },
+  "622": {
+    "belong": "山东省",
+    "province_id": "37"
+  },
+  "256": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "554": {
+    "belong": "山东省",
+    "province_id": "37"
+  },
+  "403": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "715": {
+    "belong": "黑龙江省",
+    "province_id": "23"
+  },
+  "653": {
+    "belong": "中国地震局",
+    "province_id": "13"
+  },
+  "663": {
+    "belong": "上海市",
+    "province_id": "31"
+  },
+  "1866": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "568": {
+    "belong": "中华妇女联合会",
+    "province_id": "11"
+  },
+  "1483": {
+    "belong": "重庆市",
+    "province_id": "50"
+  },
+  "534": {
+    "belong": "山东省",
+    "province_id": "37"
+  },
+  "702": {
+    "belong": "河北省",
+    "province_id": "13"
+  },
+  "174": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "1217": {
+    "belong": "教育部",
+    "province_id": "11"
+  },
+  "1941": {
+    "belong": "河南省教育厅",
+    "province_id": "41"
+  },
+  "1744": {
+    "belong": "广西壮族自治区",
+    "province_id": "45"
+  },
+  "600": {
+    "belong": "河北省",
+    "province_id": "13"
+  },
+  "558": {
+    "belong": "教育部",
+    "province_id": "11"
+  },
+  "1143": {
+    "belong": "江苏省教育厅",
+    "province_id": "32"
+  },
+  "530": {
+    "belong": "广西壮族自治区",
+    "province_id": "45"
+  },
+  "1475": {
+    "belong": "重庆市教委",
+    "province_id": "50"
+  },
+  "998": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "203": {
+    "belong": "辽宁省",
+    "province_id": "21"
+  },
+  "317": {
+    "belong": "上海市",
+    "province_id": "31"
+  },
+  "547": {
+    "belong": "山东省",
+    "province_id": "37"
+  },
+  "867": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "927": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "1578": {
+    "belong": "河北省教育厅",
+    "province_id": "13"
+  },
+  "412": {
+    "belong": "吉林省",
+    "province_id": "22"
+  },
+  "2013": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "609": {
+    "belong": "河北省",
+    "province_id": "13"
+  },
+  "158": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "1104": {
+    "belong": "湖北省教育厅",
+    "province_id": "42"
+  },
+  "713": {
+    "belong": "黑龙江省",
+    "province_id": "23"
+  },
+  "482": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "956": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "205": {
+    "belong": "辽宁省",
+    "province_id": "21"
+  },
+  "1780": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "2003": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "837": {
+    "belong": "天津市",
+    "province_id": "12"
+  },
+  "929": {
+    "belong": "四川省",
+    "province_id": "51"
+  },
+  "190": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "862": {
+    "belong": "陕西省教育厅",
+    "province_id": "61"
+  },
+  "1901": {
+    "belong": "福建省教育厅",
+    "province_id": "35"
+  },
+  "1086": {
+    "belong": "四川省",
+    "province_id": "51"
+  },
+  "687": {
+    "belong": "河北省",
+    "province_id": "13"
+  },
+  "318": {
+    "belong": "上海市",
+    "province_id": "31"
+  },
+  "586": {
+    "belong": "北京市",
+    "province_id": "11"
+  },
+  "611": {
+    "belong": "司法部",
+    "province_id": "13"
+  },
+  "69": {
+    "belong": "安徽省",
+    "province_id": "34"
+  },
+  "292": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "1887": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "365": {
+    "belong": "陕西省",
+    "province_id": "61"
+  },
+  "1013": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "47": {
+    "belong": "工业和信息化部",
+    "province_id": "11"
+  },
+  "63": {
+    "belong": "教育部",
+    "province_id": "34"
+  },
+  "104": {
+    "belong": "教育部",
+    "province_id": "44"
+  },
+  "96": {
+    "belong": "广西壮族自治区",
+    "province_id": "45"
+  },
+  "563": {
+    "belong": "北京市",
+    "province_id": "11"
+  },
+  "352": {
+    "belong": "陕西省",
+    "province_id": "61"
+  },
+  "564": {
+    "belong": "教育部",
+    "province_id": "11"
+  },
+  "773": {
+    "belong": "四川省教育厅",
+    "province_id": "51"
+  },
+  "525": {
+    "belong": "内蒙古自治区",
+    "province_id": "15"
+  },
+  "249": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "1281": {
+    "belong": "湖北省教育厅",
+    "province_id": "42"
+  },
+  "1052": {
+    "belong": "湖北省教育厅",
+    "province_id": "42"
+  },
+  "1741": {
+    "belong": "广西壮族自治区",
+    "province_id": "45"
+  },
+  "914": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "1620": {
+    "belong": "吉林省教育厅",
+    "province_id": "22"
+  },
+  "363": {
+    "belong": "陕西省",
+    "province_id": "61"
+  },
+  "1406": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "1961": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "456": {
+    "belong": "黑龙江省教育厅",
+    "province_id": "23"
+  },
+  "170": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "959": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "581": {
+    "belong": "外交部",
+    "province_id": "11"
+  },
+  "191": {
+    "belong": "重庆市",
+    "province_id": "50"
+  },
+  "1083": {
+    "belong": "四川省",
+    "province_id": "51"
+  },
+  "1329": {
+    "belong": "海南省教育厅",
+    "province_id": "46"
+  },
+  "1433": {
+    "belong": "湖北省教育厅",
+    "province_id": "42"
+  },
+  "1031": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "322": {
+    "belong": "安徽省",
+    "province_id": "34"
+  },
+  "1152": {
+    "belong": "山西省",
+    "province_id": "14"
+  },
+  "514": {
+    "belong": "贵州省",
+    "province_id": "52"
+  },
+  "590": {
+    "belong": "北京市",
+    "province_id": "11"
+  },
+  "1274": {
+    "belong": "吉林省教育厅",
+    "province_id": "22"
+  },
+  "908": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "1323": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "126": {
+    "belong": "教育部",
+    "province_id": "37"
+  },
+  "613": {
+    "belong": "广东省教育厅",
+    "province_id": "44"
+  },
+  "1859": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "218": {
+    "belong": "辽宁省",
+    "province_id": "21"
+  },
+  "60": {
+    "belong": "教育部",
+    "province_id": "12"
+  },
+  "1954": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "268": {
+    "belong": "四川省",
+    "province_id": "51"
+  },
+  "427": {
+    "belong": "黑龙江省",
+    "province_id": "23"
+  },
+  "643": {
+    "belong": "广东省教育厅",
+    "province_id": "44"
+  },
+  "1903": {
+    "belong": "福建省教育厅",
+    "province_id": "35"
+  },
+  "354": {
+    "belong": "陕西省",
+    "province_id": "61"
+  },
+  "262": {
+    "belong": "山西省",
+    "province_id": "14"
+  },
+  "1473": {
+    "belong": "重庆市教委",
+    "province_id": "50"
+  },
+  "931": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "446": {
+    "belong": "黑龙江省",
+    "province_id": "23"
+  },
+  "71": {
+    "belong": "山东省",
+    "province_id": "37"
+  },
+  "1933": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "1196": {
+    "belong": "安徽省",
+    "province_id": "34"
+  },
+  "572": {
+    "belong": "北京市",
+    "province_id": "11"
+  },
+  "557": {
+    "belong": "教育部",
+    "province_id": "11"
+  },
+  "336": {
+    "belong": "陕西省",
+    "province_id": "61"
+  },
+  "1981": {
+    "belong": "湖北省教育厅",
+    "province_id": "42"
+  },
+  "1038": {
+    "belong": "重庆市",
+    "province_id": "50"
+  },
+  "2023": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "295": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "221": {
+    "belong": "辽宁省",
+    "province_id": "21"
+  },
+  "1436": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "1147": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "1047": {
+    "belong": "吉林省",
+    "province_id": "22"
+  },
+  "692": {
+    "belong": "河北省",
+    "province_id": "13"
+  },
+  "1842": {
+    "belong": "安徽省",
+    "province_id": "34"
+  },
+  "535": {
+    "belong": "山东省",
+    "province_id": "37"
+  },
+  "168": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "479": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "349": {
+    "belong": "陕西省",
+    "province_id": "61"
+  },
+  "192": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "1395": {
+    "belong": "四川省教育厅",
+    "province_id": "51"
+  },
+  "528": {
+    "belong": "山东省",
+    "province_id": "37"
+  },
+  "1139": {
+    "belong": "公安部",
+    "province_id": "32"
+  },
+  "85": {
+    "belong": "天津市",
+    "province_id": "12"
+  },
+  "790": {
+    "belong": "四川省",
+    "province_id": "51"
+  },
+  "1097": {
+    "belong": "江苏省教育厅",
+    "province_id": "32"
+  },
+  "655": {
+    "belong": "海关总署",
+    "province_id": "31"
+  },
+  "1213": {
+    "belong": "武警总部",
+    "province_id": "61"
+  },
+  "985": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "904": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "1190": {
+    "belong": "江苏省教育厅",
+    "province_id": "32"
+  },
+  "1870": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "1895": {
+    "belong": "福建省教育厅",
+    "province_id": "35"
+  },
+  "990": {
+    "belong": "广东省教育厅",
+    "province_id": "44"
+  },
+  "1268": {
+    "belong": "贵州省",
+    "province_id": "52"
+  },
+  "30": {
+    "belong": "北京市",
+    "province_id": "11"
+  },
+  "328": {
+    "belong": "安徽省",
+    "province_id": "34"
+  },
+  "1867": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "900": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "966": {
+    "belong": "广东省教育厅",
+    "province_id": "44"
+  },
+  "863": {
+    "belong": "陕西省教育厅",
+    "province_id": "61"
+  },
+  "154": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "1167": {
+    "belong": "河北省教育厅",
+    "province_id": "13"
+  },
+  "1690": {
+    "belong": "辽宁省",
+    "province_id": "21"
+  },
+  "601": {
+    "belong": "河北省",
+    "province_id": "13"
+  },
+  "95": {
+    "belong": "天津市",
+    "province_id": "12"
+  },
+  "748": {
+    "belong": "河北省教育厅",
+    "province_id": "13"
+  },
+  "285": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "236": {
+    "belong": "新疆维吾尔自治区",
+    "province_id": "65"
+  },
+  "1000": {
+    "belong": "广东省教育厅",
+    "province_id": "44"
+  },
+  "1871": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "1992": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "1893": {
+    "belong": "福建省教育厅",
+    "province_id": "35"
+  },
+  "1285": {
+    "belong": "广东省教育厅",
+    "province_id": "44"
+  },
+  "1764": {
+    "belong": "公安部",
+    "province_id": "33"
+  },
+  "397": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "473": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "955": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "1565": {
+    "belong": "贵州省",
+    "province_id": "52"
+  },
+  "1059": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "2007": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "1899": {
+    "belong": "福建省教育厅",
+    "province_id": "35"
+  },
+  "103": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "1459": {
+    "belong": "江苏省教育厅",
+    "province_id": "32"
+  },
+  "229": {
+    "belong": "辽宁省",
+    "province_id": "21"
+  },
+  "245": {
+    "belong": "四川省",
+    "province_id": "51"
+  },
+  "385": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "421": {
+    "belong": "黑龙江省",
+    "province_id": "23"
+  },
+  "810": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "1729": {
+    "belong": "广西壮族自治区",
+    "province_id": "45"
+  },
+  "1595": {
+    "belong": "重庆市",
+    "province_id": "50"
+  },
+  "1085": {
+    "belong": "四川省",
+    "province_id": "51"
+  },
+  "1011": {
+    "belong": "上海市",
+    "province_id": "31"
+  },
+  "476": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "1984": {
+    "belong": "空军装备部",
+    "province_id": "43"
+  },
+  "1244": {
+    "belong": "辽宁省教育厅",
+    "province_id": "21"
+  },
+  "1142": {
+    "belong": "山东省",
+    "province_id": "37"
+  },
+  "532": {
+    "belong": "广西壮族自治区",
+    "province_id": "45"
+  },
+  "1771": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "1758": {
+    "belong": "广西壮族自治区教育厅",
+    "province_id": "45"
+  },
+  "405": {
+    "belong": "吉林省",
+    "province_id": "22"
+  },
+  "147": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "284": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "1029": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "255": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "59": {
+    "belong": "教育部",
+    "province_id": "12"
+  },
+  "1539": {
+    "belong": "河北省教育厅",
+    "province_id": "13"
+  },
+  "214": {
+    "belong": "辽宁省",
+    "province_id": "21"
+  },
+  "469": {
+    "belong": "河南省教育厅",
+    "province_id": "41"
+  },
+  "1973": {
+    "belong": "湖北省教育厅",
+    "province_id": "42"
+  },
+  "472": {
+    "belong": "福建省教育厅",
+    "province_id": "35"
+  },
+  "711": {
+    "belong": "黑龙江省",
+    "province_id": "23"
+  },
+  "288": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "539": {
+    "belong": "广西壮族自治区",
+    "province_id": "45"
+  },
+  "939": {
+    "belong": "中央军委",
+    "province_id": "43"
+  },
+  "299": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "495": {
+    "belong": "甘肃省",
+    "province_id": "62"
+  },
+  "803": {
+    "belong": "四川省",
+    "province_id": "51"
+  },
+  "1316": {
+    "belong": "湖北省教育厅",
+    "province_id": "42"
+  },
+  "186": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "510": {
+    "belong": "山东省",
+    "province_id": "37"
+  },
+  "359": {
+    "belong": "云南省",
+    "province_id": "53"
+  },
+  "537": {
+    "belong": "山东省",
+    "province_id": "37"
+  },
+  "1073": {
+    "belong": "重庆市",
+    "province_id": "50"
+  },
+  "1184": {
+    "belong": "陕西省教育厅",
+    "province_id": "61"
+  },
+  "436": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "808": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "1353": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "1350": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "1868": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "199": {
+    "belong": "新疆生产建设兵团",
+    "province_id": "65"
+  },
+  "1189": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "393": {
+    "belong": "吉林省",
+    "province_id": "22"
+  },
+  "1252": {
+    "belong": "广西壮族自治区",
+    "province_id": "45"
+  },
+  "504": {
+    "belong": "海南省",
+    "province_id": "46"
+  },
+  "360": {
+    "belong": "云南省",
+    "province_id": "53"
+  },
+  "197": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "1033": {
+    "belong": "广西壮族自治区",
+    "province_id": "45"
+  },
+  "895": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "1957": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "254": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "646": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "832": {
+    "belong": "教育部",
+    "province_id": "11"
+  },
+  "439": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "423": {
+    "belong": "国家民委",
+    "province_id": "42"
+  },
+  "66": {
+    "belong": "中国科学院",
+    "province_id": "34"
+  },
+  "1314": {
+    "belong": "吉林省教育厅",
+    "province_id": "22"
+  },
+  "1044": {
+    "belong": "云南省",
+    "province_id": "53"
+  },
+  "610": {
+    "belong": "公安部",
+    "province_id": "13"
+  },
+  "1994": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "1755": {
+    "belong": "广西壮族自治区教育厅",
+    "province_id": "45"
+  },
+  "1999": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "831": {
+    "belong": "教育部",
+    "province_id": "11"
+  },
+  "1084": {
+    "belong": "四川省",
+    "province_id": "51"
+  },
+  "1376": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "380": {
+    "belong": "陕西省",
+    "province_id": "61"
+  },
+  "80": {
+    "belong": "天津市",
+    "province_id": "12"
+  },
+  "509": {
+    "belong": "山东省",
+    "province_id": "37"
+  },
+  "1518": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "216": {
+    "belong": "辽宁省",
+    "province_id": "21"
+  },
+  "1023": {
+    "belong": "安徽省",
+    "province_id": "34"
+  },
+  "1701": {
+    "belong": "辽宁省教育厅",
+    "province_id": "21"
+  },
+  "933": {
+    "belong": "江苏省教育厅",
+    "province_id": "32"
+  },
+  "1488": {
+    "belong": "重庆市",
+    "province_id": "50"
+  },
+  "293": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "1382": {
+    "belong": "海南省",
+    "province_id": "46"
+  },
+  "430": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "951": {
+    "belong": "江西省教育厅",
+    "province_id": "36"
+  },
+  "1445": {
+    "belong": "河北省教育厅",
+    "province_id": "13"
+  },
+  "443": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "540": {
+    "belong": "山东省",
+    "province_id": "37"
+  },
+  "247": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "925": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "356": {
+    "belong": "云南省",
+    "province_id": "53"
+  },
+  "1498": {
+    "belong": "重庆市教委",
+    "province_id": "50"
+  },
+  "1022": {
+    "belong": "安徽省",
+    "province_id": "34"
+  },
+  "1948": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "949": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "1621": {
+    "belong": "吉林省教育厅",
+    "province_id": "22"
+  },
+  "1219": {
+    "belong": "教育部",
+    "province_id": "37"
+  },
+  "531": {
+    "belong": "广西壮族自治区",
+    "province_id": "45"
+  },
+  "1210": {
+    "belong": "山东省",
+    "province_id": "37"
+  },
+  "1757": {
+    "belong": "广西壮族自治区教育厅",
+    "province_id": "45"
+  },
+  "1024": {
+    "belong": "安徽省",
+    "province_id": "34"
+  },
+  "1875": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "1092": {
+    "belong": "上海市",
+    "province_id": "31"
+  },
+  "633": {
+    "belong": "广东省教育厅",
+    "province_id": "44"
+  },
+  "1936": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "42": {
+    "belong": "教育部",
+    "province_id": "42"
+  },
+  "1777": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "1909": {
+    "belong": "福建省教育厅",
+    "province_id": "35"
+  },
+  "1869": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "562": {
+    "belong": "教育部",
+    "province_id": "11"
+  },
+  "834": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "805": {
+    "belong": "四川省",
+    "province_id": "51"
+  },
+  "426": {
+    "belong": "黑龙江省",
+    "province_id": "23"
+  },
+  "257": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "889": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "342": {
+    "belong": "云南省",
+    "province_id": "53"
+  },
+  "550": {
+    "belong": "山东省",
+    "province_id": "37"
+  },
+  "398": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "1960": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "1178": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "122": {
+    "belong": "教育部",
+    "province_id": "22"
+  },
+  "77": {
+    "belong": "工业和信息化部",
+    "province_id": "32"
+  },
+  "1061": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "490": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "407": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "932": {
+    "belong": "四川省",
+    "province_id": "51"
+  },
+  "211": {
+    "belong": "辽宁省",
+    "province_id": "21"
+  },
+  "184": {
+    "belong": "重庆市",
+    "province_id": "50"
+  },
+  "466": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "1773": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "1894": {
+    "belong": "福建省教育厅",
+    "province_id": "35"
+  },
+  "276": {
+    "belong": "四川省",
+    "province_id": "51"
+  },
+  "1768": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "1284": {
+    "belong": "陕西省教育厅",
+    "province_id": "61"
+  },
+  "1972": {
+    "belong": "湖北省教育厅",
+    "province_id": "42"
+  },
+  "340": {
+    "belong": "安徽省",
+    "province_id": "34"
+  },
+  "937": {
+    "belong": "中央军委训练管理部",
+    "province_id": "61"
+  },
+  "481": {
+    "belong": "河南省",
+    "province_id": "41"
+  },
+  "425": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "1857": {
+    "belong": "安徽省教育厅",
+    "province_id": "34"
+  },
+  "515": {
+    "belong": "贵州省",
+    "province_id": "52"
+  },
+  "1230": {
+    "belong": "解放军空军",
+    "province_id": "61"
+  },
+  "1987": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "2026": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "1432": {
+    "belong": "海南省教育厅",
+    "province_id": "46"
+  },
+  "746": {
+    "belong": "河北省",
+    "province_id": "13"
+  },
+  "64": {
+    "belong": "山东省",
+    "province_id": "37"
+  },
+  "231": {
+    "belong": "国家民委",
+    "province_id": "51"
+  },
+  "1048": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "1018": {
+    "belong": "重庆市",
+    "province_id": "50"
+  },
+  "367": {
+    "belong": "青海省",
+    "province_id": "63"
+  },
+  "417": {
+    "belong": "教育部",
+    "province_id": "42"
+  },
+  "279": {
+    "belong": "山西省",
+    "province_id": "14"
+  },
+  "298": {
+    "belong": "广东省",
+    "province_id": "44"
+  },
+  "1788": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "1043": {
+    "belong": "陕西省",
+    "province_id": "61"
+  },
+  "1068": {
+    "belong": "湖北省",
+    "province_id": "42"
+  },
+  "161": {
+    "belong": "江苏省",
+    "province_id": "32"
+  },
+  "893": {
+    "belong": "江西省",
+    "province_id": "36"
+  },
+  "845": {
+    "belong": "天津市",
+    "province_id": "12"
+  },
+  "533": {
+    "belong": "广西壮族自治区",
+    "province_id": "45"
+  },
+  "1774": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "409": {
+    "belong": "湖南省",
+    "province_id": "43"
+  },
+  "1185": {
+    "belong": "陕西省教育厅",
+    "province_id": "61"
+  },
+  "414": {
+    "belong": "教育部",
+    "province_id": "42"
+  },
+  "116": {
+    "belong": "教育部",
+    "province_id": "32"
+  },
+  "859": {
+    "belong": "天津市",
+    "province_id": "12"
+  },
+  "781": {
+    "belong": "四川省教育厅",
+    "province_id": "51"
+  },
+  "935": {
+    "belong": "贵州省",
+    "province_id": "52"
+  },
+  "1742": {
+    "belong": "广西壮族自治区",
+    "province_id": "45"
+  },
+  "729": {
+    "belong": "河北省",
+    "province_id": "13"
+  },
+  "1885": {
+    "belong": "福建省",
+    "province_id": "35"
+  },
+  "522": {
+    "belong": "贵州省",
+    "province_id": "52"
+  },
+  "394": {
+    "belong": "吉林省",
+    "province_id": "22"
+  },
+  "1732": {
+    "belong": "广西壮族自治区",
+    "province_id": "45"
+  },
+  "1770": {
+    "belong": "浙江省",
+    "province_id": "33"
+  },
+  "217": {
+    "belong": "辽宁省",
+    "province_id": "21"
+  }
+}

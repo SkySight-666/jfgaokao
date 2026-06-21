@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>福建高考分数线查询</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#f0f2f5;color:#333}
+.header{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:24px 0;text-align:center}
+.header h1{font-size:24px;font-weight:600}
+.header .stats{margin-top:8px;font-size:14px;opacity:.85}
+.container{max-width:1400px;margin:0 auto;padding:16px}
+.filters{background:#fff;border-radius:12px;padding:20px;margin-bottom:16px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.filter-row{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end}
+.filter-group{display:flex;flex-direction:column;gap:4px;min-width:0}
+.filter-group label{font-size:12px;color:#666;font-weight:500}
+.filter-group input,.filter-group select{padding:8px 12px;border:1px solid #d9d9d9;border-radius:6px;font-size:14px;outline:none;transition:border-color .2s}
+.filter-group input:focus,.filter-group select:focus{border-color:#667eea;box-shadow:0 0 0 2px rgba(102,126,234,.15);background:#fff}
+.filter-group select:invalid{color:#999}
+.required-star{color:#e74c3c;font-weight:700;margin-right:2px}
+.filter-group input{width:160px}
+.filter-group select{width:150px}
+.btn{padding:8px 24px;border:none;border-radius:6px;font-size:14px;cursor:pointer;transition:all .2s;font-weight:500}
+.btn-primary{background:#667eea;color:#fff}
+.btn-primary:hover{background:#5a6fd6}
+.btn-reset{background:#f5f5f5;color:#666}
+.btn-reset:hover{background:#e8e8e8}
+.btn-sm{padding:4px 10px;font-size:12px;border-radius:4px}
+.btn-rank{background:#f0f0ff;color:#667eea;border:1px solid #d0d0ff}
+.btn-rank:hover,.btn-rank.active{background:#667eea;color:#fff;border-color:#667eea}
+.rank-presets{display:flex;gap:6px;flex-wrap:wrap}
+.subj-chips{display:flex;gap:8px;flex-wrap:wrap}
+.subj-chip{display:inline-flex;align-items:center;gap:4px;padding:6px 14px;border:1.5px solid #d0d0d8;border-radius:20px;font-size:13px;cursor:pointer;transition:all .2s;user-select:none;background:#fff;color:#555}
+.subj-chip:hover{border-color:#9999cc;color:#667eea}
+.subj-chip.active{background:linear-gradient(135deg,#667eea,#7c5cbf);border-color:transparent;color:#fff;box-shadow:0 2px 8px rgba(102,126,234,.3)}
+.tag-chips{display:flex;gap:8px;flex-wrap:wrap}
+.tag-chip{display:inline-flex;align-items:center;padding:5px 14px;border:1.5px solid #d0d0d8;border-radius:20px;font-size:12px;cursor:pointer;transition:all .2s;user-select:none;background:#fff;color:#555;font-weight:600}
+.tag-chip:hover{border-color:#9999cc}
+.tag-chip.active-985{background:linear-gradient(135deg,#e74c3c,#c0392b);border-color:transparent;color:#fff;box-shadow:0 2px 8px rgba(231,76,60,.3)}
+.tag-chip.active-211{background:linear-gradient(135deg,#d4a017,#b8860b);border-color:transparent;color:#fff;box-shadow:0 2px 8px rgba(184,134,11,.3)}
+.tag-chip.active-双一流{background:linear-gradient(135deg,#3b82f6,#2563aa);border-color:transparent;color:#fff;box-shadow:0 2px 8px rgba(59,130,246,.3)}
+.ac-wrap{position:relative;min-width:200px}
+.ac-wrap input{width:100%;padding:8px 12px 8px 34px;border:1.5px solid #e0e0e0;border-radius:8px;font-size:14px;outline:none;transition:border-color .2s;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23aaa' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E") 12px center no-repeat}
+.ac-wrap input:focus{border-color:#667eea;box-shadow:0 0 0 3px rgba(102,126,234,.12);background-color:#fff}
+.ac-wrap .ac-dropdown{position:absolute;top:calc(100% + 4px);left:0;right:0;background:#fff;border:1px solid #e8e8f0;border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,.12);z-index:100;max-height:280px;overflow-y:auto;display:none;animation:dropIn .15s ease}
+.ac-wrap .ac-dropdown.open{display:block}
+.ac-wrap .ac-dropdown .ac-item{padding:8px 14px;cursor:pointer;font-size:13px;transition:background .1s;border-bottom:1px solid #f5f5f5}
+.ac-wrap .ac-dropdown .ac-item:last-child{border-bottom:none}
+.ac-wrap .ac-dropdown .ac-item:hover,.ac-wrap .ac-dropdown .ac-item.highlight{background:#f0f0ff;color:#667eea}
+.ac-wrap .ac-dropdown .ac-item .ac-prov{font-size:11px;color:#999;margin-left:8px}
+.ac-wrap .ac-dropdown .ac-nomatch{padding:16px;text-align:center;color:#ccc;font-size:13px}
+.ac-wrap .ac-input-tag{display:inline-flex;align-items:center;gap:4px;background:linear-gradient(135deg,#667eea,#7c5cbf);color:#fff;font-size:12px;padding:4px 10px;border-radius:16px;line-height:1.5;animation:tagPop .2s ease}
+
+/* 标签式多选（对比面板学校） */
+.actag-wrap{position:relative;min-height:42px;border:1.5px solid #e0e0e0;border-radius:8px;padding:4px 8px;display:flex;flex-wrap:wrap;align-items:center;gap:4px;cursor:text;transition:border-color .2s;background:#fff}
+.actag-wrap:focus-within{border-color:#667eea;box-shadow:0 0 0 3px rgba(102,126,234,.12)}
+.actag-wrap .actag-tag{display:inline-flex;align-items:center;gap:3px;background:linear-gradient(135deg,#667eea,#7c5cbf);color:#fff;font-size:12px;padding:3px 8px 3px 10px;border-radius:14px;line-height:1.5;animation:tagPop .2s ease;max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.actag-wrap .actag-tag .actag-x{margin-left:2px;cursor:pointer;font-size:14px;line-height:1;opacity:.7;transition:opacity .15s;flex-shrink:0}
+.actag-wrap .actag-tag .actag-x:hover{opacity:1}
+.actag-wrap .actag-input{flex:1;min-width:120px;border:none;outline:none;font-size:13px;padding:4px 2px;background:transparent;color:#333}
+.actag-wrap .actag-input::placeholder{color:#b0b0b0}
+.actag-wrap .actag-dropdown{position:absolute;top:calc(100% + 4px);left:0;right:0;background:#fff;border:1px solid #e8e8f0;border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,.12);z-index:100;max-height:260px;overflow-y:auto;display:none;animation:dropIn .15s ease}
+.actag-wrap .actag-dropdown.open{display:block}
+.actag-wrap .actag-dropdown .actag-item{padding:8px 14px;cursor:pointer;font-size:13px;transition:background .1s;border-bottom:1px solid #f5f5f5;display:flex;justify-content:space-between;align-items:center}
+.actag-wrap .actag-dropdown .actag-item:last-child{border-bottom:none}
+.actag-wrap .actag-dropdown .actag-item:hover{background:#f0f0ff;color:#667eea}
+.actag-wrap .actag-dropdown .actag-item .actag-prov{font-size:11px;color:#999}
+.actag-wrap .actag-dropdown .actag-added{opacity:.5;pointer-events:none}
+.actag-wrap .actag-dropdown .actag-added::after{content:'已添加';font-size:11px;color:#667eea}
+.actag-wrap .actag-dropdown .actag-nomatch{padding:16px;text-align:center;color:#ccc;font-size:13px}
+
+/* 学校标签 */
+.tag{display:inline-block;font-size:11px;padding:1px 6px;border-radius:3px;font-weight:600;margin-right:2px;line-height:1.6}
+.tag-985{background:#ffe0e0;color:#c0392b}
+.tag-211{background:#fff3d0;color:#b8860b}
+.tag-syl{background:#e0f0ff;color:#2563aa}
+
+.section-label{font-size:13px;color:#999;margin:16px 0 8px;padding-bottom:4px;border-bottom:1px solid #f0f0f0}
+.result-bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:14px;color:#666}
+.table-wrap{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+thead{background:#fafafa;position:sticky;top:0;z-index:1}
+th{padding:10px 12px;text-align:left;font-weight:600;color:#555;border-bottom:2px solid #f0f0f0;white-space:nowrap}
+td{padding:8px 12px;border-bottom:1px solid #f5f5f5}
+.score{font-weight:600;color:#e74c3c}
+.rank{color:#667eea}
+.province-tag{display:inline-block;padding:2px 8px;border-radius:4px;font-size:12px;background:#f0f0ff;color:#667eea}
+.pagination{display:flex;justify-content:center;gap:8px;margin-top:16px}
+.pagination button{padding:6px 14px;border:1px solid #d9d9d9;border-radius:6px;background:#fff;cursor:pointer;font-size:13px}
+.pagination button.active{background:#667eea;color:#fff;border-color:#667eea}
+.pagination button:disabled{opacity:.4;cursor:not-allowed}
+.tabs{display:flex;gap:0;margin-bottom:16px}
+.tab{padding:10px 24px;background:#fff;border:none;cursor:pointer;font-size:14px;color:#666;border-bottom:2px solid transparent;transition:all .2s}
+.tab.active{color:#667eea;border-bottom-color:#667eea;font-weight:600}
+.tab:hover{color:#667eea}
+.panel{display:none}
+.panel.active{display:block}
+.loading{text-align:center;padding:40px;color:#999}
+.no-data{text-align:center;padding:40px;color:#ccc;font-size:16px}
+.school-group{border-bottom:1px solid #f0f0f0}
+.school-group:last-child{border-bottom:none}
+.school-header{display:flex;align-items:center;padding:12px 16px;cursor:pointer;transition:background .15s;gap:12px}
+.school-header:hover{background:#f8f9ff}
+.school-header .arrow{font-size:12px;color:#999;transition:transform .2s;width:16px;text-align:center}
+.school-header .arrow.open{transform:rotate(90deg)}
+.school-header .name{font-weight:600;font-size:15px;flex:1}
+.school-header .meta{font-size:12px;color:#999;display:flex;gap:16px}
+.school-header .score-range{color:#e74c3c;font-weight:500}
+.school-body{display:none;padding:0 16px 12px}
+.school-body.open{display:block}
+.school-body table{margin:0}
+.school-body th{font-size:12px;padding:6px 10px}
+.school-body td{font-size:12px;padding:6px 10px}
+.school-body tr:hover{background:#f0f4ff}
+.compare-input{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.compare-input input{flex:1;min-width:200px}
+
+/* ====== 多选下拉 (重设计) ====== */
+.ms-wrap{position:relative;min-width:140px;flex:1;font-size:13px}
+.ms-trigger{display:flex;align-items:center;gap:6px;padding:6px 10px;border:1.5px solid #e0e0e0;border-radius:8px;cursor:pointer;background:#fff;min-height:38px;transition:all .2s ease}
+.ms-trigger:hover{border-color:#b0b0ff}
+.ms-trigger:focus,.ms-trigger.open{border-color:#667eea;box-shadow:0 0 0 3px rgba(102,126,234,.12)}
+.ms-trigger .ms-tags{display:flex;flex-wrap:wrap;gap:4px;flex:1;overflow:hidden;align-items:center}
+.ms-trigger .ms-tag{display:inline-flex;align-items:center;gap:3px;background:linear-gradient(135deg,#667eea 0%,#7c5cbf 100%);color:#fff;font-size:11px;padding:2px 8px 2px 10px;border-radius:12px;line-height:1.6;max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;animation:tagPop .2s ease;flex-shrink:0}
+@keyframes tagPop{0%{transform:scale(.85);opacity:.5}100%{transform:scale(1);opacity:1}}
+.ms-trigger .ms-tag .ms-tag-x{margin-left:2px;cursor:pointer;font-size:13px;line-height:1;opacity:.7;transition:opacity .15s;flex-shrink:0}
+.ms-trigger .ms-tag .ms-tag-x:hover{opacity:1}
+.ms-trigger .ms-placeholder{color:#b0b0b0;flex:1;user-select:none}
+.ms-trigger .ms-arrow{font-size:9px;color:#b0b0b0;transition:transform .25s ease;flex-shrink:0}
+.ms-trigger .ms-arrow.open{transform:rotate(180deg)}
+.ms-dropdown{position:absolute;top:calc(100% + 6px);left:0;min-width:200px;width:100%;background:#fff;border:1px solid #e8e8f0;border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,.12);z-index:100;max-height:380px;display:none;flex-direction:column;overflow:hidden;animation:dropIn .2s ease}
+.ms-dropdown.open{display:flex}
+@keyframes dropIn{0%{opacity:0;transform:translateY(-6px) scale(.97)}100%{opacity:1;transform:translateY(0) scale(1)}}
+.ms-search{padding:10px 12px 8px;border-bottom:1px solid #f0f0f8;flex-shrink:0;position:relative}
+.ms-search input{width:100%;padding:7px 12px 7px 32px;border:1.5px solid #e8e8f0;border-radius:8px;font-size:13px;outline:none;transition:border-color .2s;background:#f8f9ff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23b0b0b0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E") 10px center no-repeat}
+.ms-search input:focus{border-color:#667eea;background-color:#fff}
+.ms-list{overflow-y:auto;flex:1;padding:4px 0}
+.ms-list::-webkit-scrollbar{width:5px}
+.ms-list::-webkit-scrollbar-track{background:transparent}
+.ms-list::-webkit-scrollbar-thumb{background:#ddd;border-radius:4px}
+.ms-item{display:flex;align-items:center;padding:6px 12px;cursor:pointer;font-size:13px;gap:8px;transition:background .1s;user-select:none}
+.ms-item:hover{background:#f5f5ff}
+.ms-item input[type=checkbox]{appearance:none;-webkit-appearance:none;width:18px;height:18px;border:2px solid #c8c8d8;border-radius:5px;cursor:pointer;margin:0;flex-shrink:0;position:relative;transition:all .25s cubic-bezier(.4,0,.2,1);background:#fff}
+.ms-item:hover input[type=checkbox]{border-color:#9999cc}
+.ms-item input[type=checkbox]:checked{background:linear-gradient(135deg,#667eea,#7c5cbf);border-color:transparent;box-shadow:0 2px 6px rgba(102,126,234,.35)}
+.ms-item input[type=checkbox]:checked::after{content:'';position:absolute;inset:3px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") center/contain no-repeat}
+.ms-item .ms-item-text{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#444}
+.ms-item .ms-item-text.checked{color:#667eea;font-weight:500}
+.ms-footer{display:flex;justify-content:space-between;padding:8px 12px;border-top:1px solid #f0f0f8;font-size:12px;flex-shrink:0;gap:8px}
+.ms-footer button{background:#f0f0ff;border:1px solid #e0e0ff;border-radius:6px;color:#667eea;cursor:pointer;font-size:12px;padding:4px 12px;transition:all .15s;font-weight:500}
+.ms-footer button:hover{background:#e0e0ff;border-color:#667eea}
+.ms-footer .ms-footer-right{display:flex;gap:6px}
+.ms-footer .ms-footer-right button{border-color:transparent;background:none;color:#999}
+.ms-footer .ms-footer-right button:hover{color:#e74c3c;background:#fff0f0;border-color:#ffd0d0}
+.ms-nomatch{padding:20px;text-align:center;color:#ccc;font-size:13px}
+
+/* 专业筛选区段改进 */
+.prof-filter-wrap{background:linear-gradient(135deg,#fafaff 0%,#f5f5ff 100%);border:1px solid #eeeef8;border-radius:12px;padding:16px;margin-top:12px}
+.prof-filter-wrap .section-label{margin:0 0 12px;color:#667eea;font-weight:600;border-bottom-color:#e0e0ff}
+.prof-filter-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+@media(max-width:900px){.prof-filter-row{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.prof-filter-row{grid-template-columns:1fr}}
+
+@media(max-width:768px){
+  .filter-row{flex-direction:column}
+  .filter-group input,.filter-group select{width:100%}
+  .ms-wrap{width:100%}
+  .ms-dropdown{left:0;right:0;min-width:auto}
+  .school-header{flex-wrap:wrap}
+  .school-header .meta{width:100%}
+}
+
+/* 欢迎弹窗 */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:9999;display:flex;align-items:center;justify-content:center;animation:fadeIn .25s}
+.modal-overlay.hidden{display:none}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.modal-box{background:#fff;border-radius:16px;max-width:580px;width:90%;max-height:80vh;display:flex;flex-direction:column;box-shadow:0 20px 60px rgba(0,0,0,.25);animation:modalPop .3s cubic-bezier(.34,1.56,.64,1)}
+@keyframes modalPop{from{opacity:0;transform:scale(.9) translateY(20px)}to{opacity:1;transform:scale(1) translateY(0)}}
+.modal-header{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:20px 24px;border-radius:16px 16px 0 0;display:flex;justify-content:space-between;align-items:center;flex-shrink:0}
+.modal-header h2{font-size:20px;font-weight:600}
+.modal-close{width:32px;height:32px;border:none;background:rgba(255,255,255,.2);color:#fff;border-radius:50%;cursor:pointer;font-size:18px;transition:background .2s;line-height:1;flex-shrink:0}
+.modal-close:hover{background:rgba(255,255,255,.35)}
+.modal-body{overflow-y:auto;padding:20px 24px;font-size:14px;line-height:1.8;color:#444;flex:1}
+.modal-body p{margin-bottom:12px}
+.modal-body a{color:#667eea;text-decoration:none;border-bottom:1px solid #d0d0ff}
+.modal-body a:hover{color:#764ba2}
+.modal-body strong{color:#333}
+.modal-footer{display:flex;gap:10px;padding:14px 24px;border-top:1px solid #f0f0f0;justify-content:flex-end;flex-shrink:0}
+.modal-footer button{padding:8px 20px;border-radius:8px;cursor:pointer;font-size:14px;transition:all .2s;font-weight:500}
+.modal-footer .btn-deny{background:#f5f5f5;border:1px solid #ddd;color:#888}
+.modal-footer .btn-deny:hover{background:#eee;color:#555}
+.modal-footer .btn-accept{background:#667eea;border:none;color:#fff}
+.modal-footer .btn-accept:hover{background:#5a6fd6}
+</style>
+</head>
+<body>
+
+<div class="modal-overlay" id="welcome-modal">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h2>📋 免责声明 & 注意事项</h2>
+    </div>
+    <div class="modal-body">
+      <p>这是一份<strong>免责声明和注意事项</strong>~</p>
+      <p>本人是一个被<strong>七百多页且不带检索目录的志愿书</strong>烦透的<strong>2026届</strong>高考生。</p>
+      <p>考虑到各大APP收费、功能不齐，数据不够直观，于是我做了这个，方便自己快速查表。</p>
+      <p>代码嘛，全是Vibe... 此人已经懒到不想写readme以外任何其他东西了。</p>
+      <p><strong>数据来源 <a href="https://www.gaokao.cn/" target="_blank">掌上高考</a></strong>，这里的数据经过<strong>抽样检查</strong>，未发现明显错误。尽管这样，本站数据未经过完整审核校验，仅供快速查找校对，<strong>请不要以此作为唯一报考参考材料</strong>，数据请再三核对。由于本站数据谬误导致的任何后果，<strong>概不负责</strong>。</p>
+      <p>配合 <a href="https://gaokao.chsi.com.cn/" target="_blank">阳光高考</a> 食用，效果更佳。</p>
+      <p>Dever 已经尽力确保<strong>专业检索</strong>功能精确好用，但是不排除一些学校的创新组/实验班的简称、名称中<strong>不包含</strong>详细专业而<strong>不被检索</strong>。请再三确认。</p>
+      <p>后面会不会上线新功能，比如Q&A，学长学姐留言（在考虑了），院校招生政策跳转，看情况吧。</p>
+      <p>本站数据仅供学习研究。<strong>若数据侵权</strong>，请联系邮箱 <a href="mailto:skysight4491@outlook.com">skysight4491@outlook.com</a>。</p>
+      <p>如要勘误、建议、合作同样联系邮箱 <a href="mailto:skysight4491@outlook.com">skysight4491@outlook.com</a>，或者PR/Issue。</p>
+      <p>谢绝任何网络攻击、逆向。大手子请绕路 ;)</p>
+      <p>⭐ Star me at <a href="https://github.com/SkySight-666/jfgaokao" target="_blank">github.com/SkySight-666/jfgaokao</a></p>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-deny" onclick="document.getElementById('welcome-modal').classList.add('hidden')">✕ 关闭</button>
+      <button class="btn-accept" onclick="document.getElementById('welcome-modal').classList.add('hidden')">我知道了</button>
+    </div>
+  </div>
+</div>
+
+<div class="header">
+  <h1>📊 福建高考专业分数线查询</h1>
+  <div class="stats" id="stats">加载中...</div>
+  <div style="margin-top:6px;font-size:12px;opacity:.7"><a href="javascript:void(0)" onclick="document.getElementById('welcome-modal').classList.remove('hidden')" style="color:rgba(255,255,255,.85);text-decoration:underline;text-underline-offset:2px">📋 免责声明</a></div>
+</div>
+
+<div class="container">
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab('search')">🔍 搜索查询</button>
+    <button class="tab" onclick="switchTab('compare')">📈 对比分析</button>
+  </div>
+
+  <div id="panel-search" class="panel active">
+    <div class="filters">
+      <div class="filter-row">
+        <div class="filter-group">
+          <label>学校名称</label>
+          <div class="ac-wrap">
+            <input id="f-school" placeholder="搜索学校..." autocomplete="off">
+            <div class="ac-dropdown" id="f-school-dd"></div>
+          </div>
+        </div>
+        <div class="filter-group">
+          <label>年份</label>
+          <select id="f-year"><option value="">全部</option></select>
+        </div>
+        <div class="filter-group">
+          <label>学校省份</label>
+          <select id="f-province"><option value="">全部</option></select>
+        </div>
+        <div class="filter-group">
+          <label><span class="required-star">*</span> 办学层次</label>
+          <select id="f-level1"></select>
+        </div>
+        <div class="filter-group">
+          <label>排序</label>
+          <select id="f-sort">
+            <option value="min_desc">最低分 ↓</option>
+            <option value="min_asc">最低分 ↑</option>
+            <option value="max_desc">最高分 ↓</option>
+            <option value="avg_desc">平均分 ↓</option>
+            <option value="section_asc">位次 ↑</option>
+            <option value="lq_desc">录取人数 ↓</option>
+          </select>
+        </div>
+        <button class="btn btn-primary" onclick="doSearch()">查询</button>
+        <button class="btn btn-reset" onclick="resetFilters()">重置</button>
+      </div>
+
+      <div class="prof-filter-wrap">
+      <div class="section-label">🎓 专业筛选（多选，支持搜索和级联联动）</div>
+      <div class="prof-filter-row">
+        <div class="filter-group">
+          <label id="lbl-level2">学科门类</label>
+          <div id="ms-level2"></div>
+        </div>
+        <div class="filter-group">
+          <label>专业大类</label>
+          <div id="ms-level3"></div>
+        </div>
+        <div class="filter-group">
+          <label>专业名称</label>
+          <div id="ms-spname"></div>
+        </div>
+      </div>
+      </div>
+
+      <div class="section-label">📍 位次区间筛选</div>
+      <div class="filter-row">
+        <div class="filter-group">
+          <label>排名从</label>
+          <input id="f-rank-from" type="number" placeholder="如 1000" style="width:120px">
+        </div>
+        <div class="filter-group">
+          <label>到</label>
+          <input id="f-rank-to" type="number" placeholder="如 10000" style="width:120px">
+        </div>
+        <div class="filter-group">
+          <label>快捷选择</label>
+          <div class="rank-presets">
+            <button class="btn btn-sm btn-rank" onclick="setRank('','1000')">前1000</button>
+            <button class="btn btn-sm btn-rank" onclick="setRank('1000','5000')">1k-5k</button>
+            <button class="btn btn-sm btn-rank" onclick="setRank('5000','10000')">5k-1w</button>
+            <button class="btn btn-sm btn-rank" onclick="setRank('10000','30000')">1w-3w</button>
+            <button class="btn btn-sm btn-rank" onclick="setRank('30000','50000')">3w-5w</button>
+            <button class="btn btn-sm btn-rank" onclick="setRank('50000','')">5w+</button>
+          </div>
+        </div>
+      </div>
+      <div class="section-label">🏫 学校层次</div>
+      <div class="filter-row" style="gap:8px">
+        <div class="tag-chips">
+          <label class="tag-chip" data-tag="985">985</label>
+          <label class="tag-chip" data-tag="211">211</label>
+          <label class="tag-chip" data-tag="双一流">双一流</label>
+        </div>
+      </div>
+      <div class="section-label">🎯 选考科目（按你的组合筛选可报专业）</div>
+      <div class="filter-row" style="gap:16px">
+        <div class="filter-group">
+          <label>首选科目</label>
+          <select id="f-first-subj" style="width:110px">
+            <option value="">不限</option>
+            <option value="物理">物理</option>
+            <option value="历史">历史</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>再选科目（选 1-2 门）</label>
+          <div class="subj-chips">
+            <label class="subj-chip" data-subj="化学">化学</label>
+            <label class="subj-chip" data-subj="生物">生物</label>
+            <label class="subj-chip" data-subj="思想政治">思想政治</label>
+            <label class="subj-chip" data-subj="地理">地理</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="result-bar">
+      <span id="result-info">输入条件后点击查询</span>
+      <span id="page-info"></span>
+    </div>
+    <div class="table-wrap"><div id="results"></div></div>
+    <div class="pagination" id="pagination"></div>
+  </div>
+
+  <div id="panel-compare" class="panel">
+    <div class="filters">
+      <div class="filter-row">
+        <div class="filter-group" style="flex:2">
+          <label>学校（多选）</label>
+          <div class="actag-wrap">
+            <div class="actag-tags" id="cschool-tags"></div>
+            <input class="actag-input" id="cschool-input" placeholder="搜索添加学校..." autocomplete="off">
+            <div class="actag-dropdown" id="cschool-dd"></div>
+          </div>
+        </div>
+        <div class="filter-group">
+          <label><span class="required-star">*</span> 办学层次</label>
+          <select id="c-level1"></select>
+        </div>
+        <div class="filter-group" style="flex:1">
+          <label>年份</label>
+          <select id="c-year"><option value="">全部</option></select>
+        </div>
+        <button class="btn btn-primary" onclick="doCompare()">对比</button>
+      </div>
+      <div class="prof-filter-wrap" style="margin-top:0">
+      <div class="section-label">🎓 专业（可选，不选则对比所有专业）</div>
+      <div class="prof-filter-row">
+        <div class="filter-group">
+          <label id="clbl-level2">学科门类</label>
+          <div id="ms-c-level2"></div>
+        </div>
+        <div class="filter-group">
+          <label>专业大类</label>
+          <div id="ms-c-level3"></div>
+        </div>
+        <div class="filter-group">
+          <label>专业名称</label>
+          <div id="ms-c-spname"></div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr>
+          <th>标签</th><th>学校</th><th>省份</th><th>年份</th><th>专业</th><th>详细名称</th>
+          <th>最低分</th><th>最高分</th><th>平均分</th><th>最低位次</th><th>录取人数</th>
+        </tr></thead>
+        <tbody id="compare-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script>
+const API = '';
+let currentPage = 1;
+let majorTree = {};
+
+// ========== 多选下拉组件 (v2 - 标签式) ==========
+class MultiSelect {
+  constructor(container, { placeholder = '全部', searchPlaceholder = '搜索...', onChange } = {}) {
+    this.container = container;
+    this.placeholder = placeholder;
+    this.searchPlaceholder = searchPlaceholder;
+    this.onChange = onChange || (() => {});
+    this.options = [];
+    this.selected = new Set();
+    this.open = false;
+    this._build();
+    this._bindGlobalClose();
+  }
+
+  _build() {
+    this.wrap = document.createElement('div');
+    this.wrap.className = 'ms-wrap';
+
+    this.trigger = document.createElement('div');
+    this.trigger.className = 'ms-trigger';
+    this.trigger.onclick = (e) => { e.stopPropagation(); this.toggle(); };
+
+    this.tagContainer = document.createElement('div');
+    this.tagContainer.className = 'ms-tags';
+
+    this.placeholderEl = document.createElement('span');
+    this.placeholderEl.className = 'ms-placeholder';
+    this.placeholderEl.textContent = this.placeholder;
+
+    this.arrowEl = document.createElement('span');
+    this.arrowEl.className = 'ms-arrow';
+    this.arrowEl.textContent = '▼';
+
+    this.trigger.append(this.tagContainer, this.placeholderEl, this.arrowEl);
+
+    this.dropdown = document.createElement('div');
+    this.dropdown.className = 'ms-dropdown';
+    this.dropdown.onclick = (e) => e.stopPropagation();
+
+    const searchDiv = document.createElement('div');
+    searchDiv.className = 'ms-search';
+    this.searchInput = document.createElement('input');
+    this.searchInput.placeholder = this.searchPlaceholder;
+    this.searchInput.oninput = () => this._filter(this.searchInput.value);
+    searchDiv.appendChild(this.searchInput);
+
+    this.listDiv = document.createElement('div');
+    this.listDiv.className = 'ms-list';
+
+    this.nomatchEl = document.createElement('div');
+    this.nomatchEl.className = 'ms-nomatch';
+    this.nomatchEl.textContent = '无匹配选项';
+    this.nomatchEl.style.display = 'none';
+
+    const footer = document.createElement('div');
+    footer.className = 'ms-footer';
+    footer.innerHTML = '<div class="ms-footer-right"><button class="ms-clear-btn">清空</button></div><div><button class="ms-selectall-btn">全选</button></div>';
+    footer.querySelector('.ms-selectall-btn').onclick = () => this._selectAll();
+    footer.querySelector('.ms-clear-btn').onclick = () => this._clearAll();
+
+    this.dropdown.append(searchDiv, this.listDiv, this.nomatchEl, footer);
+    this.wrap.append(this.trigger, this.dropdown);
+    this.container.appendChild(this.wrap);
+  }
+
+  _bindGlobalClose() {
+    document.addEventListener('click', () => { if (this.open) this.close(); });
+  }
+
+  toggle() {
+    this.open = !this.open;
+    this.dropdown.classList.toggle('open', this.open);
+    this.trigger.classList.toggle('open', this.open);
+    this.arrowEl.classList.toggle('open', this.open);
+    if (this.open) {
+      this.searchInput.value = '';
+      this._filter('');
+      setTimeout(() => this.searchInput.focus(), 50);
+    }
+  }
+
+  close() {
+    this.open = false;
+    this.dropdown.classList.remove('open');
+    this.trigger.classList.remove('open');
+    this.arrowEl.classList.remove('open');
+  }
+
+  setOptions(opts) {
+    const oldSelected = [...this.selected];
+    this.options = [...opts];
+    this.selected = new Set(oldSelected.filter(s => this.options.includes(s)));
+    this._render(this.options);
+    this._updateTrigger();
+  }
+
+  getSelected() {
+    return [...this.selected];
+  }
+
+  clear() {
+    this.selected.clear();
+    this._render(this.options);
+    this._updateTrigger();
+  }
+
+  _render(opts) {
+    this.listDiv.innerHTML = '';
+    if (opts.length === 0) {
+      this.nomatchEl.style.display = 'block';
+      return;
+    }
+    this.nomatchEl.style.display = 'none';
+    opts.forEach(opt => {
+      const item = document.createElement('label');
+      item.className = 'ms-item';
+      const cb = document.createElement('input');
+      cb.type = 'checkbox';
+      cb.checked = this.selected.has(opt);
+      cb.onchange = () => {
+        if (cb.checked) this.selected.add(opt); else this.selected.delete(opt);
+        this._updateTrigger();
+        this.onChange();
+      };
+      const span = document.createElement('span');
+      span.className = 'ms-item-text' + (this.selected.has(opt) ? ' checked' : '');
+      span.textContent = opt;
+      item.append(cb, span);
+      this.listDiv.appendChild(item);
+    });
+  }
+
+  _filter(q) {
+    q = q.toLowerCase();
+    const filtered = q ? this.options.filter(o => o.toLowerCase().includes(q)) : this.options;
+    this._render(filtered);
+  }
+
+  _selectAll() {
+    this.options.forEach(o => this.selected.add(o));
+    this._updateTrigger();
+    this._render(this.options);
+    this.onChange();
+  }
+
+  _clearAll() {
+    this.selected.clear();
+    this._updateTrigger();
+    this._render(this.options);
+    this.onChange();
+  }
+
+  _removeTag(opt) {
+    this.selected.delete(opt);
+    this._updateTrigger();
+    // sync checkbox state if dropdown is open
+    const cbs = this.listDiv.querySelectorAll('.ms-item input[type=checkbox]');
+    cbs.forEach(cb => {
+      const text = cb.parentElement.querySelector('.ms-item-text').textContent;
+      if (text === opt) cb.checked = false;
+    });
+    this.onChange();
+  }
+
+  _updateTrigger() {
+    const sel = [...this.selected];
+    // 重置
+    this.tagContainer.innerHTML = '';
+    if (sel.length === 0) {
+      this.placeholderEl.style.display = '';
+      return;
+    }
+    this.placeholderEl.style.display = 'none';
+    // 最多显示 6 个标签 + 额外计数
+    const maxShow = 6;
+    const showTags = sel.slice(0, maxShow);
+    showTags.forEach(s => {
+      const tag = document.createElement('span');
+      tag.className = 'ms-tag';
+      tag.innerHTML = `${this._shorten(s)}<span class="ms-tag-x" data-val="${this._escAttr(s)}">×</span>`;
+      tag.querySelector('.ms-tag-x').onclick = (e) => {
+        e.stopPropagation();
+        this._removeTag(s);
+      };
+      this.tagContainer.appendChild(tag);
+    });
+    if (sel.length > maxShow) {
+      const more = document.createElement('span');
+      more.className = 'ms-tag';
+      more.style.background = 'linear-gradient(135deg,#888,#666)';
+      more.textContent = `+${sel.length - maxShow}`;
+      this.tagContainer.appendChild(more);
+    }
+  }
+
+  _shorten(s, max = 14) {
+    return s.length > max ? s.slice(0, max - 1) + '…' : s;
+  }
+
+  _escAttr(s) {
+    return s.replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+}
+
+// ========== 初始化多选 ==========
+let msLevel2, msLevel3, msSpname;
+
+async function loadStats() {
+  const r = await fetch(`${API}/api/stats`);
+  const d = await r.json();
+  document.getElementById('stats').textContent =
+    `共 ${d.total.toLocaleString()} 条记录 | ${d.schools} 所学校 | ${d.majors} 个专业 | ${d.years[0]}-${d.years[d.years.length-1]}年`;
+
+  const yearSel = document.getElementById('f-year');
+  const yearSel2 = document.getElementById('c-year');
+  d.years.forEach(y => {
+    yearSel.innerHTML += `<option value="${y}">${y}</option>`;
+    yearSel2.innerHTML += `<option value="${y}">${y}</option>`;
+  });
+  const provSel = document.getElementById('f-province');
+  d.provinces.forEach(p => provSel.innerHTML += `<option value="${p}">${p}</option>`);
+  const l1Sel = document.getElementById('f-level1');
+  // 只显示有完整专业分类数据的办学层次（complete > 0）
+  const validLevel1 = d.level1.filter(l => (d.level1_counts[l]?.complete || 0) > 0);
+  validLevel1.forEach(l => {
+    l1Sel.innerHTML += `<option value="${l}">${l}</option>`;
+  });
+  // 默认普通本科
+  const defaultLevel1 = validLevel1.includes('本科(普通)') ? '本科(普通)' : validLevel1[0];
+  l1Sel.value = defaultLevel1;
+  // 触发专业树加载
+  defaultLevel1 && await loadMajors(defaultLevel1);
+  // 办学层次切换 → 重载专业树
+  l1Sel.onchange = () => {
+    const l1 = l1Sel.value;
+    updateLevel2Label(l1);
+    if (l1) {
+      loadMajors(l1);
+      // 清空已选专业
+      if (msLevel2) msLevel2.clear();
+      if (msLevel3) { msLevel3.setOptions([]); }
+      if (msSpname) { msSpname.setOptions([]); }
+      // 清空学校选择
+      document.getElementById('f-school').value = '';
+      schoolSelected = '';
+    }
+  };
+  // 初始化标签
+  updateLevel2Label(defaultLevel1);
+  // 对比面板办学层次（与搜索面板同步）
+  const cL1Sel = document.getElementById('c-level1');
+  validLevel1.forEach(l => {
+    cL1Sel.innerHTML += `<option value="${l}">${l}</option>`;
+  });
+  cL1Sel.value = defaultLevel1;
+  // 对比面板切换办学层次 → 重载学校列表和专业树
+  cL1Sel.onchange = () => {
+    const l1 = cL1Sel.value;
+    const label = l1 && (l1.includes('专科') || l1.includes('职业')) ? '专业大类' : '学科门类';
+    document.getElementById('lbl-level2').textContent = label;
+    document.getElementById('clbl-level2').textContent = label;
+    if (l1 && msCSchools) {
+      loadCompareSchools(l1);
+      msCSchools.clear();
+      msCLevel2.clear();
+      msCLevel3 && msCLevel3.setOptions([]);
+      msCSpname && msCSpname.setOptions([]);
+    }
+  };
+  // 对比面板初始化
+  loadCompareSchools(defaultLevel1);
+}
+
+async function loadMajors(level1) {
+  const url = level1 ? `${API}/api/majors?level1=${encodeURIComponent(level1)}` : `${API}/api/majors`;
+  const r = await fetch(url);
+  majorTree = await r.json();
+
+  const l2Options = Object.keys(majorTree).sort();
+
+  if (!msLevel2) {
+    // 首次：创建组件
+    msLevel2 = new MultiSelect(document.getElementById('ms-level2'), {
+      placeholder: '全部门类',
+      searchPlaceholder: '搜索学科门类...',
+      onChange: onLevel2Change,
+    });
+    msLevel3 = new MultiSelect(document.getElementById('ms-level3'), {
+      placeholder: '全部大类',
+      searchPlaceholder: '搜索专业大类...',
+      onChange: onLevel3Change,
+    });
+    msSpname = new MultiSelect(document.getElementById('ms-spname'), {
+      placeholder: '全部专业',
+      searchPlaceholder: '搜索专业...',
+    });
+  }
+  // 后续：只更新选项
+  msLevel2.setOptions(l2Options);
+  msLevel3.setOptions([]);
+  msSpname.setOptions([]);
+}
+
+let msCSchools, msCLevel2, msCLevel3, msCSpname;
+
+async function loadCompareSchools(level1) {
+  // 加载该办学层次下的学校列表
+  const url = level1 ? `${API}/api/schools?limit=2000&level1=${encodeURIComponent(level1)}` : `${API}/api/schools?limit=2000`;
+  const r = await fetch(url);
+  const schools = await r.json();
+
+  // 加载该办学层次下的专业树
+  const mUrl = level1 ? `${API}/api/majors?level1=${encodeURIComponent(level1)}` : `${API}/api/majors`;
+  const mr = await fetch(mUrl);
+  const tree = await mr.json();
+
+  // 更新专业树
+  majorTree = tree;
+
+  if (!msCSchools) {
+    // 学校多选兼容接口
+    const schoolSet = new Set();
+    msCSchools = {
+      _schools: schoolSet,
+      getSelected() { return [...schoolSet]; },
+      clear() { schoolSet.clear(); this._renderTags(); },
+      _renderTags() {
+        const container = document.getElementById('cschool-tags');
+        container.innerHTML = '';
+        schoolSet.forEach(s => {
+          const tag = document.createElement('span');
+          tag.className = 'actag-tag';
+          tag.innerHTML = `${s}<span class="actag-x">×</span>`;
+          tag.querySelector('.actag-x').onclick = (e) => { e.stopPropagation(); schoolSet.delete(s); this._renderTags(); };
+          container.appendChild(tag);
+        });
+      },
+    };
+
+    // 学校自动补全初始化
+    const input = document.getElementById('cschool-input');
+    const dd = document.getElementById('cschool-dd');
+    let debounce = null;
+    let allSchools = [];
+
+    input.onfocus = () => { if (input.value.trim()) { input.oninput(); } };
+    input.oninput = () => {
+      const q = input.value.trim();
+      clearTimeout(debounce);
+      if (q.length < 1) { dd.classList.remove('open'); return; }
+      debounce = setTimeout(() => {
+        const l1 = document.getElementById('c-level1').value;
+        let surl = `${API}/api/schools?q=${encodeURIComponent(q)}&limit=20`;
+        if (l1) surl += `&level1=${encodeURIComponent(l1)}`;
+        fetch(surl).then(r => r.json()).then(data => {
+          dd.innerHTML = '';
+          if (!data.length) {
+            dd.innerHTML = '<div class="actag-nomatch">无匹配学校</div>';
+            dd.classList.add('open'); return;
+          }
+          data.forEach(s => {
+            const added = schoolSet.has(s.school_name);
+            const item = document.createElement('div');
+            item.className = 'actag-item' + (added ? ' actag-added' : '');
+            item.innerHTML = `${esc(s.school_name)}<span class="actag-prov">${esc(s.school_province)}</span>`;
+            if (!added) item.onclick = () => {
+              schoolSet.add(s.school_name);
+              msCSchools._renderTags();
+              dd.classList.remove('open');
+              input.value = '';
+              input.focus();
+              doCompare();
+            };
+            dd.appendChild(item);
+          });
+          dd.classList.add('open');
+        });
+      }, 200);
+    };
+    input.onkeydown = (e) => { if (e.key === 'Enter' && input.value.trim()) { input.oninput(); } };
+    input.onblur = () => setTimeout(() => dd.classList.remove('open'), 200);
+
+    // 专业选择器（首次创建）
+    msCLevel2 = new MultiSelect(document.getElementById('ms-c-level2'), {
+      placeholder: '全部门类',
+      searchPlaceholder: '搜索学科门类...',
+      onChange: onCLevel2Change,
+    });
+    msCLevel3 = new MultiSelect(document.getElementById('ms-c-level3'), {
+      placeholder: '全部大类',
+      searchPlaceholder: '搜索专业大类...',
+      onChange: onCLevel3Change,
+    });
+    msCSpname = new MultiSelect(document.getElementById('ms-c-spname'), {
+      placeholder: '全部专业',
+      searchPlaceholder: '搜索专业...',
+    });
+  }
+
+  // 更新专业选项
+  msCLevel2.setOptions(Object.keys(tree).sort());
+  msCLevel3.setOptions([]);
+  msCSpname.setOptions([]);
+}
+
+function onCLevel2Change() {
+  if (_suppressCascade) return;
+  _suppressCascade = true;
+  const l2s = msCLevel2.getSelected();
+  let l3Options = [];
+  const l2List = l2s.length ? l2s : Object.keys(majorTree);
+  l2List.forEach(l2 => { if (majorTree[l2]) Object.keys(majorTree[l2]).sort().forEach(l3 => { if (!l3Options.includes(l3)) l3Options.push(l3); }); });
+  l3Options.sort();
+  msCLevel3.setOptions(l3Options);
+  rebuildCSpname();
+  _suppressCascade = false;
+}
+
+function onCLevel3Change() {
+  if (_suppressCascade) return;
+  _suppressCascade = true;
+  rebuildCSpname();
+  _suppressCascade = false;
+}
+
+function rebuildCSpname() {
+  const l2s = msCLevel2.getSelected();
+  const l3s = msCLevel3.getSelected();
+  let spOptions = [];
+  if (l3s.length) {
+    const l2List = l2s.length ? l2s : Object.keys(majorTree);
+    l2List.forEach(l2 => { if (!majorTree[l2]) return; l3s.forEach(l3 => { if (majorTree[l2][l3]) majorTree[l2][l3].forEach(sp => { if (!spOptions.includes(sp)) spOptions.push(sp); }); }); });
+  } else if (l2s.length) {
+    l2s.forEach(l2 => { if (!majorTree[l2]) return; Object.values(majorTree[l2]).forEach(spList => spList.forEach(sp => { if (!spOptions.includes(sp)) spOptions.push(sp); })); });
+  }
+  spOptions.sort();
+  msCSpname.setOptions(spOptions);
+}
+
+let _suppressCascade = false;
+
+function onLevel2Change() {
+  if (_suppressCascade) return;
+  _suppressCascade = true;
+
+  const l2s = msLevel2.getSelected();
+  let l3Options = [];
+  const l2List = l2s.length ? l2s : Object.keys(majorTree);
+  l2List.forEach(l2 => {
+    if (majorTree[l2]) Object.keys(majorTree[l2]).sort().forEach(l3 => { if (!l3Options.includes(l3)) l3Options.push(l3); });
+  });
+  l3Options.sort();
+  msLevel3.setOptions(l3Options);
+  rebuildSpname();
+
+  _suppressCascade = false;
+}
+
+function onLevel3Change() {
+  if (_suppressCascade) return;
+  _suppressCascade = true;
+  rebuildSpname();
+  _suppressCascade = false;
+}
+
+function rebuildSpname() {
+  const l2s = msLevel2.getSelected();
+  const l3s = msLevel3.getSelected();
+  let spOptions = [];
+
+  if (l3s.length) {
+    // 选了专业大类 → 只从选中的大类里取专业
+    const l2List = l2s.length ? l2s : Object.keys(majorTree);
+    l2List.forEach(l2 => {
+      if (!majorTree[l2]) return;
+      l3s.forEach(l3 => {
+        if (majorTree[l2][l3]) majorTree[l2][l3].forEach(sp => { if (!spOptions.includes(sp)) spOptions.push(sp); });
+      });
+    });
+  } else if (l2s.length) {
+    // 只选了学科门类 → 取门类下所有专业
+    l2s.forEach(l2 => {
+      if (!majorTree[l2]) return;
+      Object.values(majorTree[l2]).forEach(spList => spList.forEach(sp => { if (!spOptions.includes(sp)) spOptions.push(sp); }));
+    });
+  }
+  // 都没选 → 空列表
+  spOptions.sort();
+  msSpname.setOptions(spOptions);
+}
+
+function setRank(from, to) {
+  document.getElementById('f-rank-from').value = from;
+  document.getElementById('f-rank-to').value = to;
+  document.querySelectorAll('.btn-rank').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+}
+
+async function doSearch(page = 1) {
+  currentPage = page;
+  const params = new URLSearchParams();
+  const school = document.getElementById('f-school').value.trim();
+  const year = document.getElementById('f-year').value;
+  const province = document.getElementById('f-province').value;
+  const level1 = document.getElementById('f-level1').value;
+  const rankFrom = document.getElementById('f-rank-from').value;
+  const rankTo = document.getElementById('f-rank-to').value;
+  const sort = document.getElementById('f-sort').value;
+
+  if (school) params.set('school', school);
+  if (year) params.set('year', year);
+  if (province) params.set('province', province);
+  if (level1) params.set('level1', level1);
+
+  // 选科参数
+  const firstSubj = document.getElementById('f-first-subj').value;
+  const secondSubjs = [...document.querySelectorAll('.subj-chip.active')].map(el => el.dataset.subj);
+  if (firstSubj) params.set('first_subject', firstSubj);
+  secondSubjs.forEach(s => params.append('second_subjects', s));
+
+  // 学校层次标签
+  const activeTags = [...document.querySelectorAll('.tag-chip.active-985, .tag-chip.active-211, .tag-chip.active-双一流')].map(el => el.dataset.tag);
+  activeTags.forEach(t => params.append('tags', t));
+
+  // 多选专业参数
+  const spSelected = msSpname.getSelected();
+  const l3Selected = msLevel3.getSelected();
+  const l2Selected = msLevel2.getSelected();
+
+  if (spSelected.length) {
+    spSelected.forEach(s => params.append('major', s));
+  } else if (l3Selected.length) {
+    l3Selected.forEach(s => params.append('level3', s));
+  } else if (l2Selected.length) {
+    l2Selected.forEach(s => params.append('level2', s));
+  }
+
+  if (rankFrom) params.set('rank_from', rankFrom);
+  if (rankTo) params.set('rank_to', rankTo);
+  params.set('sort', sort);
+  params.set('page', page);
+  params.set('size', 200);
+
+  document.getElementById('results').innerHTML = '<div class="loading">查询中...</div>';
+
+  const r = await fetch(`${API}/api/search?${params}`);
+  const d = await r.json();
+
+  const totalPages = Math.ceil(d.total / d.size);
+  document.getElementById('result-info').textContent = `找到 ${d.total.toLocaleString()} 条记录`;
+  document.getElementById('page-info').textContent = d.total > 0 ? `第 ${d.page} 页 / 共 ${totalPages} 页` : '';
+
+  if (!d.rows.length) {
+    document.getElementById('results').innerHTML = '<div class="no-data">暂无数据</div>';
+    document.getElementById('pagination').innerHTML = '';
+    return;
+  }
+
+  // 按学校分组
+  const groups = {};
+  d.rows.forEach(r => {
+    const key = r.school_name;
+    if (!groups[key]) groups[key] = { school: r.school_name, province: r.school_province, rows: [] };
+    groups[key].rows.push(r);
+  });
+
+  let html = '';
+  Object.values(groups).forEach((g, idx) => {
+    const mins = g.rows.map(r => r.min).filter(v => v > 0);
+    const maxMin = mins.length ? Math.max(...mins) : '-';
+    const minMin = mins.length ? Math.min(...mins) : '-';
+    const uid = `sch_${page}_${idx}`;
+    html += `
+      <div class="school-group">
+        <div class="school-header" onclick="toggleSchool('${uid}')">
+          <span class="arrow" id="arrow-${uid}">▶</span>
+          <span class="name">${esc(g.school)}</span>
+          <span class="province-tag">${esc(g.province)}</span>
+          <span class="meta">
+            <span>${g.rows.length} 个专业</span>
+            <span class="score-range">最低分 ${minMin} ~ ${maxMin}</span>
+          </span>
+        </div>
+        <div class="school-body" id="body-${uid}">
+          <table>
+            <thead><tr>
+              <th>标签</th><th>年份</th><th>专业</th><th>详细名称</th><th>选科要求</th><th>批次</th>
+              <th>最低分</th><th>最高分</th><th>平均分</th><th>最低位次</th><th>录取人数</th><th>线差</th>
+            </tr></thead>
+            <tbody>
+              ${g.rows.map((r, i) => `<tr>
+                <td>${i === 0 ? renderTags(r.tags || []) : ''}</td>
+                <td>${r.year}</td>
+                <td>${esc(r.sp_name)}</td>
+                <td style="font-size:12px;color:#888;max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${esc(r.spname || '')}">${esc(r.spname || '-')}</td>
+                <td>${esc(r.sg_info)}</td>
+                <td>${esc(r.local_batch_name)}</td>
+                <td class="score">${r.min || '-'}</td>
+                <td>${r.max || '-'}</td>
+                <td>${r.average || '-'}</td>
+                <td class="rank">${r.min_section ? Number(r.min_section).toLocaleString() : '-'}</td>
+                <td>${r.lq_num || '-'}</td>
+                <td>${r.diff || '-'}</td>
+              </tr>`).join('')}
+            </tbody>
+          </table>
+        </div>
+      </div>`;
+  });
+
+  document.getElementById('results').innerHTML = html;
+  renderPagination(d.page, totalPages);
+}
+
+function toggleSchool(uid) {
+  const body = document.getElementById(`body-${uid}`);
+  const arrow = document.getElementById(`arrow-${uid}`);
+  body.classList.toggle('open');
+  arrow.classList.toggle('open');
+}
+
+function renderPagination(page, totalPages) {
+  const div = document.getElementById('pagination');
+  if (totalPages <= 1) { div.innerHTML = ''; return; }
+  let html = `<button ${page<=1?'disabled':''} onclick="doSearch(${page-1})">上一页</button>`;
+  const start = Math.max(1, page - 3);
+  const end = Math.min(totalPages, page + 3);
+  if (start > 1) html += `<button onclick="doSearch(1)">1</button>`;
+  if (start > 2) html += `<button disabled>...</button>`;
+  for (let i = start; i <= end; i++) html += `<button class="${i===page?'active':''}" onclick="doSearch(${i})">${i}</button>`;
+  if (end < totalPages - 1) html += `<button disabled>...</button>`;
+  if (end < totalPages) html += `<button onclick="doSearch(${totalPages})">${totalPages}</button>`;
+  html += `<button ${page>=totalPages?'disabled':''} onclick="doSearch(${page+1})">下一页</button>`;
+  div.innerHTML = html;
+}
+
+async function doCompare() {
+  const schools = msCSchools.getSelected();
+  const spSelected = msCSpname.getSelected();
+  const l3Selected = msCLevel3.getSelected();
+  const l2Selected = msCLevel2.getSelected();
+  const year = document.getElementById('c-year').value;
+  const level1 = document.getElementById('c-level1').value;
+  if (!schools.length) { alert('请选择学校'); return; }
+
+  const params = new URLSearchParams();
+  schools.forEach(s => params.append('schools', s));
+  if (level1) params.set('level1', level1);
+  if (spSelected.length) {
+    spSelected.forEach(s => params.append('major', s));
+  } else if (l3Selected.length) {
+    l3Selected.forEach(s => params.append('level3', s));
+  } else if (l2Selected.length) {
+    l2Selected.forEach(s => params.append('level2', s));
+  }
+  if (year) params.set('year', year);
+
+  const tbody = document.getElementById('compare-tbody');
+  tbody.innerHTML = '<tr><td colspan="11" class="loading">查询中...</td></tr>';
+
+  const r = await fetch(`${API}/api/compare?${params}`);
+  const d = await r.json();
+
+  if (!d.length) {
+    tbody.innerHTML = '<tr><td colspan="11" class="no-data">暂无数据</td></tr>';
+    return;
+  }
+
+  tbody.innerHTML = d.map(r => `<tr>
+    <td>${renderTags(r.tags || [])}</td>
+    <td><strong>${esc(r.school_name)}</strong></td>
+    <td><span class="province-tag">${esc(r.school_province)}</span></td>
+    <td>${r.year}</td>
+    <td>${esc(r.sp_name)}</td>
+    <td style="font-size:12px;color:#888;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${esc(r.spname || '')}">${esc(r.spname || '-')}</td>
+    <td class="score">${r.min || '-'}</td><td>${r.max || '-'}</td><td>${r.average || '-'}</td>
+    <td class="rank">${r.min_section ? Number(r.min_section).toLocaleString() : '-'}</td>
+    <td>${r.lq_num || '-'}</td>
+  </tr>`).join('');
+}
+
+function resetFilters() {
+  document.getElementById('f-school').value = '';
+  schoolSelected = '';
+  document.getElementById('f-year').value = '';
+  document.getElementById('f-province').value = '';
+  document.getElementById('f-sort').value = 'min_desc';
+  document.getElementById('f-rank-from').value = '';
+  document.getElementById('f-rank-to').value = '';
+  document.querySelectorAll('.btn-rank').forEach(b => b.classList.remove('active'));
+  document.getElementById('f-level1').value = '';
+  document.getElementById('f-first-subj').value = '';
+  document.querySelectorAll('.subj-chip').forEach(c => c.classList.remove('active'));
+  document.querySelectorAll('.tag-chip').forEach(c => { c.classList.remove('active-985','active-211','active-双一流'); });
+  msLevel2.clear();
+  msLevel3.clear();
+  msSpname.clear();
+  document.getElementById('results').innerHTML = '';
+  document.getElementById('result-info').textContent = '输入条件后点击查询';
+  document.getElementById('page-info').textContent = '';
+  document.getElementById('pagination').innerHTML = '';
+}
+
+function switchTab(name) {
+  document.querySelectorAll('.tab').forEach((t, i) => t.classList.toggle('active', (name==='search'?i===0:i===1)));
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.getElementById(`panel-${name}`).classList.add('active');
+}
+
+function esc(s) { if (!s) return ''; const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+function renderTags(tags) {
+  if (!tags || !tags.length) return '';
+  const cls = {'985':'tag-985','211':'tag-211','双一流':'tag-syl'};
+  return tags.map(t => `<span class="tag ${cls[t]||''}">${t}</span>`).join('');
+}
+
+function updateLevel2Label(level1) {
+  // 高职/职业本科 → 专业大类，普通本科 → 学科门类
+  const isVocational = level1 && (level1.includes('专科') || level1.includes('职业'));
+  document.getElementById('lbl-level2').textContent = isVocational ? '专业大类' : '学科门类';
+}
+
+// 选科 chip 点击切换
+document.querySelectorAll('.subj-chip').forEach(chip => {
+  chip.onclick = () => {
+    // 最多选2门
+    const active = document.querySelectorAll('.subj-chip.active');
+    if (chip.classList.contains('active')) {
+      chip.classList.remove('active');
+    } else if (active.length < 2) {
+      chip.classList.add('active');
+    }
+  };
+});
+
+// ========== 学校层次标签 ==========
+document.querySelectorAll('.tag-chip').forEach(chip => {
+  chip.onclick = () => {
+    const cls = 'active-' + chip.dataset.tag;
+    chip.classList.toggle(cls);
+    doSearch();
+  };
+});
+
+// ========== 学校自动补全 ==========
+const schoolInput = document.getElementById('f-school');
+const schoolDD = document.getElementById('f-school-dd');
+let schoolDebounce = null;
+let schoolSelected = '';  // 当前选中的学校名
+
+schoolInput.oninput = () => {
+  const q = schoolInput.value.trim();
+  // 用户重新打字 → 清除选中状态
+  if (q !== schoolSelected) schoolSelected = '';
+  clearTimeout(schoolDebounce);
+  if (q.length < 1) { schoolDD.classList.remove('open'); return; }
+  schoolDebounce = setTimeout(() => {
+    const level1 = document.getElementById('f-level1').value;
+    let url = `${API}/api/schools?q=${encodeURIComponent(q)}&limit=15`;
+    if (level1) url += `&level1=${encodeURIComponent(level1)}`;
+    fetch(url)
+      .then(r => r.json())
+      .then(data => {
+        schoolDD.innerHTML = '';
+        if (!data.length) {
+          schoolDD.innerHTML = '<div class="ac-nomatch">无匹配学校</div>';
+          schoolDD.classList.add('open');
+          return;
+        }
+        data.forEach(s => {
+          const item = document.createElement('div');
+          item.className = 'ac-item';
+          item.innerHTML = `${esc(s.school_name)}<span class="ac-prov">${esc(s.school_province)}</span>`;
+          item.onclick = () => {
+            schoolInput.value = s.school_name;
+            schoolSelected = s.school_name;
+            schoolDD.classList.remove('open');
+            doSearch();
+          };
+          schoolDD.appendChild(item);
+        });
+        schoolDD.classList.add('open');
+      });
+  }, 200);
+};
+
+schoolInput.onkeydown = (e) => {
+  if (e.key === 'Enter') {
+    schoolDD.classList.remove('open');
+    if (schoolInput.value.trim()) doSearch();
+  }
+};
+
+schoolInput.onblur = () => setTimeout(() => schoolDD.classList.remove('open'), 200);
+
+loadStats();
+</script>
+</body>
+</html>

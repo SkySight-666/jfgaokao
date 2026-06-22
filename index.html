@@ -90,10 +90,6 @@ td{padding:8px 12px;border-bottom:1px solid #f5f5f5}
 .pagination button{padding:6px 14px;border:1px solid #d9d9d9;border-radius:6px;background:#fff;cursor:pointer;font-size:13px}
 .pagination button.active{background:#667eea;color:#fff;border-color:#667eea}
 .pagination button:disabled{opacity:.4;cursor:not-allowed}
-.tabs{display:flex;gap:10px;margin-bottom:16px;}
-.tab{padding:10px 24px;background:#fff;border:2px solid transparent;cursor:pointer;font-size:14px;color:#666;transition:all .2s;border-radius:12px}
-.tab.active{color:#667eea;border-color:#667eea;font-weight:600}
-.tab:hover{color:#667eea}
 .panel{display:none}
 .panel.active{display:block}
 .loading{text-align:center;padding:40px;color:#999}
@@ -113,9 +109,6 @@ td{padding:8px 12px;border-bottom:1px solid #f5f5f5}
 .school-body th{font-size:12px;padding:6px 10px}
 .school-body td{font-size:12px;padding:6px 10px}
 .school-body tr:hover{background:#f0f4ff}
-.compare-input{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}
-.compare-input input{flex:1;min-width:200px}
-
 /* ====== 多选下拉 (重设计) ====== */
 .ms-wrap{position:relative;min-width:140px;flex:1;font-size:13px}
 .ms-trigger{display:flex;align-items:center;gap:6px;padding:6px 10px;border:1.5px solid #e0e0e0;border-radius:8px;cursor:pointer;background:#fff;min-height:38px;transition:all .2s ease}
@@ -206,20 +199,6 @@ td{padding:8px 12px;border-bottom:1px solid #f5f5f5}
   .school-body td.score{color:#e74c3c;font-size:14px}
   .school-body td.rank{color:#667eea;font-size:13px}
 
-  /* 对比表 */
-  #panel-compare table thead{display:none}
-  #panel-compare table,#panel-compare tbody{display:block}
-  #panel-compare tr{display:flex;flex-wrap:wrap;padding:10px;border-bottom:1px solid #f0f0f0;gap:2px 10px;border-left:4px solid #667eea;margin-bottom:8px;background:#fff;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
-  #panel-compare td{display:inline;padding:0;border:none;font-size:12px}
-  #panel-compare td:first-child{display:none}
-  #panel-compare td:nth-child(2){font-weight:600;font-size:14px;display:block;width:100%}
-  #panel-compare td:nth-child(3){display:none}
-  #panel-compare td:nth-child(4){font-weight:600;display:block;width:100%}
-  #panel-compare td:nth-child(5){font-weight:600;font-size:13px;display:block;width:100%}
-  #panel-compare td:nth-child(6){color:#888;display:block;width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  #panel-compare td.score{color:#e74c3c;font-size:16px;font-weight:600}
-  #panel-compare td.rank{color:#667eea}
-
   /* 弹窗全屏 */
   .modal-box{max-width:100%;width:100%;max-height:100vh;border-radius:0;height:100vh}
   .modal-header{border-radius:0}
@@ -239,7 +218,6 @@ td{padding:8px 12px;border-bottom:1px solid #f5f5f5}
 
   /* 搜索结果标签列隐藏（标签已显示在header中） */
   .school-body td:first-child{display:none}
-  #panel-compare td:first-child{display:none}
 }
 
 /* 欢迎弹窗 */
@@ -327,31 +305,6 @@ body{
 }
 .disclaimer-link:hover{text-decoration:underline;text-underline-offset:3px}
 .container{max-width:1400px;padding:22px 24px 36px}
-.tabs{
-  gap:6px;
-  margin-bottom:14px;
-  padding:4px;
-  width:max-content;
-  background:#eef2f7;
-  border:1px solid var(--line);
-  border-radius:8px;
-}
-.tab{
-  background:transparent;
-  border:0;
-  border-radius:6px;
-  padding:8px 16px;
-  color:var(--muted);
-  font-size:13px;
-  font-weight:650;
-}
-.tab:hover{color:var(--text);background:rgba(255,255,255,.65)}
-.tab.active{
-  color:var(--text);
-  border-color:transparent;
-  background:var(--surface);
-  box-shadow:0 1px 2px rgba(17,24,39,.08);
-}
 .filters,.table-wrap{
   background:var(--surface);
   border:1px solid var(--line);
@@ -608,17 +561,10 @@ tbody tr:hover{background:#f8fbff}
   .header{position:static;padding:18px 16px 14px}
   .header h1{font-size:19px}
   .container{padding:14px 12px 28px}
-  .tabs{width:100%;display:grid;grid-template-columns:1fr 1fr}
-  .tab{padding:9px 10px}
   .filters{padding:14px}
   .prof-filter-wrap{padding:12px}
   thead{top:0}
   .school-body table{border:0}
-  #panel-compare tr{
-    border-left-color:var(--brand);
-    border-radius:8px;
-    box-shadow:0 1px 3px rgba(17,24,39,.08);
-  }
   .modal-box{border-radius:0}
 }
 
@@ -648,11 +594,6 @@ body{
   color:#334155;
 }
 .container{max-width:1520px;padding:20px 32px 40px}
-.tabs{
-  margin-bottom:12px;
-  border-radius:7px;
-  background:#e8edf3;
-}
 .filters{
   display:grid;
   grid-template-columns:minmax(0,1fr) 320px;
@@ -1058,19 +999,6 @@ body{
   border-top:1px solid var(--line);
   margin-top:2px;
 }
-#panel-compare .filters{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:14px;
-}
-#panel-compare .filters > .filter-row:first-child{
-  display:grid;
-  grid-template-columns:minmax(260px,1.6fr) minmax(160px,.6fr) minmax(140px,.45fr);
-  gap:12px;
-}
-#panel-compare .prof-filter-wrap{grid-column:auto}
-#panel-compare .filters .action-row,
-#panel-compare .filters > .filter-row:last-child{justify-content:flex-end}
 @media(max-width:1180px){
   #panel-search .filters{grid-template-columns:1fr}
   #panel-search .primary-filters,
@@ -1089,9 +1017,7 @@ body{
   #panel-search .primary-filters,
   #panel-search .side-filter-panel,
   #panel-search .rank-filter-row,
-  #panel-search .subject-filter-row,
-  #panel-compare .filters,
-  #panel-compare .filters > .filter-row:first-child{
+  #panel-search .subject-filter-row{
     display:flex;
     flex-direction:column;
   }
@@ -1331,35 +1257,28 @@ body{
     flex:1;
   }
 }
-/* compare page: single-surface school picker, no nested input frame */
-#panel-compare .compare-school-picker{
-  height:38px !important;
-  min-height:38px !important;
-  max-height:38px;
+#panel-search .search-school-picker{
+  min-height:38px;
   padding:0 10px 0 8px;
   border:1px solid #cbd5e1;
   border-radius:7px;
   background:#fff;
   box-shadow:none;
-  overflow:visible;
   align-items:center;
   align-content:center;
 }
-#panel-compare .compare-school-picker:focus-within{
+#panel-search .search-school-picker:focus-within{
   border-color:var(--brand);
-  box-shadow:none;
+  box-shadow:0 0 0 3px rgba(37,99,235,.12);
 }
-#panel-compare .compare-school-picker .actag-tags{
+#panel-search .search-school-picker .actag-tags{
   display:flex;
   flex-wrap:wrap;
   gap:4px;
   align-items:center;
 }
-#panel-compare .compare-school-picker .actag-tags:empty{
-  display:none;
-}
-#panel-compare .compare-school-picker .actag-tag{
-  max-width:220px;
+#panel-search .search-school-picker .actag-tag{
+  max-width:180px;
   height:24px;
   min-height:24px;
   padding:0 7px 0 9px;
@@ -1372,20 +1291,9 @@ body{
   display:inline-flex;
   align-items:center;
 }
-#panel-compare .compare-school-picker .actag-x{
-  width:14px;
-  height:14px;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:999px;
-}
-#panel-compare .compare-school-picker .actag-x:hover{
-  background:rgba(7,89,133,.12);
-}
-#panel-compare .compare-school-picker .actag-input{
-  min-width:220px;
-  height:36px !important;
+#panel-search .search-school-picker .actag-input{
+  min-width:120px;
+  height:36px;
   line-height:36px;
   flex:1;
   border:0;
@@ -1393,24 +1301,14 @@ body{
   background:transparent;
   box-shadow:none;
   outline:none;
-  -webkit-tap-highlight-color:transparent;
-  appearance:none;
-  -webkit-appearance:none;
 }
-#panel-compare .compare-school-picker .actag-input:focus{
-  outline:none;
-  box-shadow:none;
-}
-#panel-compare .compare-school-picker .actag-input::-webkit-search-cancel-button{
-  -webkit-appearance:none;
-}
-#panel-compare .compare-school-picker .actag-dropdown{
+#panel-search .search-school-picker .actag-dropdown{
   top:calc(100% + 8px);
   border-radius:8px;
   border-color:#dbe3ec;
   box-shadow:0 18px 42px rgba(15,23,42,.14);
 }
-#panel-compare .compare-school-picker .actag-item{
+#panel-search .search-school-picker .actag-item{
   padding:9px 12px;
 }
 
@@ -1660,19 +1558,15 @@ body{
 </div>
 
 <div class="container">
-  <div class="tabs">
-    <button class="tab active" onclick="switchTab('search')">搜索查询</button>
-    <button class="tab" onclick="switchTab('compare')">对比分析</button>
-  </div>
-
   <div id="panel-search" class="panel active">
     <div class="filters">
       <div class="filter-row primary-filters">
         <div class="filter-group">
           <label>学校名称</label>
-          <div class="ac-wrap">
-            <input id="f-school" placeholder="搜索学校..." autocomplete="off">
-            <div class="ac-dropdown" id="f-school-dd"></div>
+          <div class="actag-wrap search-school-picker">
+            <div class="actag-tags" id="fschool-tags"></div>
+            <input class="actag-input" id="f-school" name="search_school_query" type="search" placeholder="搜索添加学校..." autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" inputmode="search">
+            <div class="actag-dropdown" id="f-school-dd"></div>
           </div>
         </div>
         <div class="filter-group">
@@ -1784,58 +1678,6 @@ body{
     </div>
     <div class="table-wrap"><div id="results"></div></div>
     <div class="pagination" id="pagination"></div>
-  </div>
-
-  <div id="panel-compare" class="panel">
-    <div class="filters">
-      <div class="filter-row">
-        <div class="filter-group" style="flex:2">
-          <label>学校（多选）</label>
-          <div class="actag-wrap compare-school-picker">
-            <div class="actag-tags" id="cschool-tags"></div>
-            <input class="actag-input" id="cschool-input" name="compare_school_query" type="search" placeholder="搜索添加学校..." autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" inputmode="search">
-            <div class="actag-dropdown" id="cschool-dd"></div>
-          </div>
-        </div>
-        <div class="filter-group">
-          <label><span class="required-star">*</span> 办学层次</label>
-          <select id="c-level1"></select>
-        </div>
-        <div class="filter-group" style="flex:1">
-          <label>年份</label>
-          <select id="c-year"><option value="">全部</option></select>
-        </div>
-      </div>
-      <div class="prof-filter-wrap" style="margin-top:0">
-      <div class="section-label">专业（可选，不选则对比所有专业）</div>
-      <div class="prof-filter-row">
-        <div class="filter-group">
-          <label id="clbl-level2">学科门类</label>
-          <div id="ms-c-level2"></div>
-        </div>
-        <div class="filter-group">
-          <label>专业大类</label>
-          <div id="ms-c-level3"></div>
-        </div>
-        <div class="filter-group">
-          <label>专业名称</label>
-          <div id="ms-c-spname"></div>
-        </div>
-      </div>
-      </div>
-      <div class="filter-row" style="padding-top:8px">
-        <button class="btn btn-primary" onclick="doCompare()">对比</button>
-      </div>
-    </div>
-    <div class="table-wrap">
-      <table>
-        <thead><tr>
-          <th>标签</th><th>学校</th><th>省份</th><th>年份</th><th>专业</th><th>详细名称</th>
-          <th>最低分</th><th>最高分</th><th>平均分</th><th>最低位次</th><th>录取人数</th>
-        </tr></thead>
-        <tbody id="compare-tbody"></tbody>
-      </table>
-    </div>
   </div>
 </div>
 
@@ -2198,10 +2040,8 @@ async function loadStats() {
     `共 ${d.total.toLocaleString()} 条记录 | ${d.schools} 所学校 | ${d.majors} 个专业 | ${d.years[0]}-${d.years[d.years.length-1]}年`;
 
   const yearSel = document.getElementById('f-year');
-  const yearSel2 = document.getElementById('c-year');
   d.years.forEach(y => {
     yearSel.innerHTML += `<option value="${y}">${y}</option>`;
-    yearSel2.innerHTML += `<option value="${y}">${y}</option>`;
   });
   const provSel = document.getElementById('f-province');
   d.provinces.forEach(p => provSel.innerHTML += `<option value="${p}">${p}</option>`);
@@ -2228,33 +2068,12 @@ async function loadStats() {
       if (msSpname) { msSpname.setOptions([]); }
       // 清空学校选择
       document.getElementById('f-school').value = '';
-      schoolSelected = '';
+      searchSchoolSet.clear();
+      renderSearchSchoolTags();
     }
   };
   // 初始化标签
   updateLevel2Label(defaultLevel1);
-  // 对比面板办学层次（与搜索面板同步）
-  const cL1Sel = document.getElementById('c-level1');
-  validLevel1.forEach(l => {
-    cL1Sel.innerHTML += `<option value="${l}">${l}</option>`;
-  });
-  cL1Sel.value = defaultLevel1;
-  // 对比面板切换办学层次 → 重载学校列表和专业树
-  cL1Sel.onchange = () => {
-    const l1 = cL1Sel.value;
-    const label = l1 && (l1.includes('专科') || l1.includes('职业')) ? '专业大类' : '学科门类';
-    document.getElementById('lbl-level2').textContent = label;
-    document.getElementById('clbl-level2').textContent = label;
-    if (l1 && msCSchools) {
-      loadCompareSchools(l1);
-      msCSchools.clear();
-      msCLevel2.clear();
-      msCLevel3 && msCLevel3.setOptions([]);
-      msCSpname && msCSpname.setOptions([]);
-    }
-  };
-  // 对比面板初始化
-  loadCompareSchools(defaultLevel1);
   enhanceSelects();
   syncCustomSelects();
 }
@@ -2287,146 +2106,6 @@ async function loadMajors(level1) {
   msLevel2.setOptions(l2Options);
   msLevel3.setOptions([]);
   msSpname.setOptions([]);
-}
-
-let msCSchools, msCLevel2, msCLevel3, msCSpname;
-
-async function loadCompareSchools(level1) {
-  // 加载该办学层次下的学校列表
-  const url = level1 ? `${API}/api/schools?limit=2000&level1=${encodeURIComponent(level1)}` : `${API}/api/schools?limit=2000`;
-  const r = await fetch(url);
-  const schools = await r.json();
-
-  // 加载该办学层次下的专业树
-  const mUrl = level1 ? `${API}/api/majors?level1=${encodeURIComponent(level1)}` : `${API}/api/majors`;
-  const mr = await fetch(mUrl);
-  const tree = await mr.json();
-
-  // 更新专业树
-  majorTree = tree;
-
-  if (!msCSchools) {
-    // 学校多选兼容接口
-    const schoolSet = new Set();
-    msCSchools = {
-      _schools: schoolSet,
-      getSelected() { return [...schoolSet]; },
-      clear() { schoolSet.clear(); this._renderTags(); },
-      _renderTags() {
-        const container = document.getElementById('cschool-tags');
-        container.innerHTML = '';
-        schoolSet.forEach(s => {
-          const tag = document.createElement('span');
-          tag.className = 'actag-tag';
-          tag.innerHTML = `${s}<span class="actag-x">×</span>`;
-          tag.querySelector('.actag-x').onclick = (e) => { e.stopPropagation(); schoolSet.delete(s); this._renderTags(); };
-          container.appendChild(tag);
-        });
-      },
-    };
-
-    // 学校自动补全初始化
-    const input = document.getElementById('cschool-input');
-    const dd = document.getElementById('cschool-dd');
-    input.setAttribute('autocomplete', 'off');
-    input.setAttribute('autocorrect', 'off');
-    input.setAttribute('autocapitalize', 'none');
-    input.setAttribute('spellcheck', 'false');
-    let debounce = null;
-    let allSchools = [];
-
-    input.onfocus = () => { if (input.value.trim()) { input.oninput(); } };
-    input.oninput = () => {
-      const q = input.value.trim();
-      clearTimeout(debounce);
-      if (q.length < 1) { dd.classList.remove('open'); return; }
-      debounce = setTimeout(() => {
-        const l1 = document.getElementById('c-level1').value;
-        let surl = `${API}/api/schools?q=${encodeURIComponent(q)}&limit=20`;
-        if (l1) surl += `&level1=${encodeURIComponent(l1)}`;
-        fetch(surl).then(r => r.json()).then(data => {
-          dd.innerHTML = '';
-          if (!data.length) {
-            dd.innerHTML = '<div class="actag-nomatch">无匹配学校</div>';
-            dd.classList.add('open'); return;
-          }
-          data.forEach(s => {
-            const added = schoolSet.has(s.school_name);
-            const item = document.createElement('div');
-            item.className = 'actag-item' + (added ? ' actag-added' : '');
-            item.innerHTML = `${esc(s.school_name)}<span class="actag-prov">${esc(s.school_province)}</span>`;
-            if (!added) item.onclick = () => {
-              schoolSet.add(s.school_name);
-              msCSchools._renderTags();
-              dd.classList.remove('open');
-              input.value = '';
-              input.focus();
-              doCompare();
-            };
-            dd.appendChild(item);
-          });
-          dd.classList.add('open');
-        });
-      }, 200);
-    };
-    input.onkeydown = (e) => { if (e.key === 'Enter' && input.value.trim()) { input.oninput(); } };
-    input.onblur = () => setTimeout(() => dd.classList.remove('open'), 200);
-
-    // 专业选择器（首次创建）
-    msCLevel2 = new MultiSelect(document.getElementById('ms-c-level2'), {
-      placeholder: '全部门类',
-      searchPlaceholder: '搜索学科门类...',
-      onChange: onCLevel2Change,
-    });
-    msCLevel3 = new MultiSelect(document.getElementById('ms-c-level3'), {
-      placeholder: '全部大类',
-      searchPlaceholder: '搜索专业大类...',
-      onChange: onCLevel3Change,
-    });
-    msCSpname = new MultiSelect(document.getElementById('ms-c-spname'), {
-      placeholder: '全部专业',
-      searchPlaceholder: '搜索专业...',
-    });
-  }
-
-  // 更新专业选项
-  msCLevel2.setOptions(Object.keys(tree).sort());
-  msCLevel3.setOptions([]);
-  msCSpname.setOptions([]);
-}
-
-function onCLevel2Change() {
-  if (_suppressCascade) return;
-  _suppressCascade = true;
-  const l2s = msCLevel2.getSelected();
-  let l3Options = [];
-  const l2List = l2s.length ? l2s : Object.keys(majorTree);
-  l2List.forEach(l2 => { if (majorTree[l2]) Object.keys(majorTree[l2]).sort().forEach(l3 => { if (!l3Options.includes(l3)) l3Options.push(l3); }); });
-  l3Options.sort();
-  msCLevel3.setOptions(l3Options);
-  rebuildCSpname();
-  _suppressCascade = false;
-}
-
-function onCLevel3Change() {
-  if (_suppressCascade) return;
-  _suppressCascade = true;
-  rebuildCSpname();
-  _suppressCascade = false;
-}
-
-function rebuildCSpname() {
-  const l2s = msCLevel2.getSelected();
-  const l3s = msCLevel3.getSelected();
-  let spOptions = [];
-  if (l3s.length) {
-    const l2List = l2s.length ? l2s : Object.keys(majorTree);
-    l2List.forEach(l2 => { if (!majorTree[l2]) return; l3s.forEach(l3 => { if (majorTree[l2][l3]) majorTree[l2][l3].forEach(sp => { if (!spOptions.includes(sp)) spOptions.push(sp); }); }); });
-  } else if (l2s.length) {
-    l2s.forEach(l2 => { if (!majorTree[l2]) return; Object.values(majorTree[l2]).forEach(spList => spList.forEach(sp => { if (!spOptions.includes(sp)) spOptions.push(sp); })); });
-  }
-  spOptions.sort();
-  msCSpname.setOptions(spOptions);
 }
 
 let _suppressCascade = false;
@@ -2492,6 +2171,7 @@ async function doSearch(page = 1) {
   currentPage = page;
   const params = new URLSearchParams();
   const school = document.getElementById('f-school').value.trim();
+  const selectedSchools = [...searchSchoolSet];
   const year = document.getElementById('f-year').value;
   const province = document.getElementById('f-province').value;
   const level1 = document.getElementById('f-level1').value;
@@ -2499,7 +2179,8 @@ async function doSearch(page = 1) {
   const rankTo = document.getElementById('f-rank-to').value;
   const sort = document.getElementById('f-sort').value;
 
-  if (school) params.set('school', school);
+  selectedSchools.forEach(s => params.append('schools', s));
+  if (!selectedSchools.length && school) params.set('school', school);
   if (year) params.set('year', year);
   if (province) params.set('province', province);
   if (level1) params.set('level1', level1);
@@ -2624,54 +2305,10 @@ function renderPagination(page, totalPages) {
   div.innerHTML = html;
 }
 
-async function doCompare() {
-  const schools = msCSchools.getSelected();
-  const spSelected = msCSpname.getSelected();
-  const l3Selected = msCLevel3.getSelected();
-  const l2Selected = msCLevel2.getSelected();
-  const year = document.getElementById('c-year').value;
-  const level1 = document.getElementById('c-level1').value;
-  if (!schools.length) { alert('请选择学校'); return; }
-
-  const params = new URLSearchParams();
-  schools.forEach(s => params.append('schools', s));
-  if (level1) params.set('level1', level1);
-  if (spSelected.length) {
-    spSelected.forEach(s => params.append('major', s));
-  } else if (l3Selected.length) {
-    l3Selected.forEach(s => params.append('level3', s));
-  } else if (l2Selected.length) {
-    l2Selected.forEach(s => params.append('level2', s));
-  }
-  if (year) params.set('year', year);
-
-  const tbody = document.getElementById('compare-tbody');
-  tbody.innerHTML = '<tr><td colspan="11" class="loading">查询中...</td></tr>';
-
-  const r = await fetch(`${API}/api/compare?${params}`);
-  const d = await r.json();
-
-  if (!d.length) {
-    tbody.innerHTML = '<tr><td colspan="11" class="no-data">暂无数据</td></tr>';
-    return;
-  }
-
-  tbody.innerHTML = d.map(r => `<tr>
-    <td>${renderTags(r.tags || [])}</td>
-    <td><strong>${esc(r.school_name)}</strong></td>
-    <td><span class="province-tag">${esc(r.school_province)}</span></td>
-    <td>${r.year}</td>
-    <td>${esc(r.sp_name)}</td>
-    <td style="font-size:12px;color:#888;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${esc(r.spname || '')}">${esc(r.spname || '-')}</td>
-    <td class="score">${r.min || '-'}</td><td>${r.max || '-'}</td><td>${r.average || '-'}</td>
-    <td class="rank">${formatRank(r.min_section)}</td>
-    <td>${r.lq_num || '-'}</td>
-  </tr>`).join('');
-}
-
 function resetFilters() {
   document.getElementById('f-school').value = '';
-  schoolSelected = '';
+  searchSchoolSet.clear();
+  renderSearchSchoolTags();
   document.getElementById('f-year').value = '';
   document.getElementById('f-province').value = '';
   document.getElementById('f-sort').value = 'min_desc';
@@ -2690,12 +2327,6 @@ function resetFilters() {
   document.getElementById('result-info').textContent = '输入条件后点击查询';
   document.getElementById('page-info').textContent = '';
   document.getElementById('pagination').innerHTML = '';
-}
-
-function switchTab(name) {
-  document.querySelectorAll('.tab').forEach((t, i) => t.classList.toggle('active', (name==='search'?i===0:i===1)));
-  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
-  document.getElementById(`panel-${name}`).classList.add('active');
 }
 
 function esc(s) { if (!s) return ''; const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
@@ -2751,13 +2382,37 @@ document.querySelectorAll('.tag-chip').forEach(chip => {
 // ========== 学校自动补全 ==========
 const schoolInput = document.getElementById('f-school');
 const schoolDD = document.getElementById('f-school-dd');
+const schoolTags = document.getElementById('fschool-tags');
 let schoolDebounce = null;
-let schoolSelected = '';  // 当前选中的学校名
+const searchSchoolSet = new Set();
+
+function renderSearchSchoolTags() {
+  schoolTags.innerHTML = '';
+  searchSchoolSet.forEach(school => {
+    const tag = document.createElement('span');
+    tag.className = 'actag-tag';
+    tag.innerHTML = `${esc(school)}<span class="actag-x">×</span>`;
+    tag.querySelector('.actag-x').onclick = (e) => {
+      e.stopPropagation();
+      searchSchoolSet.delete(school);
+      renderSearchSchoolTags();
+      doSearch();
+    };
+    schoolTags.appendChild(tag);
+  });
+}
+
+function addSearchSchool(school) {
+  searchSchoolSet.add(school);
+  schoolInput.value = '';
+  schoolDD.classList.remove('open');
+  renderSearchSchoolTags();
+  schoolInput.focus();
+  doSearch();
+}
 
 schoolInput.oninput = () => {
   const q = schoolInput.value.trim();
-  // 用户重新打字 → 清除选中状态
-  if (q !== schoolSelected) schoolSelected = '';
   clearTimeout(schoolDebounce);
   if (q.length < 1) { schoolDD.classList.remove('open'); return; }
   schoolDebounce = setTimeout(() => {
@@ -2769,25 +2424,25 @@ schoolInput.oninput = () => {
       .then(data => {
         schoolDD.innerHTML = '';
         if (!data.length) {
-          schoolDD.innerHTML = '<div class="ac-nomatch">无匹配学校</div>';
+          schoolDD.innerHTML = '<div class="actag-nomatch">无匹配学校</div>';
           schoolDD.classList.add('open');
           return;
         }
         data.forEach(s => {
+          const added = searchSchoolSet.has(s.school_name);
           const item = document.createElement('div');
-          item.className = 'ac-item';
-          item.innerHTML = `${esc(s.school_name)}<span class="ac-prov">${esc(s.school_province)}</span>`;
-          item.onclick = () => {
-            schoolInput.value = s.school_name;
-            schoolSelected = s.school_name;
-            schoolDD.classList.remove('open');
-            doSearch();
-          };
+          item.className = 'actag-item' + (added ? ' actag-added' : '');
+          item.innerHTML = `${esc(s.school_name)}<span class="actag-prov">${esc(s.school_province)}</span>`;
+          if (!added) item.onclick = () => addSearchSchool(s.school_name);
           schoolDD.appendChild(item);
         });
         schoolDD.classList.add('open');
       });
   }, 200);
+};
+
+schoolInput.onfocus = () => {
+  if (schoolInput.value.trim()) schoolInput.oninput();
 };
 
 schoolInput.onkeydown = (e) => {

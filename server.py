@@ -228,6 +228,7 @@ def handle_api(path, params):
 
     if path == "/api/search":
         school = params.get("school", [""])[0]
+        schools = [v for v in params.get("schools", []) if v]
         major = [v for v in params.get("major", []) if v]
         year = params.get("year", [""])[0]
         province = params.get("province", [""])[0]
@@ -264,7 +265,11 @@ def handle_api(path, params):
                 args.extend(tag_schools)
 
         conditions = []
-        if school:
+        if schools:
+            ph = ",".join(["?"] * len(schools))
+            conditions.append(f" AND school_name IN ({ph})")
+            args.extend(schools)
+        elif school:
             conditions.append(" AND school_name LIKE ?")
             args.append(f"%{school}%")
         if major:
@@ -335,71 +340,6 @@ def handle_api(path, params):
             r["level3_name"] = r.get("level3_name", "")
             r["tags"] = school_tags(r["school_name"])
         return {"total": total, "page": page, "size": size, "rows": rows}
-
-    if path == "/api/compare":
-        # 多校/多专业对比
-        schools = [v for v in params.get("schools", []) if v]
-        major = [v for v in params.get("major", []) if v]
-        level2 = [v for v in params.get("level2", []) if v]
-        level3 = [v for v in params.get("level3", []) if v]
-        year = params.get("year", [""])[0]
-        level1 = params.get("level1", [""])[0]
-        first_subject = params.get("first_subject", [""])[0]
-        second_subjects = [v for v in params.get("second_subjects", []) if v]
-        tags = [v for v in params.get("tags", []) if v]
-
-        sql = "SELECT school_name, school_province, year, sp_name, spname, min, max, average, min_section, lq_num FROM scores WHERE 1=1"
-        args = []
-        if schools:
-            ph = ",".join(["?"] * len(schools))
-            sql += f" AND school_name IN ({ph})"
-            args.extend(schools)
-        if major:
-            ph = " OR ".join(["sp_name LIKE ? OR spname LIKE ?"] * len(major))
-            sql += f" AND ({ph})"
-            for m in major:
-                kw = major_search_keywords(m)
-                args.extend([f"%{kw}%", f"%{kw}%"])
-        elif level3:
-            ph = " OR ".join(["sp_name LIKE ? OR spname LIKE ?"] * len(level3))
-            sql += f" AND ({ph})"
-            for l3 in level3:
-                kw = major_search_keywords(l3)
-                args.extend([f"%{kw}%", f"%{kw}%"])
-        elif level2:
-            ph = ",".join(["?"] * len(level2))
-            sql += f" AND level2_name IN ({ph})"
-            args.extend(level2)
-        if tags:
-            tag_schools = set()
-            for name in (n["school_name"] for n in query_db("SELECT DISTINCT school_name FROM scores", [])):
-                st = school_tags(name)
-                if any(t in st for t in tags):
-                    tag_schools.add(name)
-            if tag_schools:
-                ph = ",".join(["?"] * len(tag_schools))
-                sql += f" AND school_name IN ({ph})"
-                args.extend(tag_schools)
-        if year:
-            sql += " AND year=?"
-            args.append(int(year))
-        if level1:
-            sql += " AND level1_name=?"
-            args.append(level1)
-        if first_subject and second_subjects:
-            matching_sgs = get_matching_sg(first_subject, second_subjects)
-            if matching_sgs:
-                ph = ",".join(["?"] * len(matching_sgs))
-                sql += f" AND sg_info IN ({ph})"
-                args.extend(matching_sgs)
-        if year:
-            sql += " AND year=?"
-            args.append(int(year))
-        sql += " ORDER BY school_name, year DESC, min DESC"
-        rows = query_db(sql, args)
-        for r in rows:
-            r["tags"] = school_tags(r["school_name"])
-        return rows
 
     return {"error": "unknown endpoint"}
 

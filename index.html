@@ -2589,7 +2589,7 @@ async function doSearch(page = 1) {
               <div class="score">${r.min || '-'}</div>
               <div>${r.max || '-'}</div>
               <div>${r.average || '-'}</div>
-              <div class="rank">${r.min_section && r.min_section !== '-' ? Number(r.min_section).toLocaleString() : '-'}</div>
+              <div class="rank">${formatRank(r.min_section)}</div>
               <div>${r.lq_num || '-'}</div>
               <div>${r.diff || '-'}</div>
             </div>`).join('')}
@@ -2664,7 +2664,7 @@ async function doCompare() {
     <td>${esc(r.sp_name)}</td>
     <td style="font-size:12px;color:#888;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${esc(r.spname || '')}">${esc(r.spname || '-')}</td>
     <td class="score">${r.min || '-'}</td><td>${r.max || '-'}</td><td>${r.average || '-'}</td>
-    <td class="rank">${r.min_section && r.min_section !== '-' ? Number(r.min_section).toLocaleString() : '-'}</td>
+    <td class="rank">${formatRank(r.min_section)}</td>
     <td>${r.lq_num || '-'}</td>
   </tr>`).join('');
 }
@@ -2699,6 +2699,11 @@ function switchTab(name) {
 }
 
 function esc(s) { if (!s) return ''; const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+function formatRank(rank) {
+  if (rank === null || rank === undefined || rank === '' || rank === '-' || Number(rank) <= 0) return '<50';
+  return Number(rank).toLocaleString();
+}
 
 function renderTags(tags) {
   if (!tags || !tags.length) return '';

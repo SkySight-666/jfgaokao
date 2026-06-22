@@ -99,6 +99,15 @@ def query_db(sql, params=()):
     return [dict(r) for r in rows]
 
 
+RANK_EXPR = """
+CASE
+    WHEN min_section IS NULL OR min_section = '' OR min_section = '-' OR CAST(min_section AS INTEGER) <= 0
+    THEN 49
+    ELSE CAST(min_section AS INTEGER)
+END
+"""
+
+
 def match_sg(sg_info, first_subject, second_subjects):
     """判断 sg_info 是否与用户的选科组合匹配
 
@@ -296,12 +305,12 @@ def handle_api(path, params):
                 conditions.append(f" AND sg_info IN ({ph})")
                 args.extend(matching_sgs)
         if rank_from:
-            conditions.append(" AND min_section >= ?")
+            conditions.append(f" AND ({RANK_EXPR}) >= ?")
             args.append(int(rank_from))
         if rank_to:
-            conditions.append(" AND min_section <= ?")
+            conditions.append(f" AND ({RANK_EXPR}) <= ?")
             args.append(int(rank_to))
-        conditions.append(" AND min_section > 0 AND min_section != ''")
+        conditions.append(" AND min IS NOT NULL AND min != ''")
 
         for c in conditions:
             sql += c
@@ -313,7 +322,7 @@ def handle_api(path, params):
             "min_asc": "min ASC",
             "max_desc": "max DESC",
             "avg_desc": "average DESC",
-            "section_asc": "min_section ASC",
+            "section_asc": f"({RANK_EXPR}) ASC",
             "lq_desc": "lq_num DESC",
             "school": "school_name, year DESC, min DESC",
         }

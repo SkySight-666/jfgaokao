@@ -90,9 +90,9 @@ td{padding:8px 12px;border-bottom:1px solid #f5f5f5}
 .pagination button{padding:6px 14px;border:1px solid #d9d9d9;border-radius:6px;background:#fff;cursor:pointer;font-size:13px}
 .pagination button.active{background:#667eea;color:#fff;border-color:#667eea}
 .pagination button:disabled{opacity:.4;cursor:not-allowed}
-.tabs{display:flex;gap:0;margin-bottom:16px}
-.tab{padding:10px 24px;background:#fff;border:none;cursor:pointer;font-size:14px;color:#666;border-bottom:2px solid transparent;transition:all .2s}
-.tab.active{color:#667eea;border-bottom-color:#667eea;font-weight:600}
+.tabs{display:flex;gap:10px;margin-bottom:16px;}
+.tab{padding:10px 24px;background:#fff;border:2px solid transparent;cursor:pointer;font-size:14px;color:#666;transition:all .2s;border-radius:12px}
+.tab.active{color:#667eea;border-color:#667eea;font-weight:600}
 .tab:hover{color:#667eea}
 .panel{display:none}
 .panel.active{display:block}
@@ -259,10 +259,1371 @@ td{padding:8px 12px;border-bottom:1px solid #f5f5f5}
 .modal-body strong{color:#333}
 .modal-footer{display:flex;gap:10px;padding:14px 24px;border-top:1px solid #f0f0f0;justify-content:flex-end;flex-shrink:0}
 .modal-footer button{padding:8px 20px;border-radius:8px;cursor:pointer;font-size:14px;transition:all .2s;font-weight:500}
-.modal-footer .btn-deny{background:#f5f5f5;border:1px solid #ddd;color:#888}
-.modal-footer .btn-deny:hover{background:#eee;color:#555}
 .modal-footer .btn-accept{background:#667eea;border:none;color:#fff}
 .modal-footer .btn-accept:hover{background:#5a6fd6}
+
+/* ====== 2026 modern refresh ====== */
+:root{
+  --bg:#f6f7f9;
+  --surface:#ffffff;
+  --surface-soft:#f9fafb;
+  --line:#e5e7eb;
+  --line-strong:#d1d5db;
+  --text:#111827;
+  --muted:#6b7280;
+  --muted-soft:#9ca3af;
+  --brand:#2563eb;
+  --brand-strong:#1d4ed8;
+  --brand-soft:#eff6ff;
+  --teal:#0f766e;
+  --red:#dc2626;
+  --amber:#b45309;
+  --shadow:0 1px 2px rgba(17,24,39,.06),0 8px 24px rgba(17,24,39,.05);
+}
+html{background:var(--bg)}
+body{
+  background:
+    linear-gradient(180deg,#ffffff 0,#f8fafc 260px,var(--bg) 620px);
+  color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-size:14px;
+  letter-spacing:0;
+}
+.header{
+  background:rgba(255,255,255,.92);
+  color:var(--text);
+  padding:22px 24px 16px;
+  text-align:left;
+  border-bottom:1px solid var(--line);
+  position:sticky;
+  top:0;
+  z-index:20;
+  backdrop-filter:saturate(160%) blur(14px);
+}
+.header h1{
+  max-width:1400px;
+  margin:0 auto;
+  font-size:22px;
+  line-height:1.25;
+  font-weight:700;
+  letter-spacing:0;
+}
+.header .stats{
+  max-width:1400px;
+  margin:7px auto 0;
+  color:var(--muted);
+  font-size:13px;
+  opacity:1;
+}
+.header .notice-link-wrap{
+  max-width:1400px;
+  margin:9px auto 0;
+  font-size:12px;
+}
+.disclaimer-link{
+  color:var(--brand);
+  text-decoration:none;
+  font-weight:600;
+}
+.disclaimer-link:hover{text-decoration:underline;text-underline-offset:3px}
+.container{max-width:1400px;padding:22px 24px 36px}
+.tabs{
+  gap:6px;
+  margin-bottom:14px;
+  padding:4px;
+  width:max-content;
+  background:#eef2f7;
+  border:1px solid var(--line);
+  border-radius:8px;
+}
+.tab{
+  background:transparent;
+  border:0;
+  border-radius:6px;
+  padding:8px 16px;
+  color:var(--muted);
+  font-size:13px;
+  font-weight:650;
+}
+.tab:hover{color:var(--text);background:rgba(255,255,255,.65)}
+.tab.active{
+  color:var(--text);
+  border-color:transparent;
+  background:var(--surface);
+  box-shadow:0 1px 2px rgba(17,24,39,.08);
+}
+.filters,.table-wrap{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:8px;
+  box-shadow:var(--shadow);
+}
+.filters{padding:18px;margin-bottom:16px}
+.filter-row{gap:12px 14px}
+.filter-group{gap:6px}
+.filter-group label{
+  color:#374151;
+  font-size:12px;
+  font-weight:650;
+}
+.required-star{color:var(--red)}
+.filter-group input,.filter-group select,
+.ac-wrap input,.actag-wrap,.ms-trigger{
+  min-height:38px;
+  border:1px solid var(--line-strong);
+  border-radius:7px;
+  color:var(--text);
+  background-color:var(--surface);
+  font-size:13px;
+  transition:border-color .16s ease,box-shadow .16s ease,background-color .16s ease;
+}
+.filter-group input,.filter-group select{padding:8px 11px}
+.filter-group input:focus,.filter-group select:focus,
+.ac-wrap input:focus,.actag-wrap:focus-within,
+.ms-trigger:focus,.ms-trigger.open{
+  border-color:var(--brand);
+  box-shadow:0 0 0 3px rgba(37,99,235,.12);
+  background:#fff;
+}
+.filter-group input::placeholder,.ac-wrap input::placeholder,.actag-input::placeholder{color:var(--muted-soft)}
+.btn{
+  border-radius:7px;
+  min-height:38px;
+  padding:8px 16px;
+  font-weight:650;
+}
+.btn-primary{
+  background:var(--brand);
+  color:#fff;
+  box-shadow:0 1px 2px rgba(37,99,235,.28);
+}
+.btn-primary:hover{background:var(--brand-strong)}
+.btn-reset{background:#fff;color:#374151;border:1px solid var(--line-strong)}
+.btn-reset:hover{background:var(--surface-soft)}
+.btn-sm{min-height:30px;padding:5px 10px;border-radius:6px}
+.btn-rank{
+  background:#fff;
+  color:#374151;
+  border:1px solid var(--line-strong);
+}
+.btn-rank:hover,.btn-rank.active{
+  background:var(--brand-soft);
+  color:var(--brand-strong);
+  border-color:#bfdbfe;
+}
+.section-label{
+  margin:18px 0 10px;
+  padding:0;
+  border:0;
+  color:#111827;
+  font-size:13px;
+  font-weight:700;
+}
+.prof-filter-wrap{
+  margin-top:16px;
+  padding:14px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:var(--surface-soft);
+}
+.prof-filter-wrap .section-label{
+  margin:0 0 12px;
+  color:#111827;
+  border:0;
+}
+.subj-chip,.tag-chip{
+  border-radius:999px;
+  border:1px solid var(--line-strong);
+  background:#fff;
+  color:#374151;
+  font-weight:650;
+  box-shadow:none;
+}
+.subj-chip:hover,.tag-chip:hover{
+  border-color:#93c5fd;
+  color:var(--brand-strong);
+  background:var(--brand-soft);
+}
+.subj-chip.active{
+  background:var(--brand);
+  border-color:var(--brand);
+  color:#fff;
+  box-shadow:none;
+}
+.tag-chip.active-985{background:#fef2f2;border-color:#fecaca;color:#b91c1c;box-shadow:none}
+.tag-chip.active-211{background:#fffbeb;border-color:#fde68a;color:var(--amber);box-shadow:none}
+.tag-chip.active-双一流{background:#ecfeff;border-color:#a5f3fc;color:#0e7490;box-shadow:none}
+.ac-wrap input{
+  padding:8px 12px 8px 34px;
+  background-color:#fff;
+}
+.ac-wrap .ac-dropdown,.actag-wrap .actag-dropdown,.ms-dropdown{
+  border:1px solid var(--line);
+  border-radius:8px;
+  box-shadow:0 18px 42px rgba(17,24,39,.14);
+}
+.ac-wrap .ac-dropdown .ac-item:hover,
+.ac-wrap .ac-dropdown .ac-item.highlight,
+.actag-wrap .actag-dropdown .actag-item:hover,
+.ms-item:hover{
+  background:var(--brand-soft);
+  color:var(--brand-strong);
+}
+.actag-wrap .actag-tag,.ac-wrap .ac-input-tag,
+.ms-trigger .ms-tag{
+  background:#e0f2fe;
+  color:#075985;
+  border-radius:999px;
+  font-weight:650;
+  box-shadow:none;
+}
+.ms-trigger{padding:5px 9px}
+.ms-trigger:hover{border-color:#93c5fd}
+.ms-trigger .ms-placeholder{color:var(--muted-soft)}
+.ms-trigger .ms-arrow{color:var(--muted-soft)}
+.ms-search{border-bottom:1px solid var(--line)}
+.ms-search input{
+  border:1px solid var(--line-strong);
+  border-radius:7px;
+  background-color:#fff;
+}
+.ms-search input:focus{border-color:var(--brand)}
+.ms-item input[type=checkbox]{
+  border-color:var(--line-strong);
+  border-radius:5px;
+}
+.ms-item input[type=checkbox]:checked{
+  background:var(--brand);
+  border-color:var(--brand);
+  box-shadow:none;
+}
+.ms-item .ms-item-text.checked{color:var(--brand-strong);font-weight:650}
+.ms-footer{border-top:1px solid var(--line);background:var(--surface-soft)}
+.ms-footer button{
+  border:1px solid #bfdbfe;
+  background:var(--brand-soft);
+  color:var(--brand-strong);
+}
+.ms-footer button:hover{background:#dbeafe;border-color:#93c5fd}
+.result-bar{
+  margin:14px 2px 10px;
+  color:var(--muted);
+  font-size:13px;
+}
+#result-info{font-weight:650;color:#374151}
+.table-wrap{overflow:auto}
+table{font-size:13px}
+thead{
+  background:#f8fafc;
+  position:sticky;
+  top:85px;
+  z-index:1;
+}
+th{
+  padding:11px 12px;
+  color:#374151;
+  border-bottom:1px solid var(--line);
+  font-size:12px;
+  text-transform:none;
+}
+td{
+  padding:10px 12px;
+  border-bottom:1px solid #eef2f7;
+  color:#374151;
+  vertical-align:middle;
+}
+tbody tr:hover{background:#f8fbff}
+.score{color:var(--red);font-weight:750}
+.rank{color:var(--brand-strong);font-weight:650}
+.province-tag{
+  border-radius:999px;
+  background:#eef2ff;
+  color:#3730a3;
+  font-weight:650;
+}
+.tag{
+  border-radius:999px;
+  padding:2px 7px;
+  font-size:11px;
+}
+.tag-985{background:#fef2f2;color:#b91c1c}
+.tag-211{background:#fffbeb;color:#92400e}
+.tag-syl{background:#ecfeff;color:#0e7490}
+.school-group{border-bottom:1px solid var(--line)}
+.school-header{
+  padding:14px 16px;
+  gap:10px;
+}
+.school-header:hover{background:#f8fafc}
+.school-header .arrow{
+  width:22px;
+  height:22px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:6px;
+  color:var(--muted);
+  background:#f3f4f6;
+}
+.school-header .name{font-size:15px;font-weight:750;color:var(--text)}
+.school-header .meta{color:var(--muted);font-size:12px}
+.school-header .score-range{color:var(--red);font-weight:700}
+.school-body{padding:0 14px 14px;background:#fff}
+.school-body table{border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.school-body th{background:#f9fafb;padding:8px 10px}
+.school-body td{padding:8px 10px}
+.pagination{gap:6px;margin-top:18px}
+.pagination button{
+  min-width:36px;
+  padding:8px 11px;
+  border:1px solid var(--line-strong);
+  border-radius:7px;
+  background:#fff;
+  color:#374151;
+  font-weight:650;
+}
+.pagination button:hover:not(:disabled){background:var(--brand-soft);border-color:#bfdbfe;color:var(--brand-strong)}
+.pagination button.active{background:var(--brand);border-color:var(--brand);color:#fff}
+.loading,.no-data{color:var(--muted);padding:48px 24px}
+.modal-overlay{background:rgba(15,23,42,.48);backdrop-filter:blur(5px)}
+.modal-box{
+  border-radius:8px;
+  box-shadow:0 24px 70px rgba(15,23,42,.28);
+}
+.modal-header{
+  background:#111827;
+  border-radius:8px 8px 0 0;
+  padding:18px 22px;
+}
+.modal-header h2{font-size:18px}
+.modal-close{border-radius:7px}
+.modal-body{color:#374151}
+.modal-body strong{color:#111827}
+.modal-body a{color:var(--brand);border-bottom-color:#bfdbfe}
+.modal-footer{background:#f9fafb}
+.modal-footer button{border-radius:7px;font-weight:650}
+.modal-footer .btn-accept{background:var(--brand)}
+.modal-footer .btn-accept:hover{background:var(--brand-strong)}
+@media(max-width:768px){
+  .header{position:static;padding:18px 16px 14px}
+  .header h1{font-size:19px}
+  .container{padding:14px 12px 28px}
+  .tabs{width:100%;display:grid;grid-template-columns:1fr 1fr}
+  .tab{padding:9px 10px}
+  .filters{padding:14px}
+  .prof-filter-wrap{padding:12px}
+  thead{top:0}
+  .school-body table{border:0}
+  #panel-compare tr{
+    border-left-color:var(--brand);
+    border-radius:8px;
+    box-shadow:0 1px 3px rgba(17,24,39,.08);
+  }
+  .modal-box{border-radius:0}
+}
+
+/* ====== layout v2: denser, calmer, result-first ====== */
+body{
+  background:#f4f6f8;
+}
+.header{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  grid-template-areas:"title notice" "stats notice";
+  align-items:center;
+  gap:4px 18px;
+  padding:18px 32px;
+}
+.header h1{grid-area:title;max-width:none;margin:0;font-size:21px}
+.header .stats{grid-area:stats;max-width:none;margin:0;color:#64748b}
+.header .notice-link-wrap{grid-area:notice;max-width:none;margin:0}
+.disclaimer-link{
+  display:inline-flex;
+  align-items:center;
+  height:32px;
+  padding:0 12px;
+  border:1px solid #cbd5e1;
+  border-radius:7px;
+  background:#fff;
+  color:#334155;
+}
+.container{max-width:1520px;padding:20px 32px 40px}
+.tabs{
+  margin-bottom:12px;
+  border-radius:7px;
+  background:#e8edf3;
+}
+.filters{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 320px;
+  gap:16px 18px;
+  align-items:start;
+  padding:16px;
+}
+.filters > .filter-row:first-child{
+  display:grid;
+  grid-template-columns:minmax(220px,1.4fr) repeat(4,minmax(130px,.75fr));
+  gap:12px;
+  grid-column:1 / -1;
+}
+.filters > .filter-row:first-child .filter-group,
+.filters > .filter-row:first-child .ac-wrap,
+.filters > .filter-row:first-child input,
+.filters > .filter-row:first-child select{width:100%;min-width:0}
+.prof-filter-wrap{
+  grid-column:1 / 2;
+  margin:0;
+  padding:14px;
+  background:#f8fafc;
+}
+.prof-filter-row{grid-template-columns:1fr 1fr 1.15fr;gap:12px}
+.filters > .section-label{
+  margin:0;
+  align-self:end;
+  color:#0f172a;
+}
+.filters > .section-label:nth-of-type(2),
+.filters > .section-label:nth-of-type(3){
+  grid-column:2 / 3;
+}
+.filters > .filter-row:nth-of-type(2),
+.filters > .filter-row:nth-of-type(3){
+  grid-column:2 / 3;
+}
+.filters > .section-label:nth-of-type(4),
+.filters > .filter-row:nth-of-type(4){
+  grid-column:1 / -1;
+}
+.filters > .filter-row:nth-of-type(2){
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  padding:14px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:#fff;
+}
+.filters > .filter-row:nth-of-type(2) .filter-group:nth-child(3){
+  grid-column:1 / -1;
+}
+#f-rank-from,#f-rank-to{width:100% !important}
+.rank-presets{gap:7px}
+.filters > .filter-row:nth-of-type(3){
+  padding:14px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:#fff;
+}
+.filters > .filter-row:nth-of-type(4){
+  display:grid;
+  grid-template-columns:180px minmax(0,1fr);
+  gap:14px;
+  padding:14px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:#fff;
+}
+.filters > .filter-row:last-child{
+  grid-column:1 / -1;
+  justify-content:flex-end;
+  padding-top:0 !important;
+  border-top:1px solid var(--line);
+  margin-top:2px;
+}
+.section-label{
+  font-size:12px;
+  color:#475569;
+  letter-spacing:0;
+}
+.filter-group input,.filter-group select,.ac-wrap input,.actag-wrap,.ms-trigger{
+  border-color:#cbd5e1;
+  background:#fff;
+}
+.btn-primary{min-width:96px}
+.btn-reset{min-width:88px}
+.subj-chip,.tag-chip,.btn-rank{
+  min-height:30px;
+  padding:6px 11px;
+  border-radius:7px;
+}
+.subj-chip.active{
+  background:#0f172a;
+  border-color:#0f172a;
+}
+.tag-chip.active-985,
+.tag-chip.active-211,
+.tag-chip.active-双一流{
+  background:#0f172a;
+  border-color:#0f172a;
+  color:#fff;
+}
+.ms-dropdown{padding:6px;gap:6px;max-height:360px}
+.ms-search{padding:4px;border:0}
+.ms-search input{height:34px;background-color:#f8fafc}
+.ms-list{padding:0}
+.ms-item{
+  position:relative;
+  gap:10px;
+  min-height:36px;
+  padding:7px 9px;
+  border-radius:6px;
+  color:#334155;
+}
+.ms-item:hover{background:#f1f5f9}
+.ms-item.selected{background:#eff6ff;color:#1d4ed8}
+.ms-item input[type=checkbox]{
+  position:absolute;
+  opacity:0;
+  pointer-events:none;
+}
+.ms-check{
+  width:18px;
+  height:18px;
+  border:1px solid #cbd5e1;
+  border-radius:5px;
+  background:#fff;
+  flex:0 0 auto;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  transition:all .16s ease;
+}
+.ms-item:hover .ms-check{border-color:#94a3b8}
+.ms-item.selected .ms-check{
+  border-color:#2563eb;
+  background:#2563eb;
+}
+.ms-item.selected .ms-check::after{
+  content:'';
+  width:9px;
+  height:5px;
+  border-left:2px solid #fff;
+  border-bottom:2px solid #fff;
+  transform:rotate(-45deg) translate(1px,-1px);
+}
+.ms-item .ms-item-text{color:inherit}
+.ms-footer{
+  padding:6px 4px 2px;
+  border-top:1px solid #e2e8f0;
+  background:#fff;
+}
+.ms-footer button{
+  min-height:28px;
+  border-radius:6px;
+}
+.table-wrap{
+  border-radius:8px;
+  overflow:hidden;
+}
+.school-group{background:#fff}
+.school-header{
+  display:grid;
+  grid-template-columns:26px minmax(220px,1fr) auto auto;
+  gap:10px;
+  padding:13px 16px;
+}
+.school-header .school-title{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  min-width:0;
+}
+.school-header .name{
+  min-width:0;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.school-header .school-tags{
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  flex:0 0 auto;
+}
+.school-header .meta{
+  justify-content:flex-end;
+  align-items:center;
+  white-space:nowrap;
+}
+.school-body{
+  padding:0 16px 16px;
+  background:#fbfcfe;
+}
+.score-grid{
+  border:1px solid #dbe3ec;
+  border-radius:8px;
+  overflow:auto;
+  background:#fff;
+}
+.score-grid-head,.score-row{
+  display:grid;
+  grid-template-columns:76px minmax(120px,1.1fr) minmax(220px,1.8fr) minmax(150px,1.1fr) 90px 78px 78px 78px 96px 82px 70px;
+  min-width:1160px;
+  align-items:center;
+}
+.score-grid-head{
+  position:static;
+  z-index:2;
+  min-height:38px;
+  background:#f1f5f9;
+  color:#475569;
+  font-size:12px;
+  font-weight:700;
+  border-bottom:1px solid #dbe3ec;
+}
+.score-grid-head span,.score-row > div{
+  padding:9px 10px;
+  min-width:0;
+}
+.score-row{
+  min-height:44px;
+  border-bottom:1px solid #edf2f7;
+  color:#334155;
+}
+.score-row:last-child{border-bottom:0}
+.score-row:hover{background:#f8fbff}
+.score-year{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  font-weight:700;
+}
+.score-tags{display:flex;gap:3px;flex-wrap:wrap}
+.score-major{font-weight:700;color:#0f172a}
+.score-major,.score-detail,.score-subject,.score-batch{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.score-detail{color:#64748b}
+.score-subject{color:#475569}
+.score-batch{color:#64748b}
+.score,.rank{font-variant-numeric:tabular-nums}
+.result-bar{
+  padding:0 2px;
+}
+@media(max-width:1180px){
+  .filters{grid-template-columns:1fr}
+  .filters > .filter-row:first-child,
+  .prof-filter-wrap,
+  .filters > .section-label,
+  .filters > .filter-row:nth-of-type(2),
+  .filters > .filter-row:nth-of-type(3),
+  .filters > .filter-row:nth-of-type(4),
+  .filters > .filter-row:last-child{grid-column:1 / -1}
+}
+@media(max-width:768px){
+  .header{
+    grid-template-columns:1fr;
+    grid-template-areas:"title" "stats" "notice";
+    padding:16px;
+  }
+  .container{padding:14px 12px 30px}
+  .filters{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    padding:14px;
+  }
+  .filters > .filter-row:first-child,
+  .filters > .filter-row:nth-of-type(2),
+  .filters > .filter-row:nth-of-type(4){
+    display:flex;
+    flex-direction:column;
+    padding:0;
+    border:0;
+    background:transparent;
+  }
+  .filters > .filter-row:nth-of-type(3){
+    padding:0;
+    border:0;
+    background:transparent;
+  }
+  .filters > .filter-row:last-child{
+    flex-direction:row;
+    justify-content:stretch;
+  }
+  .filters > .filter-row:last-child .btn{flex:1}
+  .prof-filter-wrap{width:100%}
+  .school-header{
+    grid-template-columns:24px minmax(0,1fr) auto;
+    padding:12px;
+  }
+  .school-header .meta{
+    grid-column:2 / -1;
+    width:auto;
+    flex-direction:row;
+    justify-content:flex-start;
+  }
+  .school-body{padding:0 10px 12px}
+  .score-grid{
+    border:0;
+    background:transparent;
+    overflow:visible;
+  }
+  .score-grid-head{display:none}
+  .score-row{
+    display:grid;
+    grid-template-columns:1fr auto;
+    min-width:0;
+    gap:5px 12px;
+    align-items:start;
+    padding:12px;
+    margin-bottom:8px;
+    border:1px solid #e2e8f0;
+    border-radius:8px;
+    background:#fff;
+  }
+  .score-row > div{padding:0}
+  .score-year{grid-column:1 / 2}
+  .score-major{grid-column:1 / -1;font-size:14px}
+  .score-detail{grid-column:1 / -1;white-space:normal}
+  .score-subject,.score-batch{grid-column:1 / -1;font-size:12px}
+  .score-row .score{
+    grid-column:2 / 3;
+    grid-row:1 / 3;
+    font-size:20px;
+    align-self:start;
+  }
+  .score-row .rank::before{content:'位次 '}
+  .score-row > div:nth-child(7),
+  .score-row > div:nth-child(8),
+  .score-row > div:nth-child(10),
+  .score-row > div:nth-child(11){display:none}
+}
+
+/* scoped layout fixes */
+#panel-search .filters{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 320px;
+  gap:16px 18px;
+}
+#panel-search .primary-filters{
+  display:grid;
+  grid-template-columns:minmax(220px,1.4fr) repeat(4,minmax(130px,.75fr));
+  gap:12px;
+  grid-column:1 / -1;
+}
+#panel-search .primary-filters .filter-group,
+#panel-search .primary-filters .ac-wrap,
+#panel-search .primary-filters input,
+#panel-search .primary-filters select{width:100%;min-width:0}
+#panel-search .prof-filter-wrap{grid-column:1 / 2}
+#panel-search .side-filter-panel{
+  grid-column:2 / 3;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  padding:14px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:#fff;
+}
+#panel-search .rank-title,
+#panel-search .rank-filter-row,
+#panel-search .tag-title,
+#panel-search .tag-filter-row{grid-column:2 / 3}
+#panel-search .subject-title,
+#panel-search .subject-filter-row,
+#panel-search .action-row{grid-column:1 / -1}
+#panel-search .subject-title{text-align:left}
+#panel-search .rank-filter-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  padding:0;
+  border:0;
+  border-radius:0;
+  background:transparent;
+}
+#panel-search .rank-filter-row .filter-group:nth-child(3){grid-column:1 / -1}
+#panel-search .tag-filter-row{
+  padding:0;
+  border:0;
+  border-radius:0;
+  background:transparent;
+}
+#panel-search .subject-filter-row{
+  display:grid;
+  grid-template-columns:180px minmax(0,1fr);
+  gap:14px !important;
+  padding:14px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:#fff;
+}
+#panel-search .action-row{
+  justify-content:flex-end;
+  padding-top:0 !important;
+  border-top:1px solid var(--line);
+  margin-top:2px;
+}
+#panel-compare .filters{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:14px;
+}
+#panel-compare .filters > .filter-row:first-child{
+  display:grid;
+  grid-template-columns:minmax(260px,1.6fr) minmax(160px,.6fr) minmax(140px,.45fr);
+  gap:12px;
+}
+#panel-compare .prof-filter-wrap{grid-column:auto}
+#panel-compare .filters .action-row,
+#panel-compare .filters > .filter-row:last-child{justify-content:flex-end}
+@media(max-width:1180px){
+  #panel-search .filters{grid-template-columns:1fr}
+  #panel-search .primary-filters,
+  #panel-search .prof-filter-wrap,
+  #panel-search .side-filter-panel,
+  #panel-search .rank-title,
+  #panel-search .rank-filter-row,
+  #panel-search .tag-title,
+  #panel-search .tag-filter-row,
+  #panel-search .subject-title,
+  #panel-search .subject-filter-row,
+  #panel-search .action-row{grid-column:1 / -1}
+}
+@media(max-width:768px){
+  #panel-search .filters,
+  #panel-search .primary-filters,
+  #panel-search .side-filter-panel,
+  #panel-search .rank-filter-row,
+  #panel-search .subject-filter-row,
+  #panel-compare .filters,
+  #panel-compare .filters > .filter-row:first-child{
+    display:flex;
+    flex-direction:column;
+  }
+  #panel-search .rank-filter-row,
+  #panel-search .tag-filter-row,
+  #panel-search .subject-filter-row{
+    padding:0;
+    border:0;
+    background:transparent;
+  }
+  #panel-search .action-row{
+    flex-direction:row;
+    justify-content:stretch;
+  }
+  #panel-search .action-row .btn{flex:1}
+}
+
+/* layout v3: remove the dead middle space */
+#panel-search .filters{
+  grid-template-columns:420px minmax(0,1fr);
+  grid-template-areas:
+    "primary primary"
+    "major major"
+    "side right";
+  align-items:start;
+}
+#panel-search .primary-filters{
+  grid-area:primary;
+  grid-column:1 / -1;
+  grid-template-columns:minmax(260px,1.6fr) repeat(4,minmax(140px,.75fr));
+}
+#panel-search .prof-filter-wrap{
+  grid-area:major;
+  grid-column:1 / -1;
+}
+#panel-search .side-filter-panel{
+  grid-area:side;
+  grid-column:1 / 2;
+}
+#panel-search .subject-title{
+  display:none;
+}
+#panel-search .right-filter-panel{
+  grid-area:right;
+  grid-column:2 / 3;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  align-self:start;
+  width:100%;
+}
+#panel-search .subject-filter-row{
+  display:grid;
+  grid-area:auto;
+  grid-column:auto;
+  grid-template-columns:180px minmax(0,1fr);
+  min-height:0;
+  align-self:start;
+  align-content:start;
+  width:100%;
+}
+#panel-search .subject-filter-row::before{
+  content:'选考科目（按你的组合筛选可报专业）';
+  grid-column:1 / -1;
+  color:#0f172a;
+  font-size:12px;
+  font-weight:700;
+  margin-bottom:2px;
+}
+#panel-search .action-row{
+  grid-area:auto;
+  grid-column:auto;
+  align-self:start;
+  margin-top:0;
+  border-top:0;
+}
+#panel-search .rank-title,
+#panel-search .rank-filter-row,
+#panel-search .tag-title,
+#panel-search .tag-filter-row{grid-column:auto}
+#panel-search .side-filter-panel .section-label{
+  margin:0;
+}
+#panel-search .side-filter-panel .tag-title{
+  margin-top:8px;
+}
+@media(max-width:1180px){
+  #panel-search .filters{
+    grid-template-columns:1fr;
+    grid-template-areas:
+      "primary"
+      "major"
+      "side"
+      "right";
+  }
+  #panel-search .primary-filters{
+    grid-template-columns:minmax(220px,1fr) repeat(2,minmax(140px,.55fr));
+  }
+}
+@media(max-width:768px){
+  #panel-search .filters{
+    display:flex;
+    flex-direction:column;
+  }
+  #panel-search .primary-filters{
+    display:flex;
+    flex-direction:column;
+  }
+  #panel-search .subject-title{
+    margin:0;
+  }
+}
+
+/* layout v5: base filters first, then rank / major / subject */
+#panel-search .filters{
+  grid-template-columns:330px minmax(420px,1fr) 420px;
+  grid-template-areas:
+    "primary primary primary"
+    "side major right";
+  align-items:start;
+}
+#panel-search .primary-filters{
+  grid-area:primary;
+  grid-column:1 / -1;
+}
+#panel-search .side-filter-panel{
+  grid-area:side;
+  grid-column:1 / 2;
+  width:100%;
+}
+#panel-search .prof-filter-wrap{
+  grid-area:major;
+  grid-column:2 / 3;
+  width:100%;
+}
+#panel-search .right-filter-panel{
+  grid-area:right;
+  grid-column:3 / 4;
+  width:100%;
+}
+#panel-search .prof-filter-row{
+  grid-template-columns:1fr;
+  gap:10px;
+}
+#panel-search .subject-filter-row{
+  grid-template-columns:1fr;
+}
+#panel-search .action-row{
+  justify-content:flex-start;
+}
+@media(max-width:1280px){
+  #panel-search .filters{
+    grid-template-columns:320px minmax(360px,1fr);
+    grid-template-areas:
+      "primary primary"
+      "side major"
+      "right right";
+  }
+  #panel-search .right-filter-panel{
+    grid-column:1 / -1;
+  }
+  #panel-search .subject-filter-row{
+    grid-template-columns:180px minmax(0,1fr);
+  }
+}
+@media(max-width:768px){
+  #panel-search .filters,
+  #panel-search .primary-filters,
+  #panel-search .side-filter-panel,
+  #panel-search .right-filter-panel{
+    display:flex;
+    flex-direction:column;
+  }
+  #panel-search .prof-filter-wrap,
+  #panel-search .side-filter-panel,
+  #panel-search .right-filter-panel{
+    width:100%;
+  }
+}
+
+/* layout v6: equal second row, actions as the third layer */
+#panel-search .filters{
+  grid-template-columns:330px minmax(420px,1fr) 420px;
+  grid-template-areas:
+    "primary primary primary"
+    "side major right"
+    "actions actions actions";
+  align-items:stretch;
+}
+#panel-search .side-filter-panel,
+#panel-search .prof-filter-wrap,
+#panel-search .right-filter-panel{
+  height:100%;
+}
+#panel-search .right-filter-panel{
+  display:block;
+}
+#panel-search .subject-filter-row{
+  height:100%;
+}
+#panel-search .action-row{
+  grid-area:actions;
+  grid-column:1 / -1;
+  display:flex;
+  justify-content:flex-end;
+  gap:12px;
+  padding-top:12px !important;
+  border-top:1px solid var(--line);
+  margin-top:0;
+}
+@media(max-width:1280px){
+  #panel-search .filters{
+    grid-template-columns:320px minmax(360px,1fr);
+    grid-template-areas:
+      "primary primary"
+      "side major"
+      "right right"
+      "actions actions";
+  }
+}
+@media(max-width:768px){
+  #panel-search .filters{
+    display:flex;
+    flex-direction:column;
+  }
+  #panel-search .side-filter-panel,
+  #panel-search .prof-filter-wrap,
+  #panel-search .right-filter-panel,
+  #panel-search .subject-filter-row{
+    height:auto;
+  }
+  #panel-search .action-row{
+    flex-direction:row;
+    justify-content:stretch;
+  }
+  #panel-search .action-row .btn{
+    flex:1;
+  }
+}
+/* compare page: single-surface school picker, no nested input frame */
+#panel-compare .compare-school-picker{
+  height:38px !important;
+  min-height:38px !important;
+  max-height:38px;
+  padding:0 10px 0 8px;
+  border:1px solid #cbd5e1;
+  border-radius:7px;
+  background:#fff;
+  box-shadow:none;
+  overflow:visible;
+  align-items:center;
+  align-content:center;
+}
+#panel-compare .compare-school-picker:focus-within{
+  border-color:var(--brand);
+  box-shadow:none;
+}
+#panel-compare .compare-school-picker .actag-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:4px;
+  align-items:center;
+}
+#panel-compare .compare-school-picker .actag-tags:empty{
+  display:none;
+}
+#panel-compare .compare-school-picker .actag-tag{
+  max-width:220px;
+  height:24px;
+  min-height:24px;
+  padding:0 7px 0 9px;
+  border-radius:999px;
+  background:#e0f2fe;
+  color:#075985;
+  font-weight:650;
+  line-height:1;
+  box-shadow:none;
+  display:inline-flex;
+  align-items:center;
+}
+#panel-compare .compare-school-picker .actag-x{
+  width:14px;
+  height:14px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:999px;
+}
+#panel-compare .compare-school-picker .actag-x:hover{
+  background:rgba(7,89,133,.12);
+}
+#panel-compare .compare-school-picker .actag-input{
+  min-width:220px;
+  height:36px !important;
+  line-height:36px;
+  flex:1;
+  border:0;
+  padding:0 0 0 2px;
+  background:transparent;
+  box-shadow:none;
+  outline:none;
+  -webkit-tap-highlight-color:transparent;
+  appearance:none;
+  -webkit-appearance:none;
+}
+#panel-compare .compare-school-picker .actag-input:focus{
+  outline:none;
+  box-shadow:none;
+}
+#panel-compare .compare-school-picker .actag-input::-webkit-search-cancel-button{
+  -webkit-appearance:none;
+}
+#panel-compare .compare-school-picker .actag-dropdown{
+  top:calc(100% + 8px);
+  border-radius:8px;
+  border-color:#dbe3ec;
+  box-shadow:0 18px 42px rgba(15,23,42,.14);
+}
+#panel-compare .compare-school-picker .actag-item{
+  padding:9px 12px;
+}
+
+@media(max-width:768px){
+  #panel-search .right-filter-panel{
+    display:flex;
+    flex-direction:column;
+    gap:0;
+    width:100%;
+  }
+  #panel-search .subject-filter-row{
+    display:flex;
+    flex-direction:column;
+    gap:12px !important;
+    width:100%;
+    padding:14px;
+    border:1px solid var(--line);
+    border-radius:8px;
+    background:#fff;
+  }
+  #panel-search .subject-filter-row::before{
+    margin:0 0 2px;
+    line-height:1.4;
+  }
+  #panel-search .subject-filter-row .filter-group{
+    width:100%;
+    gap:7px;
+  }
+  #panel-search .subject-filter-row label{
+    white-space:normal;
+    line-height:1.35;
+  }
+  #panel-search .subject-filter-row #f-first-subj{
+    width:100% !important;
+    max-width:100%;
+  }
+  #panel-search .subject-filter-row .subj-chips{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:8px;
+  }
+  #panel-search .subject-filter-row .subj-chip{
+    justify-content:center;
+    min-height:34px;
+    padding:7px 10px;
+    border-radius:7px;
+    text-align:center;
+  }
+}
+
+/* unified popup/select polish */
+.filters,.filter-row,.filter-group,.prof-filter-wrap,.side-filter-panel,.right-filter-panel{overflow:visible}
+.custom-select{
+  position:relative;
+  width:100%;
+  min-width:0;
+  font-size:13px;
+}
+.native-select-hidden{
+  position:absolute !important;
+  width:1px !important;
+  height:1px !important;
+  opacity:0 !important;
+  pointer-events:none !important;
+  left:0;
+  bottom:0;
+}
+.cs-trigger{
+  width:100%;
+  min-height:38px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  padding:8px 11px;
+  border:1px solid #cbd5e1;
+  border-radius:7px;
+  background:#fff;
+  color:#111827;
+  font:inherit;
+  text-align:left;
+  cursor:pointer;
+  transition:border-color .16s ease,box-shadow .16s ease,background-color .16s ease;
+}
+.cs-trigger:hover{border-color:#94a3b8;background:#f8fafc}
+.cs-trigger.open{
+  border-color:var(--brand);
+  box-shadow:0 0 0 3px rgba(37,99,235,.12);
+  background:#fff;
+}
+.cs-value{
+  min-width:0;
+  flex:1;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.cs-value.placeholder{color:var(--muted-soft)}
+.cs-arrow{
+  width:16px;
+  height:16px;
+  flex:0 0 auto;
+  color:#64748b;
+  transition:transform .18s ease;
+}
+.cs-trigger.open .cs-arrow{transform:rotate(180deg)}
+.cs-menu,
+.ac-wrap .ac-dropdown,
+.actag-wrap .actag-dropdown,
+.ms-dropdown{
+  border:1px solid #dbe3ec;
+  border-radius:8px;
+  background:#fff;
+  box-shadow:0 18px 42px rgba(15,23,42,.16);
+}
+.cs-menu{
+  position:absolute;
+  top:calc(100% + 8px);
+  left:0;
+  right:0;
+  z-index:300;
+  display:none;
+  max-height:280px;
+  overflow:hidden;
+  padding:6px;
+  animation:dropIn .16s ease;
+}
+.cs-menu.open{display:block}
+.cs-search{
+  width:100%;
+  height:34px;
+  margin-bottom:6px;
+  padding:7px 10px;
+  border:1px solid #cbd5e1;
+  border-radius:6px;
+  outline:none;
+  background:#f8fafc;
+  color:#111827;
+  font:inherit;
+}
+.cs-search:focus{border-color:var(--brand);background:#fff}
+.cs-options{
+  max-height:226px;
+  overflow-y:auto;
+  padding-right:2px;
+}
+.cs-options::-webkit-scrollbar,
+.ac-wrap .ac-dropdown::-webkit-scrollbar,
+.actag-wrap .actag-dropdown::-webkit-scrollbar,
+.ms-list::-webkit-scrollbar{width:6px}
+.cs-options::-webkit-scrollbar-thumb,
+.ac-wrap .ac-dropdown::-webkit-scrollbar-thumb,
+.actag-wrap .actag-dropdown::-webkit-scrollbar-thumb,
+.ms-list::-webkit-scrollbar-thumb{
+  background:#cbd5e1;
+  border-radius:999px;
+}
+.cs-option,
+.ac-wrap .ac-dropdown .ac-item,
+.actag-wrap .actag-dropdown .actag-item,
+.ms-item{
+  border-radius:6px;
+  border-bottom:0;
+  color:#334155;
+}
+.cs-option{
+  min-height:36px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  padding:8px 9px;
+  cursor:pointer;
+  user-select:none;
+}
+.cs-option:hover,.cs-option.highlight,
+.ac-wrap .ac-dropdown .ac-item:hover,
+.ac-wrap .ac-dropdown .ac-item.highlight,
+.actag-wrap .actag-dropdown .actag-item:hover,
+.ms-item:hover{
+  background:#f1f5f9;
+  color:#0f172a;
+}
+.cs-option.selected{
+  background:#eff6ff;
+  color:var(--brand-strong);
+  font-weight:650;
+}
+.cs-option.selected::after{
+  content:'';
+  width:12px;
+  height:7px;
+  border-left:2px solid currentColor;
+  border-bottom:2px solid currentColor;
+  transform:rotate(-45deg) translate(1px,-1px);
+  flex:0 0 auto;
+}
+.cs-empty{
+  padding:14px 8px;
+  color:#94a3b8;
+  text-align:center;
+}
+@media(max-width:768px){
+  .cs-menu{
+    max-height:320px;
+    padding:8px;
+  }
+  .cs-options{max-height:260px}
+  .cs-option{
+    min-height:42px;
+    padding:10px;
+  }
+}
 </style>
 </head>
 <body>
@@ -270,7 +1631,7 @@ td{padding:8px 12px;border-bottom:1px solid #f5f5f5}
 <div class="modal-overlay" id="welcome-modal">
   <div class="modal-box">
     <div class="modal-header">
-      <h2>📋 免责声明 & 注意事项</h2>
+      <h2>免责声明 & 注意事项</h2>
     </div>
     <div class="modal-body">
       <p>这是一份<strong>免责声明和注意事项</strong>~</p>
@@ -284,30 +1645,29 @@ td{padding:8px 12px;border-bottom:1px solid #f5f5f5}
       <p>本站数据仅供学习研究。<strong>若数据侵权</strong>，请联系邮箱 <a href="mailto:skysight4491@outlook.com">skysight4491@outlook.com</a>。</p>
       <p>如要勘误、建议、合作同样联系邮箱 <a href="mailto:skysight4491@outlook.com">skysight4491@outlook.com</a>，或者PR/Issue。</p>
       <p>谢绝任何网络攻击、逆向。大手子请绕路 ;)</p>
-      <p>⭐ Star me at <a href="https://github.com/SkySight-666/fjgaokao" target="_blank">github.com/SkySight-666/fjgaokao</a></p>
+      <p>Star me at <a href="https://github.com/SkySight-666/fjgaokao" target="_blank">github.com/SkySight-666/fjgaokao</a></p>
     </div>
     <div class="modal-footer">
-      <button class="btn-deny" onclick="document.getElementById('welcome-modal').classList.add('hidden')">✕ 关闭</button>
-      <button class="btn-accept" onclick="document.getElementById('welcome-modal').classList.add('hidden')">我知道了</button>
+      <button class="btn-accept" onclick="closeWelcome()">我知道了</button>
     </div>
   </div>
 </div>
 
 <div class="header">
-  <h1>📊 福建高考专业分数线查询</h1>
+  <h1>福建高考高校专业分数线查询</h1>
   <div class="stats" id="stats">加载中...</div>
-  <div style="margin-top:6px;font-size:12px;opacity:.7"><a href="javascript:void(0)" onclick="document.getElementById('welcome-modal').classList.remove('hidden')" style="color:rgba(255,255,255,.85);text-decoration:underline;text-underline-offset:2px">📋 免责声明</a></div>
+  <div class="notice-link-wrap"><a class="disclaimer-link" href="javascript:void(0)" onclick="document.getElementById('welcome-modal').classList.remove('hidden')">免责声明</a></div>
 </div>
 
 <div class="container">
   <div class="tabs">
-    <button class="tab active" onclick="switchTab('search')">🔍 搜索查询</button>
-    <button class="tab" onclick="switchTab('compare')">📈 对比分析</button>
+    <button class="tab active" onclick="switchTab('search')">搜索查询</button>
+    <button class="tab" onclick="switchTab('compare')">对比分析</button>
   </div>
 
   <div id="panel-search" class="panel active">
     <div class="filters">
-      <div class="filter-row">
+      <div class="filter-row primary-filters">
         <div class="filter-group">
           <label>学校名称</label>
           <div class="ac-wrap">
@@ -341,7 +1701,7 @@ td{padding:8px 12px;border-bottom:1px solid #f5f5f5}
       </div>
 
       <div class="prof-filter-wrap">
-      <div class="section-label">🎓 专业筛选（多选，支持搜索和级联联动）</div>
+      <div class="section-label">专业筛选（多选，支持搜索和级联联动）</div>
       <div class="prof-filter-row">
         <div class="filter-group">
           <label id="lbl-level2">学科门类</label>
@@ -358,8 +1718,9 @@ td{padding:8px 12px;border-bottom:1px solid #f5f5f5}
       </div>
       </div>
 
-      <div class="section-label">📍 位次区间筛选</div>
-      <div class="filter-row">
+      <div class="side-filter-panel">
+      <div class="section-label rank-title">位次区间筛选</div>
+      <div class="filter-row rank-filter-row">
         <div class="filter-group">
           <label>排名从</label>
           <input id="f-rank-from" type="number" placeholder="如 1000" style="width:120px">
@@ -380,16 +1741,18 @@ td{padding:8px 12px;border-bottom:1px solid #f5f5f5}
           </div>
         </div>
       </div>
-      <div class="section-label">🏫 学校层次</div>
-      <div class="filter-row" style="gap:8px">
+      <div class="section-label tag-title">学校层次</div>
+      <div class="filter-row tag-filter-row" style="gap:8px">
         <div class="tag-chips">
           <label class="tag-chip" data-tag="985">985</label>
           <label class="tag-chip" data-tag="211">211</label>
           <label class="tag-chip" data-tag="双一流">双一流</label>
         </div>
       </div>
-      <div class="section-label">🎯 选考科目（按你的组合筛选可报专业）</div>
-      <div class="filter-row" style="gap:16px">
+      </div>
+      <div class="right-filter-panel">
+      <div class="section-label subject-title">选考科目（按你的组合筛选可报专业）</div>
+      <div class="filter-row subject-filter-row" style="gap:16px">
         <div class="filter-group">
           <label>首选科目</label>
           <select id="f-first-subj" style="width:110px">
@@ -408,8 +1771,9 @@ td{padding:8px 12px;border-bottom:1px solid #f5f5f5}
           </div>
         </div>
       </div>
-      <div class="filter-row" style="padding-top:8px">
-        <button class="btn btn-primary" onclick="doSearch()">🔍 查询</button>
+      </div>
+      <div class="filter-row action-row" style="padding-top:8px">
+        <button class="btn btn-primary" onclick="doSearch()">查询</button>
         <button class="btn btn-reset" onclick="resetFilters()">↻ 重置</button>
       </div>
     </div>
@@ -427,9 +1791,9 @@ td{padding:8px 12px;border-bottom:1px solid #f5f5f5}
       <div class="filter-row">
         <div class="filter-group" style="flex:2">
           <label>学校（多选）</label>
-          <div class="actag-wrap">
+          <div class="actag-wrap compare-school-picker">
             <div class="actag-tags" id="cschool-tags"></div>
-            <input class="actag-input" id="cschool-input" placeholder="搜索添加学校..." autocomplete="off">
+            <input class="actag-input" id="cschool-input" name="compare_school_query" type="search" placeholder="搜索添加学校..." autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" inputmode="search">
             <div class="actag-dropdown" id="cschool-dd"></div>
           </div>
         </div>
@@ -443,7 +1807,7 @@ td{padding:8px 12px;border-bottom:1px solid #f5f5f5}
         </div>
       </div>
       <div class="prof-filter-wrap" style="margin-top:0">
-      <div class="section-label">🎓 专业（可选，不选则对比所有专业）</div>
+      <div class="section-label">专业（可选，不选则对比所有专业）</div>
       <div class="prof-filter-row">
         <div class="filter-group">
           <label id="clbl-level2">学科门类</label>
@@ -460,7 +1824,7 @@ td{padding:8px 12px;border-bottom:1px solid #f5f5f5}
       </div>
       </div>
       <div class="filter-row" style="padding-top:8px">
-        <button class="btn btn-primary" onclick="doCompare()">📈 对比</button>
+        <button class="btn btn-primary" onclick="doCompare()">对比</button>
       </div>
     </div>
     <div class="table-wrap">
@@ -595,19 +1959,23 @@ class MultiSelect {
     this.nomatchEl.style.display = 'none';
     opts.forEach(opt => {
       const item = document.createElement('label');
-      item.className = 'ms-item';
+      item.className = 'ms-item' + (this.selected.has(opt) ? ' selected' : '');
       const cb = document.createElement('input');
       cb.type = 'checkbox';
       cb.checked = this.selected.has(opt);
+      const check = document.createElement('span');
+      check.className = 'ms-check';
       cb.onchange = () => {
         if (cb.checked) this.selected.add(opt); else this.selected.delete(opt);
+        item.classList.toggle('selected', cb.checked);
+        span.classList.toggle('checked', cb.checked);
         this._updateTrigger();
         this.onChange();
       };
       const span = document.createElement('span');
       span.className = 'ms-item-text' + (this.selected.has(opt) ? ' checked' : '');
       span.textContent = opt;
-      item.append(cb, span);
+      item.append(cb, check, span);
       this.listDiv.appendChild(item);
     });
   }
@@ -639,8 +2007,12 @@ class MultiSelect {
     const cbs = this.listDiv.querySelectorAll('.ms-item input[type=checkbox]');
     cbs.forEach(cb => {
       const text = cb.parentElement.querySelector('.ms-item-text').textContent;
-      if (text === opt) cb.checked = false;
-    });
+        if (text === opt) {
+          cb.checked = false;
+          cb.parentElement.classList.remove('selected');
+          cb.parentElement.querySelector('.ms-item-text').classList.remove('checked');
+        }
+      });
     this.onChange();
   }
 
@@ -683,6 +2055,138 @@ class MultiSelect {
     return s.replace(/"/g, '&quot;').replace(/'/g, '&#39;');
   }
 }
+
+// ========== 单选下拉组件：替换移动端/桌面端原生 select 弹窗 ==========
+const customSelects = [];
+
+class CustomSelect {
+  constructor(select) {
+    this.select = select;
+    this.open = false;
+    this.options = [];
+    this._build();
+    this._bind();
+    this.render();
+    this.sync();
+    this.observer = new MutationObserver(() => {
+      this.render();
+      this.sync();
+    });
+    this.observer.observe(this.select, { childList: true, subtree: true, attributes: true });
+  }
+
+  _build() {
+    this.wrap = document.createElement('div');
+    this.wrap.className = 'custom-select';
+    this.select.parentNode.insertBefore(this.wrap, this.select);
+    this.wrap.appendChild(this.select);
+    this.select.classList.add('native-select-hidden');
+
+    this.trigger = document.createElement('button');
+    this.trigger.type = 'button';
+    this.trigger.className = 'cs-trigger';
+    this.valueEl = document.createElement('span');
+    this.valueEl.className = 'cs-value';
+    this.arrowEl = document.createElement('span');
+    this.arrowEl.className = 'cs-arrow';
+    this.arrowEl.innerHTML = '<svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7.5 10 12l5-4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    this.trigger.append(this.valueEl, this.arrowEl);
+
+    this.menu = document.createElement('div');
+    this.menu.className = 'cs-menu';
+    this.search = document.createElement('input');
+    this.search.className = 'cs-search';
+    this.search.placeholder = '搜索选项';
+    this.list = document.createElement('div');
+    this.list.className = 'cs-options';
+    this.menu.append(this.search, this.list);
+    this.wrap.append(this.trigger, this.menu);
+  }
+
+  _bind() {
+    this.trigger.onclick = (e) => {
+      e.stopPropagation();
+      this.toggle();
+    };
+    this.menu.onclick = (e) => e.stopPropagation();
+    this.search.oninput = () => this.render(this.search.value);
+    this.search.onkeydown = (e) => {
+      if (e.key === 'Escape') this.close();
+    };
+    this.select.addEventListener('change', () => this.sync());
+  }
+
+  toggle() {
+    this.open ? this.close() : this.show();
+  }
+
+  show() {
+    customSelects.forEach(cs => { if (cs !== this) cs.close(); });
+    this.open = true;
+    this.menu.classList.add('open');
+    this.trigger.classList.add('open');
+    this.search.value = '';
+    this.render();
+    this.search.style.display = this.options.length > 8 ? '' : 'none';
+    if (this.options.length > 8) setTimeout(() => this.search.focus(), 30);
+  }
+
+  close() {
+    this.open = false;
+    this.menu.classList.remove('open');
+    this.trigger.classList.remove('open');
+  }
+
+  render(query = '') {
+    const q = query.trim().toLowerCase();
+    this.options = [...this.select.options].filter(opt => !opt.disabled);
+    const visible = q
+      ? this.options.filter(opt => opt.textContent.toLowerCase().includes(q))
+      : this.options;
+
+    this.list.innerHTML = '';
+    if (!visible.length) {
+      const empty = document.createElement('div');
+      empty.className = 'cs-empty';
+      empty.textContent = '无匹配选项';
+      this.list.appendChild(empty);
+      return;
+    }
+
+    visible.forEach(opt => {
+      const item = document.createElement('div');
+      item.className = 'cs-option' + (opt.value === this.select.value ? ' selected' : '');
+      item.textContent = opt.textContent;
+      item.onclick = () => {
+        this.select.value = opt.value;
+        this.select.dispatchEvent(new Event('change', { bubbles: true }));
+        this.sync();
+        this.close();
+      };
+      this.list.appendChild(item);
+    });
+  }
+
+  sync() {
+    const selected = this.select.selectedOptions[0] || this.select.options[0];
+    const text = selected ? selected.textContent : '请选择';
+    this.valueEl.textContent = text;
+    this.valueEl.classList.toggle('placeholder', !this.select.value);
+    this.render(this.search.value);
+  }
+}
+
+function enhanceSelects() {
+  document.querySelectorAll('.filter-group select:not(.native-select-hidden)').forEach(select => {
+    customSelects.push(new CustomSelect(select));
+  });
+}
+
+function syncCustomSelects() {
+  customSelects.forEach(cs => cs.sync());
+}
+
+document.addEventListener('click', () => customSelects.forEach(cs => cs.close()));
 
 // ========== 初始化多选 ==========
 let msLevel2, msLevel3, msSpname;
@@ -751,6 +2255,8 @@ async function loadStats() {
   };
   // 对比面板初始化
   loadCompareSchools(defaultLevel1);
+  enhanceSelects();
+  syncCustomSelects();
 }
 
 async function loadMajors(level1) {
@@ -822,6 +2328,10 @@ async function loadCompareSchools(level1) {
     // 学校自动补全初始化
     const input = document.getElementById('cschool-input');
     const dd = document.getElementById('cschool-dd');
+    input.setAttribute('autocomplete', 'off');
+    input.setAttribute('autocorrect', 'off');
+    input.setAttribute('autocapitalize', 'none');
+    input.setAttribute('spellcheck', 'false');
     let debounce = null;
     let allSchools = [];
 
@@ -1052,11 +2562,12 @@ async function doSearch(page = 1) {
     const maxMin = mins.length ? Math.max(...mins) : '-';
     const minMin = mins.length ? Math.min(...mins) : '-';
     const uid = `sch_${page}_${idx}`;
+    const tagsHtml = renderTags(g.rows[0]?.tags || []);
     html += `
       <div class="school-group">
         <div class="school-header" onclick="toggleSchool('${uid}')">
           <span class="arrow" id="arrow-${uid}">▶</span>
-          <span class="name">${esc(g.school)}</span>
+          <span class="school-title"><span class="name">${esc(g.school)}</span>${tagsHtml ? `<span class="school-tags">${tagsHtml}</span>` : ''}</span>
           <span class="province-tag">${esc(g.province)}</span>
           <span class="meta">
             <span>${g.rows.length} 个专业</span>
@@ -1064,28 +2575,25 @@ async function doSearch(page = 1) {
           </span>
         </div>
         <div class="school-body" id="body-${uid}">
-          <table>
-            <thead><tr>
-              <th>标签</th><th>年份</th><th>专业</th><th>详细名称</th><th>选科要求</th><th>批次</th>
-              <th>最低分</th><th>最高分</th><th>平均分</th><th>最低位次</th><th>录取人数</th><th>线差</th>
-            </tr></thead>
-            <tbody>
-              ${g.rows.map((r, i) => `<tr>
-                <td>${i === 0 ? renderTags(r.tags || []) : ''}</td>
-                <td>${r.year}</td>
-                <td>${esc(r.sp_name)}</td>
-                <td style="font-size:12px;color:#888;max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${esc(r.spname || '')}">${esc(r.spname || '-')}</td>
-                <td>${esc(r.sg_info)}</td>
-                <td>${esc(r.local_batch_name)}</td>
-                <td class="score">${r.min || '-'}</td>
-                <td>${r.max || '-'}</td>
-                <td>${r.average || '-'}</td>
-                <td class="rank">${r.min_section ? Number(r.min_section).toLocaleString() : '-'}</td>
-                <td>${r.lq_num || '-'}</td>
-                <td>${r.diff || '-'}</td>
-              </tr>`).join('')}
-            </tbody>
-          </table>
+          <div class="score-grid">
+            <div class="score-grid-head">
+              <span>年份</span><span>专业</span><span>详细名称</span><span>选科要求</span><span>批次</span>
+              <span>最低分</span><span>最高分</span><span>平均分</span><span>最低位次</span><span>录取人数</span><span>线差</span>
+            </div>
+            ${g.rows.map((r, i) => `<div class="score-row">
+              <div class="score-year">${r.year}</div>
+              <div class="score-major" title="${esc(r.sp_name)}">${esc(r.sp_name)}</div>
+              <div class="score-detail" title="${esc(r.spname || '')}">${esc(r.spname || '-')}</div>
+              <div class="score-subject">${esc(r.sg_info || '-')}</div>
+              <div class="score-batch">${esc(r.local_batch_name || '-')}</div>
+              <div class="score">${r.min || '-'}</div>
+              <div>${r.max || '-'}</div>
+              <div>${r.average || '-'}</div>
+              <div class="rank">${r.min_section && r.min_section !== '-' ? Number(r.min_section).toLocaleString() : '-'}</div>
+              <div>${r.lq_num || '-'}</div>
+              <div>${r.diff || '-'}</div>
+            </div>`).join('')}
+          </div>
         </div>
       </div>`;
   });
@@ -1156,7 +2664,7 @@ async function doCompare() {
     <td>${esc(r.sp_name)}</td>
     <td style="font-size:12px;color:#888;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${esc(r.spname || '')}">${esc(r.spname || '-')}</td>
     <td class="score">${r.min || '-'}</td><td>${r.max || '-'}</td><td>${r.average || '-'}</td>
-    <td class="rank">${r.min_section ? Number(r.min_section).toLocaleString() : '-'}</td>
+    <td class="rank">${r.min_section && r.min_section !== '-' ? Number(r.min_section).toLocaleString() : '-'}</td>
     <td>${r.lq_num || '-'}</td>
   </tr>`).join('');
 }
@@ -1172,6 +2680,7 @@ function resetFilters() {
   document.querySelectorAll('.btn-rank').forEach(b => b.classList.remove('active'));
   document.getElementById('f-level1').value = '';
   document.getElementById('f-first-subj').value = '';
+  syncCustomSelects();
   document.querySelectorAll('.subj-chip').forEach(c => c.classList.remove('active'));
   document.querySelectorAll('.tag-chip').forEach(c => { c.classList.remove('active-985','active-211','active-双一流'); });
   msLevel2.clear();
@@ -1201,6 +2710,15 @@ function updateLevel2Label(level1) {
   // 高职/职业本科 → 专业大类，普通本科 → 学科门类
   const isVocational = level1 && (level1.includes('专科') || level1.includes('职业'));
   document.getElementById('lbl-level2').textContent = isVocational ? '专业大类' : '学科门类';
+}
+
+function closeWelcome() {
+  document.getElementById('welcome-modal').classList.add('hidden');
+  document.cookie = 'welcomeAccepted=1; max-age=31536000; path=/; SameSite=Lax';
+}
+
+if (document.cookie.split('; ').includes('welcomeAccepted=1')) {
+  document.getElementById('welcome-modal').classList.add('hidden');
 }
 
 // 选科 chip 点击切换

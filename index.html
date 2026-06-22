@@ -163,12 +163,83 @@ td{padding:8px 12px;border-bottom:1px solid #f5f5f5}
 @media(max-width:640px){.prof-filter-row{grid-template-columns:1fr}}
 
 @media(max-width:768px){
-  .filter-row{flex-direction:column}
-  .filter-group input,.filter-group select{width:100%}
-  .ms-wrap{width:100%}
-  .ms-dropdown{left:0;right:0;min-width:auto}
-  .school-header{flex-wrap:wrap}
-  .school-header .meta{width:100%}
+  /* 筛选区：全部纵向堆叠 */
+  .filter-row{flex-direction:column;gap:10px}
+  .filter-group{width:100%}
+  .filter-group input,.filter-group select{width:100%;max-width:100%}
+  .filter-group input{width:100%}
+  .filter-group select{width:100%}
+  .ms-wrap{width:100%;min-width:0;flex:none}
+  .ms-dropdown{left:0;right:0;min-width:0;width:100%}
+  .ac-wrap{min-width:0;width:100%}
+  .ac-wrap input{width:100%}
+  .actag-wrap{width:100%}
+  .rank-presets{justify-content:flex-start}
+  .rank-presets .btn-sm{font-size:12px;padding:6px 12px}
+
+  /* 容器减 padding */
+  .container{padding:8px}
+  .filters{padding:12px;border-radius:8px}
+
+  /* 表头 */
+  .header{padding:16px 0}
+  .header h1{font-size:18px}
+
+  /* 专业三列 → 单列 */
+  .prof-filter-row{grid-template-columns:1fr !important;gap:8px}
+  .prof-filter-wrap{padding:10px}
+
+  /* 学校分组 */
+  .school-header{flex-wrap:wrap;padding:10px}
+  .school-header .meta{width:100%;flex-direction:column;gap:4px;margin-top:4px}
+  .school-header .name{font-size:14px}
+
+  /* 表格 → 卡片视图 */
+  .school-body table thead{display:none}
+  .school-body table,.school-body tbody{display:block}
+  .school-body tr{display:flex;flex-wrap:wrap;padding:8px 10px;border-bottom:1px solid #f0f0f0;gap:4px 12px}
+  .school-body td{display:inline;padding:0 0 4px;border:none;font-size:12px;white-space:normal}
+  .school-body td::after{content:none}
+  .school-body td:first-child{font-weight:600;color:#667eea;display:block;width:100%}
+  .school-body td:nth-child(2){font-weight:600;display:block;width:100%;font-size:13px}
+  .school-body td:nth-child(3){color:#888;font-size:11px;display:block;width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .school-body td.score{color:#e74c3c;font-size:14px}
+  .school-body td.rank{color:#667eea;font-size:13px}
+
+  /* 对比表 */
+  #panel-compare table thead{display:none}
+  #panel-compare table,#panel-compare tbody{display:block}
+  #panel-compare tr{display:flex;flex-wrap:wrap;padding:10px;border-bottom:1px solid #f0f0f0;gap:2px 10px;border-left:4px solid #667eea;margin-bottom:8px;background:#fff;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+  #panel-compare td{display:inline;padding:0;border:none;font-size:12px}
+  #panel-compare td:first-child{display:none}
+  #panel-compare td:nth-child(2){font-weight:600;font-size:14px;display:block;width:100%}
+  #panel-compare td:nth-child(3){display:none}
+  #panel-compare td:nth-child(4){font-weight:600;display:block;width:100%}
+  #panel-compare td:nth-child(5){font-weight:600;font-size:13px;display:block;width:100%}
+  #panel-compare td:nth-child(6){color:#888;display:block;width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  #panel-compare td.score{color:#e74c3c;font-size:16px;font-weight:600}
+  #panel-compare td.rank{color:#667eea}
+
+  /* 弹窗全屏 */
+  .modal-box{max-width:100%;width:100%;max-height:100vh;border-radius:0;height:100vh}
+  .modal-header{border-radius:0}
+  .modal-body{padding:14px 16px;font-size:13px;line-height:1.7}
+
+  /* 标签/芯片 */
+  .tag-chips{flex-wrap:wrap}
+  .subj-chips{flex-wrap:wrap}
+  .subj-chip{padding:8px 14px;font-size:13px}
+
+  /* 分页 */
+  .pagination{gap:4px}
+  .pagination button{padding:8px 12px;font-size:13px}
+
+  /* 结果栏 */
+  .result-bar{flex-direction:column;gap:4px;align-items:flex-start}
+
+  /* 搜索结果标签列隐藏（标签已显示在header中） */
+  .school-body td:first-child{display:none}
+  #panel-compare td:first-child{display:none}
 }
 
 /* 欢迎弹窗 */

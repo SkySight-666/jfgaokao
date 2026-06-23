@@ -90,6 +90,8 @@ td{padding:8px 12px;border-bottom:1px solid #f5f5f5}
 .pagination button{padding:6px 14px;border:1px solid #d9d9d9;border-radius:6px;background:#fff;cursor:pointer;font-size:13px}
 .pagination button.active{background:#667eea;color:#fff;border-color:#667eea}
 .pagination button:disabled{opacity:.4;cursor:not-allowed}
+.site-footer{max-width:1400px;margin:8px auto 20px;padding:0 16px;text-align:center;color:#8a8f99;font-size:12px}
+.visit-count{font-weight:600;color:#667eea}
 .panel{display:none}
 .panel.active{display:block}
 .loading{text-align:center;padding:40px;color:#999}
@@ -1681,6 +1683,8 @@ body{
   </div>
 </div>
 
+<footer class="site-footer">累计访问 <span class="visit-count" id="visit-count">...</span> 次</footer>
+
 <script>
 const API = '';
 let currentPage = 1;
@@ -2078,6 +2082,16 @@ async function loadStats() {
   syncCustomSelects();
 }
 
+async function loadVisitCount() {
+  try {
+    const r = await fetch(`${API}/api/visits`);
+    const d = await r.json();
+    document.getElementById('visit-count').textContent = Number(d.total || 0).toLocaleString();
+  } catch (e) {
+    document.getElementById('visit-count').textContent = '-';
+  }
+}
+
 async function loadMajors(level1) {
   const url = level1 ? `${API}/api/majors?level1=${encodeURIComponent(level1)}` : `${API}/api/majors`;
   const r = await fetch(url);
@@ -2455,6 +2469,7 @@ schoolInput.onkeydown = (e) => {
 schoolInput.onblur = () => setTimeout(() => schoolDD.classList.remove('open'), 200);
 
 loadStats();
+loadVisitCount();
 </script>
 </body>
 </html>

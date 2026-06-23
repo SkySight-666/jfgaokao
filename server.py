@@ -10,6 +10,7 @@ from functools import lru_cache
 
 PORT = 8899
 MAJOR_DIR_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "专业目录.txt")
+VISIT_COUNT_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "visits.json")
 
 
 def build_static_tree(path):
@@ -160,6 +161,22 @@ def query_db(sql, params=()):
     return [dict(r) for r in rows]
 
 
+def record_visit():
+    """记录一次首页访问，计数文件不存在时自动创建。"""
+    total = 0
+    if os.path.exists(VISIT_COUNT_FILE):
+        try:
+            with open(VISIT_COUNT_FILE, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+                total = int(data.get("total", 0))
+        except (OSError, json.JSONDecodeError, TypeError, ValueError):
+            total = 0
+    total += 1
+    with open(VISIT_COUNT_FILE, 'w', encoding='utf-8') as f:
+        json.dump({"total": total}, f, ensure_ascii=False, indent=2)
+    return {"total": total}
+
+
 RANK_EXPR = """
 CASE
     WHEN min_section IS NULL OR min_section = '' OR min_section = '-' OR CAST(min_section AS INTEGER) <= 0
@@ -227,6 +244,9 @@ def get_matching_sg(first_subject, second_subjects):
 
 
 def handle_api(path, params):
+    if path == "/api/visits":
+        return record_visit()
+
     if path == "/api/stats":
         conn = get_conn()
         r = {}

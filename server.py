@@ -6,6 +6,7 @@ import sqlite3
 import os
 import re
 import urllib.parse
+from functools import lru_cache
 
 PORT = 8899
 MAJOR_DIR_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "专业目录.txt")
@@ -52,6 +53,65 @@ def major_search_keywords(raw):
     return re.sub(r'（[^）]*(?:注|授予|原专业代码|可授)[^）]*）', '', raw).strip()
 
 
+def unique_major_keywords(names):
+    """清洗并去重专业检索词，保持原有顺序。"""
+    seen = set()
+    keywords = []
+    for name in names:
+        kw = major_search_keywords(name)
+        if kw and kw not in seen:
+            seen.add(kw)
+            keywords.append(kw)
+    return keywords
+
+
+def expand_level2_major_keywords(level2_names):
+    """学科门类选择要覆盖该门类下的大类名和具体专业名。"""
+    names = []
+    for l2 in level2_names:
+        for l3, sp_list in STATIC_TREE.get(l2, {}).items():
+            names.append(l3)
+            names.extend(sp_list)
+    return unique_major_keywords(names)
+
+
+def expand_level3_major_keywords(level3_names):
+    """专业大类选择要覆盖大类名和大类下的具体专业名。"""
+    names = []
+    for target_l3 in level3_names:
+        matched = False
+        for cats in STATIC_TREE.values():
+            if target_l3 in cats:
+                matched = True
+                names.append(target_l3)
+                names.extend(cats[target_l3])
+        if not matched:
+            names.append(target_l3)
+    return unique_major_keywords(names)
+
+
+def major_name_match_clause(keywords):
+    """生成专业名匹配条件，避免大量 OR LIKE 触发 SQLite 表达式深度限制。"""
+    if not keywords:
+        return "", []
+    return "(major_name_matches(sp_name, spname, ?) = 1)", [json.dumps(keywords, ensure_ascii=False)]
+
+
+@lru_cache(maxsize=128)
+def _major_keywords_from_payload(payload):
+    try:
+        keywords = json.loads(payload)
+    except (TypeError, json.JSONDecodeError):
+        return ()
+    return tuple(kw for kw in keywords if kw)
+
+
+def major_name_matches(sp_name, spname, keywords_payload):
+    """SQLite 自定义函数：判断专业名称/完整名称是否包含任一关键词。"""
+    text = f"{sp_name or ''}\n{spname or ''}"
+    return 1 if any(kw in text for kw in _major_keywords_from_payload(keywords_payload)) else 0
+
+
 def _load_list(path):
     """读名单文件，返回规范化名称集合"""
     names = set()
@@ -89,6 +149,7 @@ DB_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "gaok
 def get_conn():
     conn = sqlite3.connect(DB_FILE)
     conn.row_factory = sqlite3.Row
+    conn.create_function("major_name_matches", 3, major_name_matches)
     return conn
 
 
@@ -273,11 +334,10 @@ def handle_api(path, params):
             conditions.append(" AND school_name LIKE ?")
             args.append(f"%{school}%")
         if major:
-            ph = " OR ".join(["sp_name LIKE ? OR spname LIKE ?"] * len(major))
-            conditions.append(f" AND ({ph})")
-            for m in major:
-                kw = major_search_keywords(m)
-                args.extend([f"%{kw}%", f"%{kw}%"])
+            clause, clause_args = major_name_match_clause(unique_major_keywords(major))
+            if clause:
+                conditions.append(f" AND {clause}")
+                args.extend(clause_args)
         if year:
             conditions.append(" AND year=?")
             args.append(int(year))
@@ -286,14 +346,21 @@ def handle_api(path, params):
             args.append(province)
         if level2:
             ph = ",".join(["?"] * len(level2))
-            conditions.append(f" AND level2_name IN ({ph})")
-            args.extend(level2)
+            level2_parts = [f"level2_name IN ({ph})"]
+            level2_args = list(level2)
+            expanded_keywords = expand_level2_major_keywords(level2)
+            name_clause, name_args = major_name_match_clause(expanded_keywords)
+            if name_clause:
+                level2_parts.append(name_clause)
+                level2_args.extend(name_args)
+            conditions.append(f" AND ({' OR '.join(level2_parts)})")
+            args.extend(level2_args)
         if level3:
-            ph = " OR ".join(["sp_name LIKE ? OR spname LIKE ?"] * len(level3))
-            conditions.append(f" AND ({ph})")
-            for l3 in level3:
-                kw = major_search_keywords(l3)
-                args.extend([f"%{kw}%", f"%{kw}%"])
+            expanded_keywords = expand_level3_major_keywords(level3)
+            clause, clause_args = major_name_match_clause(expanded_keywords)
+            if clause:
+                conditions.append(f" AND {clause}")
+                args.extend(clause_args)
         if level1:
             conditions.append(" AND level1_name=?")
             args.append(level1)
